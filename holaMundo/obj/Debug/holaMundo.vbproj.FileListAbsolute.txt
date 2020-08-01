@@ -33,3 +33,15 @@ C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\obj\Debug\holaMundo.vbpr
 C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\obj\Debug\holaMundo.exe
 C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\obj\Debug\holaMundo.xml
 C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\obj\Debug\holaMundo.pdb
+C:\Users\Usuario\Source\Repos\Calculadora-Progra-2\holaMundo\bin\Debug\holaMundo.exe.config
+C:\Users\Usuario\Source\Repos\Calculadora-Progra-2\holaMundo\bin\Debug\holaMundo.exe
+C:\Users\Usuario\Source\Repos\Calculadora-Progra-2\holaMundo\bin\Debug\holaMundo.pdb
+C:\Users\Usuario\Source\Repos\Calculadora-Progra-2\holaMundo\bin\Debug\holaMundo.xml
+C:\Users\Usuario\Source\Repos\Calculadora-Progra-2\holaMundo\obj\Debug\holaMundo.vbprojAssemblyReference.cache
+C:\Users\Usuario\Source\Repos\Calculadora-Progra-2\holaMundo\obj\Debug\holaMundo.Form1.resources
+C:\Users\Usuario\Source\Repos\Calculadora-Progra-2\holaMundo\obj\Debug\holaMundo.Resources.resources
+C:\Users\Usuario\Source\Repos\Calculadora-Progra-2\holaMundo\obj\Debug\holaMundo.vbproj.GenerateResource.cache
+C:\Users\Usuario\Source\Repos\Calculadora-Progra-2\holaMundo\obj\Debug\holaMundo.vbproj.CoreCompileInputs.cache
+C:\Users\Usuario\Source\Repos\Calculadora-Progra-2\holaMundo\obj\Debug\holaMundo.exe
+C:\Users\Usuario\Source\Repos\Calculadora-Progra-2\holaMundo\obj\Debug\holaMundo.xml
+C:\Users\Usuario\Source\Repos\Calculadora-Progra-2\holaMundo\obj\Debug\holaMundo.pdb

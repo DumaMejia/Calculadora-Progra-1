@@ -23,24 +23,13 @@
         End If
 
         If optPorcentaje.Checked Then
-            'Realizar el proceso de porcentaje....
+            lblrespuesta.Text = num1 * num2 / 100 'Realizar el proceso de porcentaje....
         End If
         If optExponenciacion.Checked Then
-            'Realizar el proceso de exponenciacion....
+            lblrespuesta.Text = num1 ^ num2 'Realizar el proceso de exponenciacion....
         End If
-        '...
-        Select Case cboOperaciones.SelectedIndex
-            Case 1 'Suma
-                lblrespuesta.Text = num1 + num2
-
-            Case 2 'Resta
-                lblrespuesta.Text = num1 - num2
-
-            Case 3 'Multiplicacion
-                lblrespuesta.Text = num1 * num2
-
-            Case 4 'Division
-                lblrespuesta.Text = num1 / num2
-        End Select
+        If OptResiduo.Checked Then
+            lblrespuesta.Text = num1 Mod num2
+        End If
     End Sub
 End Class
