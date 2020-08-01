@@ -1,0 +1,35 @@
+C:\Users\Luis Enrique\source\repos\Programacion-I\holaMundo\bin\Debug\holaMundo.exe.config
+C:\Users\Luis Enrique\source\repos\Programacion-I\holaMundo\bin\Debug\holaMundo.exe
+C:\Users\Luis Enrique\source\repos\Programacion-I\holaMundo\bin\Debug\holaMundo.pdb
+C:\Users\Luis Enrique\source\repos\Programacion-I\holaMundo\bin\Debug\holaMundo.xml
+C:\Users\Luis Enrique\source\repos\Programacion-I\holaMundo\obj\Debug\holaMundo.Form1.resources
+C:\Users\Luis Enrique\source\repos\Programacion-I\holaMundo\obj\Debug\holaMundo.Resources.resources
+C:\Users\Luis Enrique\source\repos\Programacion-I\holaMundo\obj\Debug\holaMundo.vbproj.GenerateResource.cache
+C:\Users\Luis Enrique\source\repos\Programacion-I\holaMundo\obj\Debug\holaMundo.vbproj.CoreCompileInputs.cache
+C:\Users\Luis Enrique\source\repos\Programacion-I\holaMundo\obj\Debug\holaMundo.exe
+C:\Users\Luis Enrique\source\repos\Programacion-I\holaMundo\obj\Debug\holaMundo.xml
+C:\Users\Luis Enrique\source\repos\Programacion-I\holaMundo\obj\Debug\holaMundo.pdb
+C:\Users\LUIS\Desktop\Programacion-I\holaMundo\bin\Debug\holaMundo.exe.config
+C:\Users\LUIS\Desktop\Programacion-I\holaMundo\bin\Debug\holaMundo.exe
+C:\Users\LUIS\Desktop\Programacion-I\holaMundo\bin\Debug\holaMundo.pdb
+C:\Users\LUIS\Desktop\Programacion-I\holaMundo\bin\Debug\holaMundo.xml
+C:\Users\LUIS\Desktop\Programacion-I\holaMundo\obj\Debug\holaMundo.vbprojAssemblyReference.cache
+C:\Users\LUIS\Desktop\Programacion-I\holaMundo\obj\Debug\holaMundo.Form1.resources
+C:\Users\LUIS\Desktop\Programacion-I\holaMundo\obj\Debug\holaMundo.Resources.resources
+C:\Users\LUIS\Desktop\Programacion-I\holaMundo\obj\Debug\holaMundo.vbproj.GenerateResource.cache
+C:\Users\LUIS\Desktop\Programacion-I\holaMundo\obj\Debug\holaMundo.vbproj.CoreCompileInputs.cache
+C:\Users\LUIS\Desktop\Programacion-I\holaMundo\obj\Debug\holaMundo.exe
+C:\Users\LUIS\Desktop\Programacion-I\holaMundo\obj\Debug\holaMundo.xml
+C:\Users\LUIS\Desktop\Programacion-I\holaMundo\obj\Debug\holaMundo.pdb
+C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\bin\Debug\holaMundo.exe.config
+C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\bin\Debug\holaMundo.exe
+C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\bin\Debug\holaMundo.pdb
+C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\bin\Debug\holaMundo.xml
+C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\obj\Debug\holaMundo.vbprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\obj\Debug\holaMundo.Form1.resources
+C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\obj\Debug\holaMundo.Resources.resources
+C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\obj\Debug\holaMundo.vbproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\obj\Debug\holaMundo.vbproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\obj\Debug\holaMundo.exe
+C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\obj\Debug\holaMundo.xml
+C:\Users\Usuario\source\repos\Programacion-I2\holaMundo\obj\Debug\holaMundo.pdb

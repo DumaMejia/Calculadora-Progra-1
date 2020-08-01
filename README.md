@@ -1,2 +1,2 @@
-# Calculadora-Progra-1
-solucion a calculadora
+# Programacion-I
+Codigo de la clase de Programacion I - UGB
