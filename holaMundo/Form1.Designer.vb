@@ -35,6 +35,8 @@ Partial Class Form1
         Me.optPorcentaje = New System.Windows.Forms.RadioButton()
         Me.optExponenciacion = New System.Windows.Forms.RadioButton()
         Me.OptResiduo = New System.Windows.Forms.RadioButton()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'lblnum1
@@ -175,11 +177,31 @@ Partial Class Form1
         Me.OptResiduo.Text = "Residuo"
         Me.OptResiduo.UseVisualStyleBackColor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(0, 0)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 28)
+        Me.ComboBox1.TabIndex = 13
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Suma", "Resta", "Multiplicacion", "Division", "Porcentaje", "exponente", "Residuo"})
+        Me.ComboBox2.Location = New System.Drawing.Point(487, 104)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 28)
+        Me.ComboBox2.TabIndex = 14
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(696, 403)
+        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.OptResiduo)
         Me.Controls.Add(Me.optExponenciacion)
         Me.Controls.Add(Me.optPorcentaje)
@@ -217,4 +239,6 @@ Partial Class Form1
     Friend WithEvents optPorcentaje As RadioButton
     Friend WithEvents optExponenciacion As RadioButton
     Friend WithEvents OptResiduo As RadioButton
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBox2 As ComboBox
 End Class
