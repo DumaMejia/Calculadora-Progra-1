@@ -57,3 +57,15 @@ C:\Users\Usuario\source\repos\Repositorio\holaMundo\obj\Debug\holaMundo.vbproj.C
 C:\Users\Usuario\source\repos\Repositorio\holaMundo\obj\Debug\holaMundo.exe
 C:\Users\Usuario\source\repos\Repositorio\holaMundo\obj\Debug\holaMundo.xml
 C:\Users\Usuario\source\repos\Repositorio\holaMundo\obj\Debug\holaMundo.pdb
+C:\Users\WALMART\source\repos\Conversorfork\holaMundo\bin\Debug\holaMundo.exe.config
+C:\Users\WALMART\source\repos\Conversorfork\holaMundo\bin\Debug\holaMundo.exe
+C:\Users\WALMART\source\repos\Conversorfork\holaMundo\bin\Debug\holaMundo.pdb
+C:\Users\WALMART\source\repos\Conversorfork\holaMundo\bin\Debug\holaMundo.xml
+C:\Users\WALMART\source\repos\Conversorfork\holaMundo\obj\Debug\holaMundo.vbprojAssemblyReference.cache
+C:\Users\WALMART\source\repos\Conversorfork\holaMundo\obj\Debug\holaMundo.Form1.resources
+C:\Users\WALMART\source\repos\Conversorfork\holaMundo\obj\Debug\holaMundo.Resources.resources
+C:\Users\WALMART\source\repos\Conversorfork\holaMundo\obj\Debug\holaMundo.vbproj.GenerateResource.cache
+C:\Users\WALMART\source\repos\Conversorfork\holaMundo\obj\Debug\holaMundo.vbproj.CoreCompileInputs.cache
+C:\Users\WALMART\source\repos\Conversorfork\holaMundo\obj\Debug\holaMundo.exe
+C:\Users\WALMART\source\repos\Conversorfork\holaMundo\obj\Debug\holaMundo.xml
+C:\Users\WALMART\source\repos\Conversorfork\holaMundo\obj\Debug\holaMundo.pdb
