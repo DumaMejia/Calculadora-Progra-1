@@ -1,5 +1,9 @@
 ﻿Public Class Form1
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        'Duma Roberto Zelaya Mejia
+        'Roberto Carlos Hernandez Melendez 
+        'Jose Roberto Del Rio Maravilla
+        'Rene Gustavo Garcia Gomez
         Select Case ComboBox1.SelectedIndex
             Case 0
                 ComboBox2.Items.Clear()
@@ -199,38 +203,67 @@
             Case 1
                 Select Case ComboBox2.SelectedIndex
                     Case 0
-                        Array = {1, 1000, 1000000.0, 1000000000.0, 0.000984207, 0.0011231, 0.157473, 2.20462, 35.2, 0.001}
-
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1, 1000, 1000000.0, 1000000000.0, 1016, 907, 6.35, 2.20462, 35.2, 1000}
+                        If ComboBox3.SelectedIndex > 3 And ComboBox3.SelectedIndex < 7 Or ComboBox3.SelectedIndex = 9 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 1
-                        Array = {0.001, 1, 1000, 1000000.0, 1016, 907, 0.000157473, 0.00220462, 0.035274, 0.000001}
-                        If ComboBox3.SelectedIndex > 4 And ComboBox3.SelectedIndex < 7 Then
+                        Array = {1000, 1, 1000, 1000000.0, 1016000.0, 907185, 6350, 454, 28.35, 1000000.0}
+                        If ComboBox3.SelectedIndex = 2 Or ComboBox3.SelectedIndex = 3 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
                             Respuesta.Text = Valor / Array(Selec)
                         End If
                     Case 2
-                        Array = {0.000001, 0.001, 1, 1000, 0.00000000098421, 0.0000000011023, 0.00000015747, 0.0000022046, 0.000035274, 0.000000001}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1000000.0, 1000, 1, 1000, 1016000000.0, 907200000.0, 6350000.0, 453592, 28350, 1000000000.0}
+                        If ComboBox3.SelectedIndex = 3 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 3
-                        Array = {0.000000001, 0.000001, 0.001, 1, 9.8421E-23, 1.1023E-22, 0.00000000015747, 0.0000000022046, 0.000000035274, 0.000000000001}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1000000000.0, 1000000.0, 1000, 1, 1016000000000.0, 907200000000.0, 6350000000.0, 453600000.0, 283500000.0, 1000000000000.0}
+                        Respuesta.Text = Valor / Array(Selec)
                     Case 4
                         Array = {1016.015, 1016000.0, 1016000000.0, 1016000000000.0, 1, 1.12, 160, 2240, 35840, 1.001605}
                         Respuesta.Text = Valor * Array(Selec)
                     Case 5
-                        Array = {907.185, 907185, 907200000.0, 907200000000.0, 0.892857, 1, 142.857, 2000, 32000, 0.907185}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {907.185, 907185, 907200000.0, 907200000000.0, 1.12, 1, 142.857, 2000, 32000, 1.102}
+                        If ComboBox3.SelectedIndex = 4 Or ComboBox3.SelectedIndex = 9 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 6
-                        Array = {6.35026, 6350.29, 6350000.0, 6350000000.0, 0.00625, 0.007, 1, 14, 224, 0.00635029}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {6.35026, 6350.29, 6350000.0, 6350000000.0, 160, 143, 1, 14, 224, 157}
+                        If ComboBox3.SelectedIndex = 4 Or ComboBox3.SelectedIndex = 5 Or ComboBox3.SelectedIndex = 9 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 7
-                        Array = {0.453592, 453.592, 453592, 453600000.0, 0.000446429, 0.0005, 0.0714286, 1, 16, 0.000453592}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {2.205, 453.592, 453592, 453600000.0, 2240, 2000, 14, 1, 16, 2205}
+                        If ComboBox3.SelectedIndex = 0 Or ComboBox3.SelectedIndex > 3 And ComboBox3.SelectedIndex < 7 Or ComboBox3.SelectedIndex = 9 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 8
-                        Array = {0.0283495, 28.3495, 28349.5, 28350000.0, 0.000027902, 0.00003125, 0.00446429, 0.0625, 1, 0.00002835}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {35.274, 28.3495, 28349.5, 28350000.0, 35840, 32000, 224, 16, 1, 35274}
+                        If ComboBox3.SelectedIndex > 0 And ComboBox3.SelectedIndex < 4 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 9
-                        Array = {1000, 1000000.0, 1000000000.0, 1000000000000.0, 0.984207, 1.10231, 157.473, 2204.62, 35272, 1}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1000, 1000000.0, 1000000000.0, 1000000000000.0, 1.016, 1.10231, 157.473, 2204.62, 35272, 1}
+                        If ComboBox3.SelectedIndex = 4 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                 End Select
             Case 2
                 Select Case ComboBox2.SelectedIndex
@@ -238,95 +271,191 @@
                         Array = {1, 1000, 1000000.0, 219.9, 879.8, 1759.7, 3579.5, 35195.1, 35.3147, 61023.7}
                         Respuesta.Text = Valor * Array(Selec)
                     Case 1
-                        Array = {0.001, 1, 1000, 0.219969, 0.879877, 1.75975, 3.51951, 35.1951, 0.0353147, 61.0237}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1000, 1, 1000, 4546, 1137, 568, 284, 35.1951, 0.0353147, 61.0237}
+                        If ComboBox3.SelectedIndex = 1 Or ComboBox3.SelectedIndex > 2 And ComboBox3.SelectedIndex < 7 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 2
-                        Array = {0.000001, 0.001, 1, 0.000219969, 0.000879877, 0.00175975, 0.00351951, 0.0351951, 0.000035315, 0.0610237}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1000000.0, 1000, 1, 4546, 1137, 568, 284, 28.413, 28317, 16.387}
+                        If ComboBox3.SelectedIndex < 8 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 3
-                        Array = {0.00454609, 4.54609, 4546.09, 4, 1, 8, 16, 160, 0.160544, 277.419}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {220, 4.54609, 4546.09, 4, 1, 8, 16, 160, 6.229, 277.419}
+                        If ComboBox3.SelectedIndex = 0 Or ComboBox3.SelectedIndex = 8 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 4
-                        Array = {0.00113652, 1.13652, 1136.52, 0.25, 1, 2, 4, 40, 0.0401000359, 69.3549}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {880, 1.13652, 1136.52, 4, 1, 2, 4, 40, 24.915, 69.3549}
+                        If ComboBox3.SelectedIndex = 0 Or ComboBox3.SelectedIndex = 3 Or ComboBox3.SelectedIndex = 8 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 5
-                        Array = {0.000568261, 0.568261, 568.261, 0.125, 0.5, 1, 2, 20, 0.020068, 34.6774}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1760, 1.76, 568.261, 8, 2, 1, 2, 20, 24.915, 34.6774}
+                        If ComboBox3.SelectedIndex < 2 Or ComboBox3.SelectedIndex > 2 And ComboBox3.SelectedIndex < 5 Or ComboBox3.SelectedIndex = 8 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 6
-                        Array = {0.000284134, 0.284134, 284.131, 0.0625, 0.25, 10, 1, 0.5, 0.010034, 17.3387}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {3520, 3.52, 284.131, 16, 4, 2, 1, 0.5, 99.661, 17.3387}
+                        If ComboBox3.SelectedIndex < 2 Or ComboBox3.SelectedIndex > 2 And ComboBox3.SelectedIndex < 6 Or ComboBox3.SelectedIndex = 8 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 7
-                        Array = {0.000028413, 0.0284131, 28.4134, 0.00625, 0.025, 0.05, 0.1, 1, 0.0010034, 1.73387}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {35195, 35.195, 28.4134, 160, 40, 20, 0.1, 1, 997, 1.73387}
+                        If ComboBox3.SelectedIndex < 2 Or ComboBox3.SelectedIndex > 2 And ComboBox3.SelectedIndex < 6 Or ComboBox3.SelectedIndex = 8 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 8
-                        Array = {0.0283468, 28.3168, 28316.8, 6.22884, 24.9153, 49.8307, 99.6614, 996.614, 1, 1728}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {35.315, 28.3168, 28316.8, 6.22884, 24.9153, 49.8307, 99.6614, 996.614, 1, 1728}
+                        If ComboBox3.SelectedIndex = 0 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 9
-                        Array = {0.000016387, 0.0163871, 16.3871, 0.003600465, 0.0144186, 0.02881372, 0.0576744, 0.57674, 0.000578704, 1}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {61024, 61.024, 16.3871, 277, 69.355, 34.677, 17.339, 1.734, 1728, 1}
+                        If ComboBox3.SelectedIndex = 2 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                 End Select
             Case 3
                 Select Case ComboBox2.SelectedIndex
                     Case 0
-                        Array = {1, 1000, 100000, 1000000, 10000000000, 1000000000000.0, 0.621371, 1093.61, 3280.83, 39369.96}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1, 1000, 100000, 1000000, 10000000000, 1000000000000.0, 1.609, 1093.61, 3280.83, 39369.96}
+                        If ComboBox3.SelectedIndex = 6 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 1
-                        Array = {0.001, 1, 100, 1000, 1000000.0, 1000000000.0, 0.000621371, 1.09361, 3.28084, 39.3701}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1000, 1, 100, 1000, 1000000.0, 1000000000.0, 1609, 1.09361, 3.28084, 39.3701}
+                        If ComboBox3.SelectedIndex = 0 Or ComboBox3.SelectedIndex = 6 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 2
-                        Array = {0.00001, 0.01, 1, 10, 10000, 10000000.0, 0.0000062137, 0.0109361, 0.0328084, 0.393701}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {100000, 100, 1, 10, 10000, 10000000.0, 160934, 91.44, 30.48, 2.54}
+                        If ComboBox3.SelectedIndex < 2 Or ComboBox3.SelectedIndex > 5 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 3
-                        Array = {0.000001, 0.001, 0.1, 1, 1000, 1000000.0, 0.00000062137, 0.00109361, 0.00328084, 0.0393701}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1000000.0, 1000, 10, 1, 1000, 1000000.0, 1609000.0, 914, 305, 25.4}
+                        If ComboBox3.SelectedIndex < 3 Or ComboBox3.SelectedIndex > 5 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 4
-                        Array = {0.000000001, 0.000001, 0.0001, 0.001, 1, 1000, 0.00000000062137, 0.0000010936, 0.0000032808, 0.00003937}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1000000000.0, 1000000.0, 10000, 1000, 1, 1000, 1609000000.0, 914400, 304800, 25400}
+                        If ComboBox3.SelectedIndex = 5 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 5
-                        Array = {0.000000000001, 0.000000001, 0.0000001, 0.000001, 0.001, 1, 0.00000000000062137, 0.0000000010936, 0.0000000032808, 0.00000003937}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1000000000000.0, 1000000000.0, 10000000.0, 1000000.0, 1000, 1, 1609000000000.0, 914400000.0, 304800000.0, 25400000.0}
+                        Respuesta.Text = Valor / Array(Selec)
                     Case 6
                         Array = {1.60934, 1609.34, 160934, 1609000.0, 1609000000.0, 1609000000000.0, 1, 1760, 5280, 63360}
                         Respuesta.Text = Valor * Array(Selec)
                     Case 7
-                        Array = {0.0009144, 0.9144, 91.44, 914.4, 914400, 914400000.0, 0.000568182, 1, 3, 36}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1094, 1.094, 91.44, 914.4, 914400, 914400000.0, 1760, 1, 3, 36}
+                        If ComboBox3.SelectedIndex < 2 Or ComboBox3.SelectedIndex = 6 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 8
-                        Array = {0.0003048, 0.3048, 30.48, 304.8, 304800, 304800000.0, 0.000189394, 0.33333344, 1, 12}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {3281, 3.281, 30.48, 304.8, 304800, 304800000.0, 5280, 3, 1, 12}
+                        If ComboBox3.SelectedIndex < 2 Or ComboBox3.SelectedIndex > 5 And ComboBox3.SelectedIndex < 8 Then
+                            Respuesta.Text = Valor / Array(Selec)
+                        Else
+                            Respuesta.Text = Valor * Array(Selec)
+                        End If
                     Case 9
-                        Array = {0.0000254, 0.0254, 2.54, 25.4, 25400, 25400000.0, 0.000015783, 0.0277778, 0.0833334, 1}
+                        Array = {39370, 39.37, 2.54, 25.4, 25400, 25400000.0, 63360, 36, 12, 1}
                         Respuesta.Text = Valor * Array(Selec)
                 End Select
             Case 4
                 Select Case ComboBox2.SelectedIndex
                     Case 0
-                        Array = {1, 0.125, 0.000125, 0.000000125, 0.000000000125, 0.000000000000125, 0.000000000000000125, 1.25E-19, 1.25E-22, 1.25E-25}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1, 8, 8000, 8000000.0, 8000000000.0, 8000000000000.0, 8.0E+15, 8.0E+18, 9.223E+18, 9.223E+18}
+                        Respuesta.Text = Valor / Array(Selec)
                     Case 1
-                        Array = {8, 1, 0.001, 0.000001, 0.000000001, 0.000000000001, 0.000000000000001, 1.0E-18, 1.0E-21, 1.0E-24}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {8, 1, 1000, 1000000.0, 1000000000.0, 1000000000000.0, 1.0E+15, 1.0E+18, 1.0E+21, 1.0E+24}
+                        If ComboBox3.SelectedIndex < 2 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 2
-                        Array = {8000, 1000, 1, 0.001, 0.000001, 0.000000001, 0.000000000001, 0.000000000000001, 1.0E-18, 1.0E-21}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {8000, 1000, 1, 1000, 1000000.0, 1000000000.0, 1.0E+15, 1.0E+18, 1.0E+18, 1.0E+21}
+                        If ComboBox3.SelectedIndex < 3 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 3
-                        Array = {8000000.0, 1000000.0, 1000, 1, 0.001, 0.000001, 0.000000001, 0.000000000001, 0.000000000000001, 1.0E-18}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {8000000.0, 1000000.0, 1000, 1, 1000, 1000000.0, 1000000000.0, 1.0E+15, 1.0E+18, 9.223E+18}
+                        If ComboBox3.SelectedIndex < 4 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 4
-                        Array = {8000000000.0, 1000000000.0, 1000000.0, 1000, 1, 0.001, 0.000001, 0.000000001, 0.000000000001, 0.000000000000001}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {8000000000.0, 1000000000.0, 1000000.0, 1000, 1, 1000000.0, 1000000000.0, 1000000000000.0, 1000000000000.0, 1.0E+15}
+                        If ComboBox3.SelectedIndex < 5 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 5
-                        Array = {8000000000000.0, 1000000000000.0, 1000000000.0, 1000000.0, 1000, 1, 0.001, 0.000001, 0.000000001, 0.000000000001}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {8000000000000.0, 1000000000000.0, 1000000000.0, 1000000.0, 1000, 1, 1000, 1000000.0, 1000000000.0, 1000000000000.0}
+                        If ComboBox3.SelectedIndex < 6 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 6
-                        Array = {8.0E+15, 1.0E+15, 1000000000000.0, 1000000000.0, 1000000.0, 1000, 1, 0.001, 0.000001, 0.000000001}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {8.0E+15, 1.0E+15, 1000000000000.0, 1000000000.0, 1000000.0, 1000, 1, 1000, 1000000.0, 1000000000.0}
+                        If ComboBox3.SelectedIndex < 7 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 7
-                        Array = {8.0E+18, 1.0E+18, 1.0E+15, 1000000000000.0, 1000000000.0, 1000000.0, 1000, 1, 0.001, 0.000001}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {8.0E+18, 1.0E+18, 1.0E+15, 1000000000000.0, 1000000000.0, 1000000.0, 1000, 1, 1000, 1000000.0}
+                        If ComboBox3.SelectedIndex < 8 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 8
-                        Array = {8.0E+21, 1.0E+21, 1.0E+18, 1.0E+15, 1000000000000.0, 1000000000.0, 1000000.0, 1000, 1, 0.001}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {8.0E+21, 1.0E+21, 1.0E+18, 1.0E+15, 1000000000000.0, 1000000000.0, 1000000.0, 1000, 1, 1000}
+                        If ComboBox3.SelectedIndex < 9 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 9
                         Array = {8.0E+24, 1.0E+24, 1.0E+21, 1.0E+18, 1.0E+15, 1000000000000.0, 1000000000.0, 1000000, 1000, 1}
                         Respuesta.Text = Valor * Array(Selec)
@@ -334,32 +463,64 @@
             Case 5
                 Select Case ComboBox2.SelectedIndex
                     Case 0
-                        Array = {1, 0.001, 0.000016667, 0.00000027778, 0.000000011574, 0.0000000016534, 0.00000000038052, 0.00000000003171, 0.000000000003171, 0.0000000000003171}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {1, 1000, 60000, 3600000.0, 86400000.0, 604800000.0, 2628000000.0, 31540000000.0, 315400000000.0, 3154000000000.0}
+                        Respuesta.Text = Valor / Array(Selec)
                     Case 1
-                        Array = {10000, 1, 0.0166667, 0.000277778, 0.000011574, 0.0000016534, 0.00000038052, 0.00000003171, 0.000000003171, 0.0000000003171}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {10000, 1, 60, 3600, 86400, 604800, 2628000.0, 31540000.0, 315400000.0, 3154000000.0}
+                        If ComboBox3.SelectedIndex < 2 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 2
-                        Array = {60000, 60, 1, 0.0166667, 0.000694444, 0.000099206, 0.000022831, 0.0000019026, 0.00000019026, 0.00019026}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {60000, 60, 1, 60, 1440, 10080, 43800, 525600, 5256000.0, 52660000.0}
+                        If ComboBox3.SelectedIndex < 3 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 3
-                        Array = {3600000.0, 3600, 60, 1, 0.0416667, 0.00595238, 0.00136986, 0.0001141155, 0.000011416, 0.0000011416}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {3600000.0, 3600, 60, 1, 24, 168, 730, 8760, 87600, 876000}
+                        If ComboBox3.SelectedIndex < 4 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 4
-                        Array = {86400000.0, 86400, 1440, 24, 1, 0.142857, 0.0318707, 0.00273973, 0.000273973, 0.000027397}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {86400000.0, 86400, 1440, 24, 1, 7, 30.417, 365, 3650, 36500}
+                        If ComboBox3.SelectedIndex < 5 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 5
-                        Array = {604800000.0, 604800, 10080, 168, 7, 1, 0.230137, 0.0191781, 0.00191781, 0.000191781}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {604800000.0, 604800, 10080, 168, 7, 1, 4.345, 52.143, 521, 5214}
+                        If ComboBox3.SelectedIndex < 6 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 6
-                        Array = {2628000000.0, 2628000.0, 43800, 730.001, 30.4167, 4.34524, 1, 0.0833334, 0.00833334, 0.000833334}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {2628000000.0, 2628000.0, 43800, 730.001, 30.4167, 4.34524, 1, 12, 120, 1200}
+                        If ComboBox3.SelectedIndex < 7 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 7
-                        Array = {31540000000.0, 37540000.0, 52600, 8760, 365, 52.1429, 12, 1, 0.1, 0.01}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {31540000000.0, 37540000.0, 52600, 8760, 365, 52.1429, 12, 1, 10, 100}
+                        If ComboBox3.SelectedIndex < 8 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 8
-                        Array = {315400000000.0, 315400000.0, 5256000.0, 87600, 3650, 521.429, 120, 10, 1, 0.1}
-                        Respuesta.Text = Valor * Array(Selec)
+                        Array = {315400000000.0, 315400000.0, 5256000.0, 87600, 3650, 521.429, 120, 10, 1, 10}
+                        If ComboBox3.SelectedIndex < 9 Then
+                            Respuesta.Text = Valor * Array(Selec)
+                        Else
+                            Respuesta.Text = Valor / Array(Selec)
+                        End If
                     Case 9
                         Array = {3154000000000.0, 3154000000.0, 52560000.0, 876000, 36500, 5214.29, 1200, 100, 100, 1}
                         Respuesta.Text = Valor * Array(Selec)

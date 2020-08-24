@@ -30,10 +30,13 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Respuesta = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Monedas", "Masa", "Volumen", "Longitud", "Almacenamiento", "Tiempo"})
         Me.ComboBox1.Location = New System.Drawing.Point(223, 61)
@@ -43,16 +46,18 @@ Partial Class Form1
         '
         'ComboBox3
         '
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(429, 184)
+        Me.ComboBox3.Location = New System.Drawing.Point(470, 188)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(121, 28)
         Me.ComboBox3.TabIndex = 1
         '
         'ComboBox2
         '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(96, 184)
+        Me.ComboBox2.Location = New System.Drawing.Point(181, 193)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(121, 28)
         Me.ComboBox2.TabIndex = 2
@@ -62,13 +67,13 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(120, 64)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(72, 20)
+        Me.Label1.Size = New System.Drawing.Size(77, 20)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Convertir"
+        Me.Label1.Text = "Unidades"
         '
         'Caja
         '
-        Me.Caja.Location = New System.Drawing.Point(244, 187)
+        Me.Caja.Location = New System.Drawing.Point(318, 193)
         Me.Caja.Name = "Caja"
         Me.Caja.Size = New System.Drawing.Size(100, 26)
         Me.Caja.TabIndex = 4
@@ -76,7 +81,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(385, 188)
+        Me.Label2.Location = New System.Drawing.Point(424, 193)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(18, 20)
         Me.Label2.TabIndex = 5
@@ -84,9 +89,9 @@ Partial Class Form1
         '
         'Respuesta
         '
-        Me.Respuesta.Location = New System.Drawing.Point(450, 268)
+        Me.Respuesta.Location = New System.Drawing.Point(450, 271)
         Me.Respuesta.Name = "Respuesta"
-        Me.Respuesta.Size = New System.Drawing.Size(100, 26)
+        Me.Respuesta.Size = New System.Drawing.Size(141, 26)
         Me.Respuesta.TabIndex = 6
         '
         'Button1
@@ -95,14 +100,34 @@ Partial Class Form1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(113, 44)
         Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Convertir"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(597, 274)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(87, 20)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "Respuesta"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(65, 193)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(98, 20)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "Convertir de "
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(696, 403)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Respuesta)
         Me.Controls.Add(Me.Label2)
@@ -116,7 +141,7 @@ Partial Class Form1
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form1"
-        Me.Text = "tablas de duma :U"
+        Me.Text = "Convertidor de unidades"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -130,4 +155,6 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Respuesta As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class
