@@ -285,7 +285,7 @@
                             Respuesta.Text = Valor * Array(Selec)
                         End If
                     Case 3
-                        Array = {220, 4.54609, 4546.09, 4, 1, 8, 16, 160, 6.229, 277.419}
+                        Array = {220, 4.54609, 4546.09, 1, 4, 8, 16, 160, 6.229, 277.419}
                         If ComboBox3.SelectedIndex = 0 Or ComboBox3.SelectedIndex = 8 Then
                             Respuesta.Text = Valor / Array(Selec)
                         Else
