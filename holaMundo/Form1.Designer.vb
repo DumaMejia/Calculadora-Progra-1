@@ -22,223 +22,129 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.OptResiduo = New System.Windows.Forms.RadioButton()
-        Me.optExponenciacion = New System.Windows.Forms.RadioButton()
-        Me.optPorcentaje = New System.Windows.Forms.RadioButton()
-        Me.optDividir = New System.Windows.Forms.RadioButton()
-        Me.optMultiplicar = New System.Windows.Forms.RadioButton()
-        Me.optResta = New System.Windows.Forms.RadioButton()
-        Me.optSuma = New System.Windows.Forms.RadioButton()
-        Me.lblrespuesta = New System.Windows.Forms.Label()
-        Me.txtnum2 = New System.Windows.Forms.TextBox()
-        Me.lblnum2 = New System.Windows.Forms.Label()
-        Me.btnCalcular = New System.Windows.Forms.Button()
-        Me.txtnum1 = New System.Windows.Forms.TextBox()
-        Me.lblnum1 = New System.Windows.Forms.Label()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'ComboBox2
+        'TabControl1
         '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Suma", "Resta", "Multiplicacion", "Division", "Porcentaje", "exponente", "Residuo"})
-        Me.ComboBox2.Location = New System.Drawing.Point(519, 125)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 28)
-        Me.ComboBox2.TabIndex = 29
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Location = New System.Drawing.Point(13, 13)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(671, 378)
+        Me.TabControl1.TabIndex = 0
         '
-        'ComboBox1
+        'TabPage1
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(56, 27)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 28)
-        Me.ComboBox1.TabIndex = 28
+        Me.TabPage1.Controls.Add(Me.Label3)
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.Label1)
+        Me.TabPage1.Controls.Add(Me.TextBox3)
+        Me.TabPage1.Controls.Add(Me.TextBox2)
+        Me.TabPage1.Controls.Add(Me.TextBox1)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(663, 345)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "TabPage1"
+        Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'OptResiduo
+        'TabPage2
         '
-        Me.OptResiduo.AutoSize = True
-        Me.OptResiduo.Location = New System.Drawing.Point(268, 267)
-        Me.OptResiduo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.OptResiduo.Name = "OptResiduo"
-        Me.OptResiduo.Size = New System.Drawing.Size(93, 24)
-        Me.OptResiduo.TabIndex = 27
-        Me.OptResiduo.Text = "Residuo"
-        Me.OptResiduo.UseVisualStyleBackColor = True
+        Me.TabPage2.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(663, 345)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "TabPage2"
+        Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'optExponenciacion
+        'TextBox1
         '
-        Me.optExponenciacion.AutoSize = True
-        Me.optExponenciacion.Location = New System.Drawing.Point(268, 232)
-        Me.optExponenciacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.optExponenciacion.Name = "optExponenciacion"
-        Me.optExponenciacion.Size = New System.Drawing.Size(41, 24)
-        Me.optExponenciacion.TabIndex = 26
-        Me.optExponenciacion.Text = "^"
-        Me.optExponenciacion.UseVisualStyleBackColor = True
+        Me.TextBox1.Location = New System.Drawing.Point(97, 59)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(120, 26)
+        Me.TextBox1.TabIndex = 0
         '
-        'optPorcentaje
+        'TextBox2
         '
-        Me.optPorcentaje.AutoSize = True
-        Me.optPorcentaje.Location = New System.Drawing.Point(268, 196)
-        Me.optPorcentaje.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.optPorcentaje.Name = "optPorcentaje"
-        Me.optPorcentaje.Size = New System.Drawing.Size(110, 24)
-        Me.optPorcentaje.TabIndex = 25
-        Me.optPorcentaje.Text = "Porcentaje"
-        Me.optPorcentaje.UseVisualStyleBackColor = True
+        Me.TextBox2.Location = New System.Drawing.Point(404, 59)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(120, 26)
+        Me.TextBox2.TabIndex = 1
         '
-        'optDividir
+        'TextBox3
         '
-        Me.optDividir.AutoSize = True
-        Me.optDividir.Location = New System.Drawing.Point(266, 161)
-        Me.optDividir.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.optDividir.Name = "optDividir"
-        Me.optDividir.Size = New System.Drawing.Size(38, 24)
-        Me.optDividir.TabIndex = 24
-        Me.optDividir.TabStop = True
-        Me.optDividir.Text = "/"
-        Me.optDividir.UseVisualStyleBackColor = True
+        Me.TextBox3.Location = New System.Drawing.Point(253, 170)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(120, 26)
+        Me.TextBox3.TabIndex = 2
         '
-        'optMultiplicar
+        'Label1
         '
-        Me.optMultiplicar.AutoSize = True
-        Me.optMultiplicar.Location = New System.Drawing.Point(266, 125)
-        Me.optMultiplicar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.optMultiplicar.Name = "optMultiplicar"
-        Me.optMultiplicar.Size = New System.Drawing.Size(40, 24)
-        Me.optMultiplicar.TabIndex = 23
-        Me.optMultiplicar.TabStop = True
-        Me.optMultiplicar.Text = "*"
-        Me.optMultiplicar.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 59)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(73, 20)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Cantidad"
         '
-        'optResta
+        'Label2
         '
-        Me.optResta.AutoSize = True
-        Me.optResta.Location = New System.Drawing.Point(266, 90)
-        Me.optResta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.optResta.Name = "optResta"
-        Me.optResta.Size = New System.Drawing.Size(39, 24)
-        Me.optResta.TabIndex = 22
-        Me.optResta.TabStop = True
-        Me.optResta.Text = "-"
-        Me.optResta.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(325, 59)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(77, 20)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Unidades"
         '
-        'optSuma
+        'Label3
         '
-        Me.optSuma.AutoSize = True
-        Me.optSuma.Checked = True
-        Me.optSuma.Location = New System.Drawing.Point(266, 55)
-        Me.optSuma.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.optSuma.Name = "optSuma"
-        Me.optSuma.Size = New System.Drawing.Size(43, 24)
-        Me.optSuma.TabIndex = 21
-        Me.optSuma.TabStop = True
-        Me.optSuma.Text = "+"
-        Me.optSuma.UseVisualStyleBackColor = True
-        '
-        'lblrespuesta
-        '
-        Me.lblrespuesta.AutoSize = True
-        Me.lblrespuesta.Location = New System.Drawing.Point(478, 96)
-        Me.lblrespuesta.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblrespuesta.Name = "lblrespuesta"
-        Me.lblrespuesta.Size = New System.Drawing.Size(104, 20)
-        Me.lblrespuesta.TabIndex = 20
-        Me.lblrespuesta.Text = "Respuesta: ?"
-        '
-        'txtnum2
-        '
-        Me.txtnum2.Location = New System.Drawing.Point(384, 92)
-        Me.txtnum2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtnum2.Name = "txtnum2"
-        Me.txtnum2.Size = New System.Drawing.Size(82, 26)
-        Me.txtnum2.TabIndex = 19
-        '
-        'lblnum2
-        '
-        Me.lblnum2.AutoSize = True
-        Me.lblnum2.Location = New System.Drawing.Point(317, 96)
-        Me.lblnum2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblnum2.Name = "lblnum2"
-        Me.lblnum2.Size = New System.Drawing.Size(59, 20)
-        Me.lblnum2.TabIndex = 18
-        Me.lblnum2.Text = "Num 2:"
-        '
-        'btnCalcular
-        '
-        Me.btnCalcular.Location = New System.Drawing.Point(215, 324)
-        Me.btnCalcular.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnCalcular.Name = "btnCalcular"
-        Me.btnCalcular.Size = New System.Drawing.Size(138, 51)
-        Me.btnCalcular.TabIndex = 17
-        Me.btnCalcular.Text = "Calcular"
-        Me.btnCalcular.UseVisualStyleBackColor = True
-        '
-        'txtnum1
-        '
-        Me.txtnum1.Location = New System.Drawing.Point(152, 92)
-        Me.txtnum1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtnum1.Name = "txtnum1"
-        Me.txtnum1.Size = New System.Drawing.Size(82, 26)
-        Me.txtnum1.TabIndex = 16
-        '
-        'lblnum1
-        '
-        Me.lblnum1.AutoSize = True
-        Me.lblnum1.Location = New System.Drawing.Point(82, 96)
-        Me.lblnum1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblnum1.Name = "lblnum1"
-        Me.lblnum1.Size = New System.Drawing.Size(59, 20)
-        Me.lblnum1.TabIndex = 15
-        Me.lblnum1.Text = "Num 1:"
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(167, 176)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(80, 20)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "respuesta"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(696, 403)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.OptResiduo)
-        Me.Controls.Add(Me.optExponenciacion)
-        Me.Controls.Add(Me.optPorcentaje)
-        Me.Controls.Add(Me.optDividir)
-        Me.Controls.Add(Me.optMultiplicar)
-        Me.Controls.Add(Me.optResta)
-        Me.Controls.Add(Me.optSuma)
-        Me.Controls.Add(Me.lblrespuesta)
-        Me.Controls.Add(Me.txtnum2)
-        Me.Controls.Add(Me.lblnum2)
-        Me.Controls.Add(Me.btnCalcular)
-        Me.Controls.Add(Me.txtnum1)
-        Me.Controls.Add(Me.lblnum1)
+        Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form1"
         Me.Text = "Convertidor de unidades"
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents OptResiduo As RadioButton
-    Friend WithEvents optExponenciacion As RadioButton
-    Friend WithEvents optPorcentaje As RadioButton
-    Friend WithEvents optDividir As RadioButton
-    Friend WithEvents optMultiplicar As RadioButton
-    Friend WithEvents optResta As RadioButton
-    Friend WithEvents optSuma As RadioButton
-    Friend WithEvents lblrespuesta As Label
-    Friend WithEvents txtnum2 As TextBox
-    Friend WithEvents lblnum2 As Label
-    Friend WithEvents btnCalcular As Button
-    Friend WithEvents txtnum1 As TextBox
-    Friend WithEvents lblnum1 As Label
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
 End Class
