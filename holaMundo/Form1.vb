@@ -25,7 +25,6 @@
             CnSuma = Resp2 * Uni + x
             cantidad.Text = CnSuma
         End If
-
     End Sub
 End Class
 
