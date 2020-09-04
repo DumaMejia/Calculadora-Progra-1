@@ -32,18 +32,25 @@ Partial Class Form1
         Me.unidades = New System.Windows.Forms.TextBox()
         Me.cantidad = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ComCD = New System.Windows.Forms.ComboBox()
+        Me.ComCA = New System.Windows.Forms.ComboBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(13, 13)
+        Me.TabControl1.Location = New System.Drawing.Point(9, 8)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(671, 378)
+        Me.TabControl1.Size = New System.Drawing.Size(509, 306)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -55,19 +62,21 @@ Partial Class Form1
         Me.TabPage1.Controls.Add(Me.respuesta)
         Me.TabPage1.Controls.Add(Me.unidades)
         Me.TabPage1.Controls.Add(Me.cantidad)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(663, 345)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage1.Size = New System.Drawing.Size(439, 220)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Universal"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(289, 261)
+        Me.Button1.Location = New System.Drawing.Point(193, 170)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(180, 50)
+        Me.Button1.Size = New System.Drawing.Size(120, 32)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Convertir"
         Me.Button1.UseVisualStyleBackColor = True
@@ -75,69 +84,121 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(167, 176)
+        Me.Label3.Location = New System.Drawing.Point(111, 114)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 20)
+        Me.Label3.Size = New System.Drawing.Size(53, 13)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "respuesta"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(325, 59)
+        Me.Label2.Location = New System.Drawing.Point(217, 38)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 20)
+        Me.Label2.Size = New System.Drawing.Size(52, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Unidades"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 59)
+        Me.Label1.Location = New System.Drawing.Point(4, 38)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 20)
+        Me.Label1.Size = New System.Drawing.Size(49, 13)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Cantidad"
         '
         'respuesta
         '
-        Me.respuesta.Location = New System.Drawing.Point(253, 170)
+        Me.respuesta.Location = New System.Drawing.Point(169, 110)
+        Me.respuesta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.respuesta.Name = "respuesta"
-        Me.respuesta.Size = New System.Drawing.Size(120, 26)
+        Me.respuesta.Size = New System.Drawing.Size(81, 20)
         Me.respuesta.TabIndex = 2
         '
         'unidades
         '
-        Me.unidades.Location = New System.Drawing.Point(404, 59)
+        Me.unidades.Location = New System.Drawing.Point(269, 38)
+        Me.unidades.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.unidades.Name = "unidades"
-        Me.unidades.Size = New System.Drawing.Size(120, 26)
+        Me.unidades.Size = New System.Drawing.Size(81, 20)
         Me.unidades.TabIndex = 1
         '
         'cantidad
         '
-        Me.cantidad.Location = New System.Drawing.Point(97, 59)
+        Me.cantidad.Location = New System.Drawing.Point(65, 38)
+        Me.cantidad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cantidad.Name = "cantidad"
-        Me.cantidad.Size = New System.Drawing.Size(120, 26)
+        Me.cantidad.Size = New System.Drawing.Size(81, 20)
         Me.cantidad.TabIndex = 0
         '
         'TabPage2
         '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage2.Controls.Add(Me.TextBox2)
+        Me.TabPage2.Controls.Add(Me.TextBox1)
+        Me.TabPage2.Controls.Add(Me.ComCA)
+        Me.TabPage2.Controls.Add(Me.ComCD)
+        Me.TabPage2.Controls.Add(Me.Button2)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(663, 345)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage2.Size = New System.Drawing.Size(501, 280)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Area"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(181, 168)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 0
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'ComCD
+        '
+        Me.ComCD.FormattingEnabled = True
+        Me.ComCD.Items.AddRange(New Object() {" Pie Cuadrado ", "Vara Cuadrada ", " Yarda Cuadrada ", " Metro Cuadrado ", "Tareas ", " Manzana ", " Hectárea  "})
+        Me.ComCD.Location = New System.Drawing.Point(3, 36)
+        Me.ComCD.Name = "ComCD"
+        Me.ComCD.Size = New System.Drawing.Size(121, 21)
+        Me.ComCD.TabIndex = 1
+        '
+        'ComCA
+        '
+        Me.ComCA.FormattingEnabled = True
+        Me.ComCA.Items.AddRange(New Object() {" Pie Cuadrado ", "Vara Cuadrada ", " Yarda Cuadrada ", " Metro Cuadrado ", "Tareas ", " Manzana ", " Hectárea  "})
+        Me.ComCA.Location = New System.Drawing.Point(265, 37)
+        Me.ComCA.Name = "ComCA"
+        Me.ComCA.Size = New System.Drawing.Size(121, 21)
+        Me.ComCA.TabIndex = 2
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(130, 37)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 3
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(265, 92)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 4
+        '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(696, 403)
+        Me.ClientSize = New System.Drawing.Size(529, 325)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form1"
@@ -145,6 +206,8 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -159,4 +222,9 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ComCA As ComboBox
+    Friend WithEvents ComCD As ComboBox
+    Friend WithEvents Button2 As Button
 End Class

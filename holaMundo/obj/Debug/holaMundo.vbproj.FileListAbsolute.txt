@@ -93,3 +93,15 @@ C:\Users\Usuario\Source\Repos\parcial\holaMundo\obj\Debug\holaMundo.vbproj.CoreC
 C:\Users\Usuario\Source\Repos\parcial\holaMundo\obj\Debug\holaMundo.exe
 C:\Users\Usuario\Source\Repos\parcial\holaMundo\obj\Debug\holaMundo.xml
 C:\Users\Usuario\Source\Repos\parcial\holaMundo\obj\Debug\holaMundo.pdb
+C:\Users\rober\Source\Repos\Parcial\holaMundo\bin\Debug\holaMundo.exe.config
+C:\Users\rober\Source\Repos\Parcial\holaMundo\bin\Debug\holaMundo.exe
+C:\Users\rober\Source\Repos\Parcial\holaMundo\bin\Debug\holaMundo.pdb
+C:\Users\rober\Source\Repos\Parcial\holaMundo\bin\Debug\holaMundo.xml
+C:\Users\rober\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.vbprojAssemblyReference.cache
+C:\Users\rober\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.Form1.resources
+C:\Users\rober\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.Resources.resources
+C:\Users\rober\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.vbproj.GenerateResource.cache
+C:\Users\rober\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.vbproj.CoreCompileInputs.cache
+C:\Users\rober\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.exe
+C:\Users\rober\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.xml
+C:\Users\rober\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.pdb
