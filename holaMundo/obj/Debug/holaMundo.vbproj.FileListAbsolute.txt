@@ -105,3 +105,15 @@ C:\Users\rober\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.vbproj.CoreCom
 C:\Users\rober\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.exe
 C:\Users\rober\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.xml
 C:\Users\rober\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.pdb
+C:\Users\WALMART\Source\Repos\Parcial\holaMundo\bin\Debug\holaMundo.exe.config
+C:\Users\WALMART\Source\Repos\Parcial\holaMundo\bin\Debug\holaMundo.exe
+C:\Users\WALMART\Source\Repos\Parcial\holaMundo\bin\Debug\holaMundo.pdb
+C:\Users\WALMART\Source\Repos\Parcial\holaMundo\bin\Debug\holaMundo.xml
+C:\Users\WALMART\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.vbprojAssemblyReference.cache
+C:\Users\WALMART\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.Form1.resources
+C:\Users\WALMART\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.Resources.resources
+C:\Users\WALMART\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.vbproj.GenerateResource.cache
+C:\Users\WALMART\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.vbproj.CoreCompileInputs.cache
+C:\Users\WALMART\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.exe
+C:\Users\WALMART\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.xml
+C:\Users\WALMART\Source\Repos\Parcial\holaMundo\obj\Debug\holaMundo.pdb
