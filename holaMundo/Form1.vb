@@ -65,15 +65,12 @@
                 Array = {4703.82, 624.29, 522.65, 437, 1, 0.06, 0.04}
                 TxtA.Text = Valor * Array(Selec)
             Case 5
-                Array = {1, 2, 3, 4, 5, 6, 7}
+                Array = {75347.32, 10000, 8371.93, 7000, 16.02, 1, 0.7}
                 TxtA.Text = Valor * Array(Selec)
             Case 6
-                Array = {1, 2, 3, 4, 5, 6, 7}
+                Array = {107639, 14285.71, 11959.9, 10000, 22.88, 1.43, 1}
                 TxtA.Text = Valor * Array(Selec)
         End Select
-
-
-
     End Sub
 End Class
 
