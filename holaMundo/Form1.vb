@@ -42,7 +42,35 @@
         End If
     End Sub
 
+    Dim Array()
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+        Dim Selec = ComCA.SelectedIndex
+        Dim Valor = TxtCON.Text
+        Dim Resp
+        Select Case ComCD.SelectedIndex
+            Case 0
+                Array = {1, 0.13, 0.11, 0.09, 0.00014, 0.000013, 0.0000092903}
+                TxtA.Text = Valor * Array(Selec)
+            Case 1
+                Array = {7.53, 1, 0.84, 0.7, 0.001140024348, 0.000102568523, 0.000071684731}
+                TxtA.Text = Valor * Array(Selec)
+            Case 2
+                Array = {9, 1.19, 1, 0.84, 0.0001474656489, 0.00011963544791, 0.00008361204013}
+                TxtA.Text = Valor * Array(Selec)
+            Case 3
+                Array = {10.76, 1.53, 1.2, 1, 0.00159, 0.00014308280488, 0.0001}
+                TxtA.Text = Valor * Array(Selec)
+            Case 4
+                Array = {4703.82, 624.29, 522.65, 437, 1, 0.06, 0.04}
+                TxtA.Text = Valor * Array(Selec)
+            Case 5
+                Array = {1, 2, 3, 4, 5, 6, 7}
+                TxtA.Text = Valor * Array(Selec)
+            Case 6
+                Array = {1, 2, 3, 4, 5, 6, 7}
+                TxtA.Text = Valor * Array(Selec)
+        End Select
 
 
 
