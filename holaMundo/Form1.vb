@@ -1,60 +1,62 @@
 ﻿Public Class Form1
-    Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
-        'Dim es una palabra reservada para declarar una variable
-        Dim num1, num2, respuesta As Double 'Declaro las variables en linea separadas por comas del mismo tipo
+    Private Sub btnProcesar_Click(sender As Object, e As EventArgs) Handles btnProcesar.Click
+        lstEjercicios.Items.Clear()
 
-        num1 = txtnum1.Text 'capturando el dato que ingres el usuario a la caja de texto, asigno dicho valor a la variable num1.
-        num2 = txtnum2.Text
+        lstEjercicios.Items.Add("Numero pares del 1 al 20")
+        For i = 2 To 20 Step 2
+            lstEjercicios.Items.Add(i)
+        Next
 
-        If optSuma.Checked Then 'If -> si de condicion
-            lblrespuesta.Text = num1 + num2 'realizamos la suma
+        lstEjercicios.Items.Add("Numero impares del 1 al 20")
+        For i = 1 To 20 Step 2
+            lstEjercicios.Items.Add(i)
+        Next
+    End Sub
+
+    Private Sub btnParImpar_Click(sender As Object, e As EventArgs) Handles btnParImpar.Click
+        Dim num = txtnum.Text
+        If num Mod 2 = 0 Then
+            MessageBox.Show("El numero: " + num + ", es par")
+        Else
+            MessageBox.Show("El numero: " + num + ", es impar")
         End If
+    End Sub
 
-        If optResta.Checked Then
-            lblrespuesta.Text = num1 - num2 'realizamos la resta
+    Private Sub btnPrimo_Click(sender As Object, e As EventArgs) Handles btnPrimo.Click
+        Dim num = txtnum.Text, i = 0, acu = 1
+        While i < 3 And acu <= num
+            If num Mod acu = 0 Then
+                i += 1 ' i=i+1
+            End If
+            acu += 1
+        End While
+        If i <= 2 Then
+            MessageBox.Show("Es primo")
+        Else
+            MessageBox.Show("NO es primo")
         End If
+    End Sub
 
-        If optMultiplicar.Checked Then
-            lblrespuesta.Text = num1 * num2 'realizamos la multiplicacion
-        End If
+    Private Sub btnCajero_Click(sender As Object, e As EventArgs) Handles btnCajero.Click
+        Dim denominaciones() = {100, 50, 20, 10, 5, 1, 0.5, 0.25, 0.1, 0.05, 0.01}, valor = txtnum.Text, cantidad = 0
+        Dim denomina As String
 
-        If optDividir.Checked Then
-            lblrespuesta.Text = num1 / num2 'realizamos la division
-        End If
+        lstEjercicios.Items.Clear()
 
-        If optPorcentaje.Checked Then
-            lblrespuesta.Text = num1 * num2 / 100 'Realizar el proceso de porcentaje....
-        End If
-        If optExponenciacion.Checked Then
-            lblrespuesta.Text = num1 ^ num2 'Realizar el proceso de exponenciacion....
-        End If
-        If OptResiduo.Checked Then
-            lblrespuesta.Text = num1 Mod num2
-        End If
-
-        Select Case ComboBox2.SelectedIndex
-            Case 0
-                lblrespuesta.Text = num1 + num2
-
-            Case 1
-                lblrespuesta.Text = num1 - num2
-
-            Case 2
-                lblrespuesta.Text = num1 * num2
-
-            Case 3
-                lblrespuesta.Text = num1 / num2
-
-            Case 4
-                lblrespuesta.Text = num1 * num2 / 100
-
-            Case 5
-                lblrespuesta.Text = num1 ^ num2
-
-            Case 6
-                lblrespuesta.Text = num1 Mod num2
-
-        End Select
+        For Each denominacion In denominaciones
+            While valor > 0 And denominacion <= valor
+                valor = Math.Round(valor - denominacion, 2)
+                cantidad += 1
+            End While
+            If cantidad > 0 Then
+                If denominacion <= 1 Then
+                    denomina = " moneda de "
+                Else
+                    denomina = " billete de "
+                End If
+                lstEjercicios.Items.Add(cantidad.ToString() + denomina + denominacion.ToString())
+                cantidad = 0
+            End If
+        Next
     End Sub
 End Class
-
