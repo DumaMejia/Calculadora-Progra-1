@@ -22,106 +22,133 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lblinteresCompuesto = New System.Windows.Forms.Label()
+        Me.lblInteresSimple = New System.Windows.Forms.Label()
+        Me.txtTiempo = New System.Windows.Forms.TextBox()
+        Me.lbltiempo = New System.Windows.Forms.Label()
+        Me.txtinteres = New System.Windows.Forms.TextBox()
+        Me.lblinteres = New System.Windows.Forms.Label()
+        Me.txtcapital = New System.Windows.Forms.TextBox()
+        Me.lblcapital = New System.Windows.Forms.Label()
+        Me.btnCalcular = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Label1
+        'lblinteresCompuesto
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(57, 74)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Capital"
+        Me.lblinteresCompuesto.AutoSize = True
+        Me.lblinteresCompuesto.Location = New System.Drawing.Point(402, 167)
+        Me.lblinteresCompuesto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblinteresCompuesto.Name = "lblinteresCompuesto"
+        Me.lblinteresCompuesto.Size = New System.Drawing.Size(162, 20)
+        Me.lblinteresCompuesto.TabIndex = 17
+        Me.lblinteresCompuesto.Text = "Interes Compuesto: ?"
         '
-        'Label2
+        'lblInteresSimple
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(284, 74)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 20)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Interes"
+        Me.lblInteresSimple.AutoSize = True
+        Me.lblInteresSimple.Location = New System.Drawing.Point(100, 167)
+        Me.lblInteresSimple.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblInteresSimple.Name = "lblInteresSimple"
+        Me.lblInteresSimple.Size = New System.Drawing.Size(128, 20)
+        Me.lblInteresSimple.TabIndex = 16
+        Me.lblInteresSimple.Text = "Interes Simple: ?"
         '
-        'Label3
+        'txtTiempo
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(555, 74)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(108, 20)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Tiempo(Años)"
+        Me.txtTiempo.Location = New System.Drawing.Point(570, 79)
+        Me.txtTiempo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtTiempo.Name = "txtTiempo"
+        Me.txtTiempo.Size = New System.Drawing.Size(72, 26)
+        Me.txtTiempo.TabIndex = 15
         '
-        'Label4
+        'lbltiempo
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(75, 227)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(111, 20)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Interes Simple"
+        Me.lbltiempo.AutoSize = True
+        Me.lbltiempo.Location = New System.Drawing.Point(444, 84)
+        Me.lbltiempo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbltiempo.Name = "lbltiempo"
+        Me.lbltiempo.Size = New System.Drawing.Size(116, 20)
+        Me.lbltiempo.TabIndex = 14
+        Me.lbltiempo.Text = "Tiempo (Años):"
         '
-        'Label5
+        'txtinteres
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(192, 227)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(18, 20)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "?"
+        Me.txtinteres.Location = New System.Drawing.Point(349, 79)
+        Me.txtinteres.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtinteres.Name = "txtinteres"
+        Me.txtinteres.Size = New System.Drawing.Size(80, 26)
+        Me.txtinteres.TabIndex = 13
         '
-        'Label6
+        'lblinteres
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(422, 227)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(145, 20)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Interes Compuesto"
+        Me.lblinteres.AutoSize = True
+        Me.lblinteres.Location = New System.Drawing.Point(282, 84)
+        Me.lblinteres.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblinteres.Name = "lblinteres"
+        Me.lblinteres.Size = New System.Drawing.Size(63, 20)
+        Me.lblinteres.TabIndex = 12
+        Me.lblinteres.Text = "Interes:"
         '
-        'Label7
+        'txtcapital
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(573, 227)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(18, 20)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "?"
+        Me.txtcapital.Location = New System.Drawing.Point(121, 79)
+        Me.txtcapital.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtcapital.Name = "txtcapital"
+        Me.txtcapital.Size = New System.Drawing.Size(151, 26)
+        Me.txtcapital.TabIndex = 11
+        '
+        'lblcapital
+        '
+        Me.lblcapital.AutoSize = True
+        Me.lblcapital.Location = New System.Drawing.Point(54, 84)
+        Me.lblcapital.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblcapital.Name = "lblcapital"
+        Me.lblcapital.Size = New System.Drawing.Size(62, 20)
+        Me.lblcapital.TabIndex = 10
+        Me.lblcapital.Text = "Capital:"
+        '
+        'btnCalcular
+        '
+        Me.btnCalcular.Location = New System.Drawing.Point(297, 278)
+        Me.btnCalcular.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnCalcular.Name = "btnCalcular"
+        Me.btnCalcular.Size = New System.Drawing.Size(115, 46)
+        Me.btnCalcular.TabIndex = 9
+        Me.btnCalcular.Text = "Calcular"
+        Me.btnCalcular.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(696, 403)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblinteresCompuesto)
+        Me.Controls.Add(Me.lblInteresSimple)
+        Me.Controls.Add(Me.txtTiempo)
+        Me.Controls.Add(Me.lbltiempo)
+        Me.Controls.Add(Me.txtinteres)
+        Me.Controls.Add(Me.lblinteres)
+        Me.Controls.Add(Me.txtcapital)
+        Me.Controls.Add(Me.lblcapital)
+        Me.Controls.Add(Me.btnCalcular)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form1"
-        Me.Text = "Convertidor de unidades"
+        Me.Text = "Ejercicio"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblinteresCompuesto As Label
+    Friend WithEvents lblInteresSimple As Label
+    Friend WithEvents txtTiempo As TextBox
+    Friend WithEvents lbltiempo As Label
+    Friend WithEvents txtinteres As TextBox
+    Friend WithEvents lblinteres As Label
+    Friend WithEvents txtcapital As TextBox
+    Friend WithEvents lblcapital As Label
+    Friend WithEvents btnCalcular As Button
 End Class
