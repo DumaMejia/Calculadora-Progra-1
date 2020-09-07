@@ -1,60 +1,47 @@
 ﻿Public Class Form1
-    Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
-        'Dim es una palabra reservada para declarar una variable
-        Dim num1, num2, respuesta As Double 'Declaro las variables en linea separadas por comas del mismo tipo
+    Dim objEstadistica As New estadistica
+    Private Sub btnMediaAritmetica_Click(sender As Object, e As EventArgs) Handles btnMediaAritmetica.Click
+        lblRespuestaMedia.Text = objEstadistica.calcularMedia(txtserie.Text.Split(","))
+        lblRespuestaVarianza.Text = objEstadistica.calcularVarianza(txtserie.Text.Split(","))
+        lblRespuestaDesvTipica.Text = objEstadistica.calcularDesvTipica(txtserie.Text.Split(","))
+    End Sub
 
-        num1 = txtnum1.Text 'capturando el dato que ingres el usuario a la caja de texto, asigno dicho valor a la variable num1.
-        num2 = txtnum2.Text
+    Private Sub grdEstadistica_KeyUp(sender As Object, e As KeyEventArgs) Handles grdEstadistica.KeyUp
+        Dim nfilas = grdEstadistica.Rows.Count - 1,
+            totalf1 = 0,
+            totalx1xf1 = 0.0,
+            totalx21xf1 = 0.0
+        Dim fila As New DataGridViewRow
+        For i = 0 To nfilas - 1
+            fila = grdEstadistica.Rows(i)
+            Dim x1 = 0, f1 = 0
+            If fila.Cells("x1").Value <> "" Then
+                x1 = Integer.Parse(fila.Cells("x1").Value.ToString())
+            End If
+            If fila.Cells("f1").Value <> "" Then
+                f1 = Integer.Parse(fila.Cells("f1").Value.ToString())
+            End If
+            totalf1 += f1
+            totalx1xf1 += x1 * f1
+            totalx21xf1 += x1 ^ 2 * f1
 
-        If optSuma.Checked Then 'If -> si de condicion
-            lblrespuesta.Text = num1 + num2 'realizamos la suma
-        End If
+            fila.Cells("n1").Value = totalf1.ToString()
+            fila.Cells("x1xf1").Value = (x1 * f1).ToString()
+            fila.Cells("x21xf1").Value = (x1 ^ 2 * f1).ToString()
+        Next
+        lbltotalf1.Text = totalf1.ToString()
+        lbltotalx1xf1.Text = totalx1xf1.ToString()
+        lbltotalx21xf1.Text = totalx21xf1.ToString()
 
-        If optResta.Checked Then
-            lblrespuesta.Text = num1 - num2 'realizamos la resta
-        End If
+        Dim media = Math.Round(totalx1xf1 / totalf1, 2),
+            varianza = Math.Round(totalx21xf1 / totalf1 - media ^ 2, 2)
+        lblRespuestaMedia.Text = media.ToString()
+        lblRespuestaVarianza.Text = varianza.ToString()
+        lblRespuestaDesvTipica.Text = Math.Round(Math.Sqrt(varianza), 2).ToString()
 
-        If optMultiplicar.Checked Then
-            lblrespuesta.Text = num1 * num2 'realizamos la multiplicacion
-        End If
+    End Sub
 
-        If optDividir.Checked Then
-            lblrespuesta.Text = num1 / num2 'realizamos la division
-        End If
+    Private Sub grdEstadistica_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdEstadistica.CellContentClick
 
-        If optPorcentaje.Checked Then
-            lblrespuesta.Text = num1 * num2 / 100 'Realizar el proceso de porcentaje....
-        End If
-        If optExponenciacion.Checked Then
-            lblrespuesta.Text = num1 ^ num2 'Realizar el proceso de exponenciacion....
-        End If
-        If OptResiduo.Checked Then
-            lblrespuesta.Text = num1 Mod num2
-        End If
-
-        Select Case ComboBox2.SelectedIndex
-            Case 0
-                lblrespuesta.Text = num1 + num2
-
-            Case 1
-                lblrespuesta.Text = num1 - num2
-
-            Case 2
-                lblrespuesta.Text = num1 * num2
-
-            Case 3
-                lblrespuesta.Text = num1 / num2
-
-            Case 4
-                lblrespuesta.Text = num1 * num2 / 100
-
-            Case 5
-                lblrespuesta.Text = num1 ^ num2
-
-            Case 6
-                lblrespuesta.Text = num1 Mod num2
-
-        End Select
     End Sub
 End Class
-
