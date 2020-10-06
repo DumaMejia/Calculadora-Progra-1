@@ -4,7 +4,7 @@ Public Class db_conexion
     Dim miconexion As New SqlConnection
     Dim micomand As New SqlCommand
     Dim miadapter As New SqlDataAdapter
-    Dim ds As DataSet
+    Dim ds As New DataSet
 
     Public Sub New()
         Dim c_conexion As String

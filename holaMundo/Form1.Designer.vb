@@ -30,6 +30,9 @@ Partial Class Form1
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.eliminarBT = New System.Windows.Forms.Button()
+        Me.nuevoBT = New System.Windows.Forms.Button()
+        Me.modificarBT = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -96,11 +99,41 @@ Partial Class Form1
         Me.TextBox5.Size = New System.Drawing.Size(293, 26)
         Me.TextBox5.TabIndex = 8
         '
+        'eliminarBT
+        '
+        Me.eliminarBT.Location = New System.Drawing.Point(589, 303)
+        Me.eliminarBT.Name = "eliminarBT"
+        Me.eliminarBT.Size = New System.Drawing.Size(113, 44)
+        Me.eliminarBT.TabIndex = 9
+        Me.eliminarBT.Text = "Eliminar"
+        Me.eliminarBT.UseVisualStyleBackColor = True
+        '
+        'nuevoBT
+        '
+        Me.nuevoBT.Location = New System.Drawing.Point(12, 303)
+        Me.nuevoBT.Name = "nuevoBT"
+        Me.nuevoBT.Size = New System.Drawing.Size(113, 44)
+        Me.nuevoBT.TabIndex = 10
+        Me.nuevoBT.Text = "Nuevo"
+        Me.nuevoBT.UseVisualStyleBackColor = True
+        '
+        'modificarBT
+        '
+        Me.modificarBT.Location = New System.Drawing.Point(470, 303)
+        Me.modificarBT.Name = "modificarBT"
+        Me.modificarBT.Size = New System.Drawing.Size(113, 44)
+        Me.modificarBT.TabIndex = 11
+        Me.modificarBT.Text = "Modificar"
+        Me.modificarBT.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(756, 374)
+        Me.Controls.Add(Me.modificarBT)
+        Me.Controls.Add(Me.nuevoBT)
+        Me.Controls.Add(Me.eliminarBT)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox2)
@@ -128,4 +161,7 @@ Partial Class Form1
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents eliminarBT As Button
+    Friend WithEvents nuevoBT As Button
+    Friend WithEvents modificarBT As Button
 End Class

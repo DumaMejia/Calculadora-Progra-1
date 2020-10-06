@@ -96,3 +96,4 @@ C:\Users\Usuario\Source\Repos\3FORMULARIOS\holaMundo\bin\Debug\holaMundo.exe.con
 C:\Users\Usuario\Source\Repos\3FORMULARIOS\holaMundo\bin\Debug\holaMundo.exe
 C:\Users\Usuario\Source\Repos\3FORMULARIOS\holaMundo\bin\Debug\holaMundo.pdb
 C:\Users\Usuario\Source\Repos\3FORMULARIOS\holaMundo\bin\Debug\holaMundo.xml
+C:\Users\Usuario\Source\Repos\3FORMULARIOS\holaMundo\obj\Debug\holaMundo.Form3.resources
