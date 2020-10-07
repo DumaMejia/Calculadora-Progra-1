@@ -26,14 +26,15 @@ Partial Class Form3
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.seleccionar = New System.Windows.Forms.Button()
-        Me.cancelar = New System.Windows.Forms.Button()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.caducidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.seleccionar = New System.Windows.Forms.Button()
+        Me.cancelar = New System.Windows.Forms.Button()
         Me.nuevo = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -63,37 +64,18 @@ Partial Class Form3
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.nombre, Me.cantidad, Me.caducidad, Me.descripcion})
-        Me.DataGridView1.Location = New System.Drawing.Point(56, 79)
+        Me.DataGridView1.Location = New System.Drawing.Point(24, 95)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 62
         Me.DataGridView1.RowTemplate.Height = 28
         Me.DataGridView1.Size = New System.Drawing.Size(741, 374)
         Me.DataGridView1.TabIndex = 3
-        '
-        'seleccionar
-        '
-        Me.seleccionar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.seleccionar.Location = New System.Drawing.Point(607, 476)
-        Me.seleccionar.Name = "seleccionar"
-        Me.seleccionar.Size = New System.Drawing.Size(190, 35)
-        Me.seleccionar.TabIndex = 4
-        Me.seleccionar.Text = "Seleccionar "
-        Me.seleccionar.UseVisualStyleBackColor = True
-        '
-        'cancelar
-        '
-        Me.cancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cancelar.Location = New System.Drawing.Point(411, 476)
-        Me.cancelar.Name = "cancelar"
-        Me.cancelar.Size = New System.Drawing.Size(190, 35)
-        Me.cancelar.TabIndex = 5
-        Me.cancelar.Text = "Cancelar"
-        Me.cancelar.UseVisualStyleBackColor = True
         '
         'id
         '
@@ -141,21 +123,51 @@ Partial Class Form3
         Me.descripcion.ReadOnly = True
         Me.descripcion.Width = 150
         '
+        'seleccionar
+        '
+        Me.seleccionar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.seleccionar.Location = New System.Drawing.Point(575, 492)
+        Me.seleccionar.Name = "seleccionar"
+        Me.seleccionar.Size = New System.Drawing.Size(190, 35)
+        Me.seleccionar.TabIndex = 4
+        Me.seleccionar.Text = "Seleccionar "
+        Me.seleccionar.UseVisualStyleBackColor = True
+        '
+        'cancelar
+        '
+        Me.cancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cancelar.Location = New System.Drawing.Point(379, 492)
+        Me.cancelar.Name = "cancelar"
+        Me.cancelar.Size = New System.Drawing.Size(190, 35)
+        Me.cancelar.TabIndex = 5
+        Me.cancelar.Text = "Cancelar"
+        Me.cancelar.UseVisualStyleBackColor = True
+        '
         'nuevo
         '
         Me.nuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.nuevo.Location = New System.Drawing.Point(56, 476)
+        Me.nuevo.Location = New System.Drawing.Point(24, 492)
         Me.nuevo.Name = "nuevo"
         Me.nuevo.Size = New System.Drawing.Size(190, 35)
         Me.nuevo.TabIndex = 6
         Me.nuevo.Text = "Nuevo"
         Me.nuevo.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(294, 491)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(57, 20)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Label3"
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(876, 538)
+        Me.ClientSize = New System.Drawing.Size(844, 554)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.nuevo)
         Me.Controls.Add(Me.cancelar)
         Me.Controls.Add(Me.seleccionar)
@@ -183,4 +195,5 @@ Partial Class Form3
     Friend WithEvents caducidad As DataGridViewTextBoxColumn
     Friend WithEvents descripcion As DataGridViewTextBoxColumn
     Friend WithEvents nuevo As Button
+    Friend WithEvents Label3 As Label
 End Class

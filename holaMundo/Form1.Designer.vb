@@ -26,13 +26,15 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtnombre = New System.Windows.Forms.TextBox()
+        Me.txtcaducidad = New System.Windows.Forms.TextBox()
+        Me.txtcantidad = New System.Windows.Forms.TextBox()
+        Me.txtdescripcion = New System.Windows.Forms.TextBox()
         Me.eliminarBT = New System.Windows.Forms.Button()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.modificarBT = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -71,33 +73,33 @@ Partial Class Form1
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "CANTIDAD"
         '
-        'TextBox1
+        'txtnombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(311, 63)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(293, 26)
-        Me.TextBox1.TabIndex = 4
+        Me.txtnombre.Location = New System.Drawing.Point(311, 63)
+        Me.txtnombre.Name = "txtnombre"
+        Me.txtnombre.Size = New System.Drawing.Size(293, 26)
+        Me.txtnombre.TabIndex = 4
         '
-        'TextBox2
+        'txtcaducidad
         '
-        Me.TextBox2.Location = New System.Drawing.Point(311, 242)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(293, 26)
-        Me.TextBox2.TabIndex = 5
+        Me.txtcaducidad.Location = New System.Drawing.Point(311, 242)
+        Me.txtcaducidad.Name = "txtcaducidad"
+        Me.txtcaducidad.Size = New System.Drawing.Size(293, 26)
+        Me.txtcaducidad.TabIndex = 5
         '
-        'TextBox4
+        'txtcantidad
         '
-        Me.TextBox4.Location = New System.Drawing.Point(311, 195)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(293, 26)
-        Me.TextBox4.TabIndex = 7
+        Me.txtcantidad.Location = New System.Drawing.Point(311, 195)
+        Me.txtcantidad.Name = "txtcantidad"
+        Me.txtcantidad.Size = New System.Drawing.Size(293, 26)
+        Me.txtcantidad.TabIndex = 7
         '
-        'TextBox5
+        'txtdescripcion
         '
-        Me.TextBox5.Location = New System.Drawing.Point(311, 142)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(293, 26)
-        Me.TextBox5.TabIndex = 8
+        Me.txtdescripcion.Location = New System.Drawing.Point(311, 142)
+        Me.txtdescripcion.Name = "txtdescripcion"
+        Me.txtdescripcion.Size = New System.Drawing.Size(293, 26)
+        Me.txtdescripcion.TabIndex = 8
         '
         'eliminarBT
         '
@@ -126,18 +128,37 @@ Partial Class Form1
         Me.modificarBT.Text = "Modificar"
         Me.modificarBT.UseVisualStyleBackColor = True
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(278, 315)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(0, 20)
+        Me.Label5.TabIndex = 12
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(351, 303)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(113, 44)
+        Me.Button1.TabIndex = 13
+        Me.Button1.Text = "Buscar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(756, 374)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.modificarBT)
         Me.Controls.Add(Me.nuevoBT)
         Me.Controls.Add(Me.eliminarBT)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtdescripcion)
+        Me.Controls.Add(Me.txtcantidad)
+        Me.Controls.Add(Me.txtcaducidad)
+        Me.Controls.Add(Me.txtnombre)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -157,11 +178,13 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtnombre As TextBox
+    Friend WithEvents txtcaducidad As TextBox
+    Friend WithEvents txtcantidad As TextBox
+    Friend WithEvents txtdescripcion As TextBox
     Friend WithEvents eliminarBT As Button
     Friend WithEvents nuevoBT As Button
     Friend WithEvents modificarBT As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Button1 As Button
 End Class
