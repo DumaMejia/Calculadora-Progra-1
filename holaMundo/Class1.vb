@@ -46,6 +46,4 @@ Public Class db_conexion
         micomand.CommandText = sql
         Return micomand.ExecuteNonQuery()
     End Function
-
-
 End Class
