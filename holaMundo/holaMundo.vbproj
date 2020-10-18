@@ -88,6 +88,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuscarProveedor.Designer.vb">
+      <DependentUpon>BuscarProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Class1.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -136,8 +142,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Proveedor.Designer.vb">
+      <DependentUpon>Proveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BuscarProveedor.resx">
+      <DependentUpon>BuscarProveedor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +162,9 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="menu.resx">
       <DependentUpon>menu.vb</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +173,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedor.resx">
+      <DependentUpon>Proveedor.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -3,7 +3,6 @@
     Public idc As Integer
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DataGridView1.DataSource = objconexion.obtenerdatos().Tables("medicina").DefaultView
-
     End Sub
 
     Private Sub TextBox1_KeyUp(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyUp
@@ -27,6 +26,31 @@
         seleccionarDato()
     End Sub
     Private Sub cancelar_Click(sender As Object, e As EventArgs) Handles cancelar.Click
+        Me.Close()
         idc = 0
+    End Sub
+
+    Private Sub nuevo_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
     End Sub
 End Class

@@ -25,16 +25,14 @@ Partial Class Form3
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.caducidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.caducidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.seleccionar = New System.Windows.Forms.Button()
         Me.cancelar = New System.Windows.Forms.Button()
-        Me.nuevo = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -62,20 +60,41 @@ Partial Class Form3
         Me.TextBox1.Size = New System.Drawing.Size(501, 26)
         Me.TextBox1.TabIndex = 2
         '
-        'DataGridView1
+        'descripcion
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.nombre, Me.cantidad, Me.caducidad, Me.descripcion})
-        Me.DataGridView1.Location = New System.Drawing.Point(24, 95)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersWidth = 62
-        Me.DataGridView1.RowTemplate.Height = 28
-        Me.DataGridView1.Size = New System.Drawing.Size(741, 374)
-        Me.DataGridView1.TabIndex = 3
+        Me.descripcion.DataPropertyName = "descripcion"
+        Me.descripcion.HeaderText = "DESCRIPCION"
+        Me.descripcion.MinimumWidth = 8
+        Me.descripcion.Name = "descripcion"
+        Me.descripcion.ReadOnly = True
+        Me.descripcion.Width = 150
+        '
+        'caducidad
+        '
+        Me.caducidad.DataPropertyName = "caducidad"
+        Me.caducidad.HeaderText = "CADUCIDAD"
+        Me.caducidad.MinimumWidth = 8
+        Me.caducidad.Name = "caducidad"
+        Me.caducidad.ReadOnly = True
+        Me.caducidad.Width = 150
+        '
+        'cantidad
+        '
+        Me.cantidad.DataPropertyName = "cantidad"
+        Me.cantidad.HeaderText = "CANTIDAD"
+        Me.cantidad.MinimumWidth = 8
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.ReadOnly = True
+        Me.cantidad.Width = 150
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "NOMBRE"
+        Me.nombre.MinimumWidth = 8
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 250
         '
         'id
         '
@@ -87,46 +106,25 @@ Partial Class Form3
         Me.id.Visible = False
         Me.id.Width = 150
         '
-        'nombre
+        'DataGridView1
         '
-        Me.nombre.DataPropertyName = "nombre"
-        Me.nombre.HeaderText = "NOMBRE"
-        Me.nombre.MinimumWidth = 8
-        Me.nombre.Name = "nombre"
-        Me.nombre.ReadOnly = True
-        Me.nombre.Width = 250
-        '
-        'cantidad
-        '
-        Me.cantidad.DataPropertyName = "cantidad"
-        Me.cantidad.HeaderText = "CANTIDAD"
-        Me.cantidad.MinimumWidth = 8
-        Me.cantidad.Name = "cantidad"
-        Me.cantidad.ReadOnly = True
-        Me.cantidad.Width = 150
-        '
-        'caducidad
-        '
-        Me.caducidad.DataPropertyName = "caducidad"
-        Me.caducidad.HeaderText = "CADUCIDAD"
-        Me.caducidad.MinimumWidth = 8
-        Me.caducidad.Name = "caducidad"
-        Me.caducidad.ReadOnly = True
-        Me.caducidad.Width = 150
-        '
-        'descripcion
-        '
-        Me.descripcion.DataPropertyName = "descripcion"
-        Me.descripcion.HeaderText = "DESCRIPCION"
-        Me.descripcion.MinimumWidth = 8
-        Me.descripcion.Name = "descripcion"
-        Me.descripcion.ReadOnly = True
-        Me.descripcion.Width = 150
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.nombre, Me.cantidad, Me.caducidad, Me.descripcion})
+        Me.DataGridView1.Location = New System.Drawing.Point(53, 81)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 62
+        Me.DataGridView1.RowTemplate.Height = 28
+        Me.DataGridView1.Size = New System.Drawing.Size(768, 374)
+        Me.DataGridView1.TabIndex = 3
         '
         'seleccionar
         '
         Me.seleccionar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.seleccionar.Location = New System.Drawing.Point(575, 492)
+        Me.seleccionar.Location = New System.Drawing.Point(631, 492)
         Me.seleccionar.Name = "seleccionar"
         Me.seleccionar.Size = New System.Drawing.Size(190, 35)
         Me.seleccionar.TabIndex = 4
@@ -136,39 +134,18 @@ Partial Class Form3
         'cancelar
         '
         Me.cancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cancelar.Location = New System.Drawing.Point(379, 492)
+        Me.cancelar.Location = New System.Drawing.Point(435, 492)
         Me.cancelar.Name = "cancelar"
         Me.cancelar.Size = New System.Drawing.Size(190, 35)
         Me.cancelar.TabIndex = 5
         Me.cancelar.Text = "Cancelar"
         Me.cancelar.UseVisualStyleBackColor = True
         '
-        'nuevo
-        '
-        Me.nuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.nuevo.Location = New System.Drawing.Point(24, 492)
-        Me.nuevo.Name = "nuevo"
-        Me.nuevo.Size = New System.Drawing.Size(190, 35)
-        Me.nuevo.TabIndex = 6
-        Me.nuevo.Text = "Nuevo"
-        Me.nuevo.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(294, 491)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(57, 20)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Label3"
-        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(844, 554)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.nuevo)
+        Me.ClientSize = New System.Drawing.Size(833, 554)
         Me.Controls.Add(Me.cancelar)
         Me.Controls.Add(Me.seleccionar)
         Me.Controls.Add(Me.DataGridView1)
@@ -186,14 +163,12 @@ Partial Class Form3
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents descripcion As DataGridViewTextBoxColumn
+    Friend WithEvents caducidad As DataGridViewTextBoxColumn
+    Friend WithEvents cantidad As DataGridViewTextBoxColumn
+    Friend WithEvents nombre As DataGridViewTextBoxColumn
+    Friend WithEvents id As DataGridViewTextBoxColumn
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents seleccionar As Button
     Friend WithEvents cancelar As Button
-    Friend WithEvents id As DataGridViewTextBoxColumn
-    Friend WithEvents nombre As DataGridViewTextBoxColumn
-    Friend WithEvents cantidad As DataGridViewTextBoxColumn
-    Friend WithEvents caducidad As DataGridViewTextBoxColumn
-    Friend WithEvents descripcion As DataGridViewTextBoxColumn
-    Friend WithEvents nuevo As Button
-    Friend WithEvents Label3 As Label
 End Class
