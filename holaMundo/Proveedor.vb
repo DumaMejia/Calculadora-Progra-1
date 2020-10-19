@@ -12,14 +12,7 @@
         datatable = conexion.obtenerdatos().Tables("proveedor")
         datatable.PrimaryKey = New DataColumn() {datatable.Columns("Idproveedor")}
     End Sub
-    Sub mostrardatos()
-        Me.Tag = datatable.Rows(posicion).ItemArray(0).ToString() 'ID de Cliente
-        txtnombre.Text = datatable.Rows(posicion).ItemArray(1).ToString()
-        txtPropietario.Text = datatable.Rows(posicion).ItemArray(2).ToString()
-        txtdireccion.Text = datatable.Rows(posicion).ItemArray(3).ToString()
-        txttelefono.Text = datatable.Rows(posicion).ItemArray(4).ToString()
-        Txtcorreo.Text = datatable.Rows(posicion).ItemArray(5).ToString()
-    End Sub
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim Ventana As New BuscarProveedor
@@ -28,7 +21,7 @@
             controlesBuscar(True)
             posicion = datatable.Rows.IndexOf(datatable.Rows.Find(Ventana.idc))
         End If
-        mostrardatos()
+        'mostrardatos()
     End Sub
 
     Private Sub nuevoBT_Click(sender As Object, e As EventArgs) Handles nuevoBT.Click

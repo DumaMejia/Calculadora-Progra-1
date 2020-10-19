@@ -4,7 +4,6 @@
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DataGridView1.DataSource = objconexion.obtenerdatos().Tables("medicina").DefaultView
     End Sub
-
     Private Sub TextBox1_KeyUp(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyUp
         filtrar(TextBox1.Text)
         If e.KeyCode = 13 Then
