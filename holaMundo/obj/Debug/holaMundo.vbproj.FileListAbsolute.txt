@@ -101,3 +101,5 @@ C:\Users\Usuario\Source\Repos\3FORMULARIOS\holaMundo\obj\Debug\holaMundo.menu.re
 C:\Users\Usuario\Source\Repos\3FORMULARIOS\holaMundo\obj\Debug\holaMundo.Form4.resources
 C:\Users\Usuario\Source\Repos\3FORMULARIOS\holaMundo\obj\Debug\holaMundo.BuscarProveedor.resources
 C:\Users\Usuario\Source\Repos\3FORMULARIOS\holaMundo\obj\Debug\holaMundo.Proveedor.resources
+C:\Users\Usuario\Source\Repos\3FORMULARIOS\holaMundo\obj\Debug\holaMundo.FormCargo.resources
+C:\Users\Usuario\Source\Repos\3FORMULARIOS\holaMundo\obj\Debug\holaMundo.diagnostico.resources

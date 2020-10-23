@@ -12,6 +12,17 @@ Public Class db_conexion
         miconexion.ConnectionString = c_conexion
 
         miconexion.Open()
+        parametros()
+    End Sub
+    Private Sub parametros()
+        micomand.Parameters.Add("@id", SqlDbType.Int).Value = 0
+        micomand.Parameters.Add("@idEspec", SqlDbType.Int).Value = 0
+        micomand.Parameters.Add("@IdDiag", SqlDbType.Int).Value = 0
+        micomand.Parameters.Add("@IdEnfer", SqlDbType.Int).Value = 0
+        micomand.Parameters.Add("@diag", SqlDbType.Char).Value = ""
+        micomand.Parameters.Add("@desc", SqlDbType.Char).Value = ""
+        micomand.Parameters.Add("@cargo", SqlDbType.Char).Value = ""
+        micomand.Parameters.Add("@espe", SqlDbType.Char).Value = ""
     End Sub
 
     Public Function obtenerdatos()
@@ -29,6 +40,26 @@ Public Class db_conexion
         micomand.CommandText = "select * from proveedor"
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "proveedor")
+
+        micomand.CommandText = "
+            select CargoPersonal.IdCargo, CargoPersonal.IdEspecialista, CargoPersonal.cargoper, especialista.especialidad
+            from CargoPersonal 
+            inner join especialista on(especialista.IdEspecialista=CargoPersonal.IdEspecialista)
+        "
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "CargoPersonal")
+
+        micomand.CommandText = "
+            select diagnostico.IdDiag, diagnostico.IdEnfermedad, diagnostico.diag, diagnostico.descripcion, enfermedades.nombre
+            from diagnostico 
+            inner join enfermedades on(enfermedades.IdEnfermedad=diagnostico.IdEnfermedad)
+        "
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "diagnostico")
+
+        micomand.CommandText = "select * from especialista"
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "especialista")
         Return ds
     End Function
     Public Function mantenimientoMedicina(ByVal datos As String(), ByVal cambio As String)
@@ -89,5 +120,51 @@ Public Class db_conexion
         micomand.Connection = miconexion
         micomand.CommandText = sql
         Return micomand.ExecuteNonQuery()
+    End Function
+    Public Function mantenimientoDatosCargo(ByVal datos As String(), ByVal accion As String)
+        Dim sql, msg As String
+        Select Case accion
+            Case "nuevo"
+                sql = "INSERT INTO Cargo (cargo) VALUES(@cargo)"
+            Case "modificar"
+                sql = "UPDATE cargo SET cargo=@cargo WHERE idcargo=@id"
+            Case "eliminar"
+                sql = "DELETE FROM cargo WHERE idCargo=@id"
+        End Select
+        micomand.Parameters("@id").Value = datos(0)
+        If accion IsNot "eliminar" Then
+            micomand.Parameters("@cargo").Value = datos(1)
+        End If
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
+    Public Function mantenimientoDiag(ByVal datos As String(), ByVal accion As String)
+        Dim sql, msg As String
+        Select Case accion
+            Case "nuevo"
+                sql = "INSERT INTO diagnostico (diag,descripcion) VALUES(@diag,@desc)"
+            Case "modificar"
+                sql = "UPDATE diagnostico SET IdEnfermedad=@IdEnfer,diag=@diag,descripcion=@desc WHERE IdDiag=@id"
+            Case "eliminar"
+                sql = "DELETE FROM diagnostico WHERE idDiag=@id"
+        End Select
+        micomand.Parameters("@id").Value = datos(0)
+        If accion IsNot "eliminar" Then
+            micomand.Parameters("@idEnfer").Value = datos(1)
+            micomand.Parameters("@diag").Value = datos(2)
+            micomand.Parameters("@des").Value = datos(3)
+        End If
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
     End Function
 End Class

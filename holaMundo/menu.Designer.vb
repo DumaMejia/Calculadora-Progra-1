@@ -25,9 +25,12 @@ Partial Class menu
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PACIENTESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MEDICAMENTOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PROVEEDORToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PACIENTEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ENFERMEDADESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PROVEEDORToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PEROSNALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CARGOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DIAGNOSTICOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -35,7 +38,7 @@ Partial Class menu
         '
         Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PACIENTESToolStripMenuItem, Me.PACIENTEToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PACIENTESToolStripMenuItem, Me.PACIENTEToolStripMenuItem, Me.PEROSNALToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1185, 33)
@@ -55,9 +58,15 @@ Partial Class menu
         Me.MEDICAMENTOSToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
         Me.MEDICAMENTOSToolStripMenuItem.Text = "MEDICAMENTOS"
         '
+        'PROVEEDORToolStripMenuItem
+        '
+        Me.PROVEEDORToolStripMenuItem.Name = "PROVEEDORToolStripMenuItem"
+        Me.PROVEEDORToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.PROVEEDORToolStripMenuItem.Text = "PROVEEDOR"
+        '
         'PACIENTEToolStripMenuItem
         '
-        Me.PACIENTEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ENFERMEDADESToolStripMenuItem})
+        Me.PACIENTEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ENFERMEDADESToolStripMenuItem, Me.DIAGNOSTICOToolStripMenuItem})
         Me.PACIENTEToolStripMenuItem.Name = "PACIENTEToolStripMenuItem"
         Me.PACIENTEToolStripMenuItem.Size = New System.Drawing.Size(105, 29)
         Me.PACIENTEToolStripMenuItem.Text = "PACIENTE"
@@ -68,11 +77,24 @@ Partial Class menu
         Me.ENFERMEDADESToolStripMenuItem.Size = New System.Drawing.Size(247, 34)
         Me.ENFERMEDADESToolStripMenuItem.Text = "ENFERMEDADES"
         '
-        'PROVEEDORToolStripMenuItem
+        'PEROSNALToolStripMenuItem
         '
-        Me.PROVEEDORToolStripMenuItem.Name = "PROVEEDORToolStripMenuItem"
-        Me.PROVEEDORToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
-        Me.PROVEEDORToolStripMenuItem.Text = "PROVEEDOR"
+        Me.PEROSNALToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CARGOToolStripMenuItem})
+        Me.PEROSNALToolStripMenuItem.Name = "PEROSNALToolStripMenuItem"
+        Me.PEROSNALToolStripMenuItem.Size = New System.Drawing.Size(115, 29)
+        Me.PEROSNALToolStripMenuItem.Text = "PERSONAL"
+        '
+        'CARGOToolStripMenuItem
+        '
+        Me.CARGOToolStripMenuItem.Name = "CARGOToolStripMenuItem"
+        Me.CARGOToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.CARGOToolStripMenuItem.Text = "CARGO"
+        '
+        'DIAGNOSTICOToolStripMenuItem
+        '
+        Me.DIAGNOSTICOToolStripMenuItem.Name = "DIAGNOSTICOToolStripMenuItem"
+        Me.DIAGNOSTICOToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.DIAGNOSTICOToolStripMenuItem.Text = "DIAGNOSTICO"
         '
         'menu
         '
@@ -96,4 +118,7 @@ Partial Class menu
     Friend WithEvents PACIENTEToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ENFERMEDADESToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PROVEEDORToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PEROSNALToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CARGOToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DIAGNOSTICOToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -29,4 +29,8 @@
         Me.Close()
         idc = 0
     End Sub
+
+    Private Sub nuevo_Click(sender As Object, e As EventArgs) Handles nuevo.Click
+
+    End Sub
 End Class

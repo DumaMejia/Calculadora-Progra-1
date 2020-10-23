@@ -23,6 +23,8 @@ Partial Class Proveedor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PanelDatos = New System.Windows.Forms.Panel()
+        Me.Txtcorreo = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.txtPropietario = New System.Windows.Forms.TextBox()
         Me.txtdireccion = New System.Windows.Forms.TextBox()
         Me.txttelefono = New System.Windows.Forms.TextBox()
@@ -36,8 +38,6 @@ Partial Class Proveedor
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Txtcorreo = New System.Windows.Forms.TextBox()
         Me.PanelDatos.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,6 +57,22 @@ Partial Class Proveedor
         Me.PanelDatos.Name = "PanelDatos"
         Me.PanelDatos.Size = New System.Drawing.Size(722, 333)
         Me.PanelDatos.TabIndex = 20
+        '
+        'Txtcorreo
+        '
+        Me.Txtcorreo.Location = New System.Drawing.Point(298, 261)
+        Me.Txtcorreo.Name = "Txtcorreo"
+        Me.Txtcorreo.Size = New System.Drawing.Size(293, 26)
+        Me.Txtcorreo.TabIndex = 18
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(132, 261)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(79, 20)
+        Me.Label6.TabIndex = 17
+        Me.Label6.Text = "CORREO"
         '
         'txtPropietario
         '
@@ -165,22 +181,6 @@ Partial Class Proveedor
         Me.eliminarBT.TabIndex = 15
         Me.eliminarBT.Text = "Eliminar"
         Me.eliminarBT.UseVisualStyleBackColor = True
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(132, 261)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(79, 20)
-        Me.Label6.TabIndex = 17
-        Me.Label6.Text = "CORREO"
-        '
-        'Txtcorreo
-        '
-        Me.Txtcorreo.Location = New System.Drawing.Point(298, 261)
-        Me.Txtcorreo.Name = "Txtcorreo"
-        Me.Txtcorreo.Size = New System.Drawing.Size(293, 26)
-        Me.Txtcorreo.TabIndex = 18
         '
         'Proveedor
         '
