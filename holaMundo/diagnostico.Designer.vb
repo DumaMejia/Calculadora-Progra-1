@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class diagnostico
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,10 @@ Partial Class diagnostico
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.IdDiag = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEnfermedad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.diag = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PanelDatos = New System.Windows.Forms.Panel()
+        Me.PanelBuscarDiag = New System.Windows.Forms.Panel()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -39,65 +34,23 @@ Partial Class diagnostico
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelBD = New System.Windows.Forms.Panel()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdDiag = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdEnfermedad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.diag = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PanelDatos.SuspendLayout()
+        Me.PanelBD.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDiag, Me.IdEnfermedad, Me.diag, Me.desc, Me.nombre})
-        Me.DataGridView2.Location = New System.Drawing.Point(634, 17)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowHeadersWidth = 62
-        Me.DataGridView2.RowTemplate.Height = 28
-        Me.DataGridView2.Size = New System.Drawing.Size(479, 522)
-        Me.DataGridView2.TabIndex = 40
-        '
-        'IdDiag
-        '
-        Me.IdDiag.DataPropertyName = "IdDiag"
-        Me.IdDiag.HeaderText = "IDDIAG"
-        Me.IdDiag.MinimumWidth = 8
-        Me.IdDiag.Name = "IdDiag"
-        Me.IdDiag.Visible = False
-        Me.IdDiag.Width = 150
-        '
-        'IdEnfermedad
-        '
-        Me.IdEnfermedad.DataPropertyName = "IdEnfermedad"
-        Me.IdEnfermedad.HeaderText = "IDENFER"
-        Me.IdEnfermedad.MinimumWidth = 8
-        Me.IdEnfermedad.Name = "IdEnfermedad"
-        Me.IdEnfermedad.Visible = False
-        Me.IdEnfermedad.Width = 150
-        '
-        'diag
-        '
-        Me.diag.DataPropertyName = "diag"
-        Me.diag.HeaderText = "DIAGNOSTICO"
-        Me.diag.MinimumWidth = 8
-        Me.diag.Name = "diag"
-        Me.diag.Width = 150
-        '
-        'desc
-        '
-        Me.desc.DataPropertyName = "descripcion"
-        Me.desc.HeaderText = "DESCRIPCION"
-        Me.desc.MinimumWidth = 8
-        Me.desc.Name = "desc"
-        Me.desc.Width = 150
-        '
-        'nombre
-        '
-        Me.nombre.DataPropertyName = "nombre"
-        Me.nombre.HeaderText = "ENFERMEDAD"
-        Me.nombre.MinimumWidth = 8
-        Me.nombre.Name = "nombre"
-        Me.nombre.Width = 150
         '
         'PanelDatos
         '
+        Me.PanelDatos.Controls.Add(Me.PanelBuscarDiag)
         Me.PanelDatos.Controls.Add(Me.ComboBox1)
         Me.PanelDatos.Controls.Add(Me.TextBox2)
         Me.PanelDatos.Controls.Add(Me.TextBox1)
@@ -108,6 +61,13 @@ Partial Class diagnostico
         Me.PanelDatos.Name = "PanelDatos"
         Me.PanelDatos.Size = New System.Drawing.Size(634, 459)
         Me.PanelDatos.TabIndex = 39
+        '
+        'PanelBuscarDiag
+        '
+        Me.PanelBuscarDiag.Location = New System.Drawing.Point(595, -9)
+        Me.PanelBuscarDiag.Name = "PanelBuscarDiag"
+        Me.PanelBuscarDiag.Size = New System.Drawing.Size(581, 620)
+        Me.PanelBuscarDiag.TabIndex = 19
         '
         'ComboBox1
         '
@@ -162,7 +122,7 @@ Partial Class diagnostico
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(396, 495)
+        Me.Button1.Location = New System.Drawing.Point(445, 495)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(113, 44)
         Me.Button1.TabIndex = 38
@@ -189,19 +149,107 @@ Partial Class diagnostico
         '
         'eliminarBT
         '
-        Me.eliminarBT.Location = New System.Drawing.Point(515, 495)
+        Me.eliminarBT.Location = New System.Drawing.Point(285, 495)
         Me.eliminarBT.Name = "eliminarBT"
         Me.eliminarBT.Size = New System.Drawing.Size(113, 44)
         Me.eliminarBT.TabIndex = 35
         Me.eliminarBT.Text = "Eliminar"
         Me.eliminarBT.UseVisualStyleBackColor = True
         '
+        'PanelBD
+        '
+        Me.PanelBD.Controls.Add(Me.DataGridView1)
+        Me.PanelBD.Controls.Add(Me.TextBox3)
+        Me.PanelBD.Controls.Add(Me.Label4)
+        Me.PanelBD.Location = New System.Drawing.Point(592, 12)
+        Me.PanelBD.Name = "PanelBD"
+        Me.PanelBD.Size = New System.Drawing.Size(608, 624)
+        Me.PanelBD.TabIndex = 40
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(140, 57)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(391, 26)
+        Me.TextBox3.TabIndex = 44
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(53, 63)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(81, 20)
+        Me.Label4.TabIndex = 42
+        Me.Label4.Text = "BUSCAR:"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDiag, Me.IdEnfermedad, Me.nombre, Me.diag, Me.descripcion})
+        Me.DataGridView1.Location = New System.Drawing.Point(46, 116)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 62
+        Me.DataGridView1.RowTemplate.Height = 28
+        Me.DataGridView1.Size = New System.Drawing.Size(529, 455)
+        Me.DataGridView1.TabIndex = 45
+        '
+        'IdDiag
+        '
+        Me.IdDiag.DataPropertyName = "IdDiag"
+        Me.IdDiag.HeaderText = "IDDIAG"
+        Me.IdDiag.MinimumWidth = 8
+        Me.IdDiag.Name = "IdDiag"
+        Me.IdDiag.ReadOnly = True
+        Me.IdDiag.Visible = False
+        Me.IdDiag.Width = 150
+        '
+        'IdEnfermedad
+        '
+        Me.IdEnfermedad.DataPropertyName = "IdEnfermedad"
+        Me.IdEnfermedad.HeaderText = "IDENFER"
+        Me.IdEnfermedad.MinimumWidth = 8
+        Me.IdEnfermedad.Name = "IdEnfermedad"
+        Me.IdEnfermedad.ReadOnly = True
+        Me.IdEnfermedad.Visible = False
+        Me.IdEnfermedad.Width = 150
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "ENFERMEDAD"
+        Me.nombre.MinimumWidth = 8
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 150
+        '
+        'diag
+        '
+        Me.diag.DataPropertyName = "diag"
+        Me.diag.HeaderText = "DIAGNOSTICO"
+        Me.diag.MinimumWidth = 8
+        Me.diag.Name = "diag"
+        Me.diag.ReadOnly = True
+        Me.diag.Width = 150
+        '
+        'descripcion
+        '
+        Me.descripcion.DataPropertyName = "descripcion"
+        Me.descripcion.FillWeight = 200.0!
+        Me.descripcion.HeaderText = "DESCRIPCION"
+        Me.descripcion.MinimumWidth = 8
+        Me.descripcion.Name = "descripcion"
+        Me.descripcion.ReadOnly = True
+        Me.descripcion.Width = 150
+        '
         'diagnostico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1134, 568)
-        Me.Controls.Add(Me.DataGridView2)
+        Me.ClientSize = New System.Drawing.Size(1212, 635)
+        Me.Controls.Add(Me.PanelBD)
         Me.Controls.Add(Me.PanelDatos)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.modificarBT)
@@ -209,14 +257,14 @@ Partial Class diagnostico
         Me.Controls.Add(Me.eliminarBT)
         Me.Name = "diagnostico"
         Me.Text = "diagnostico"
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelDatos.ResumeLayout(False)
         Me.PanelDatos.PerformLayout()
+        Me.PanelBD.ResumeLayout(False)
+        Me.PanelBD.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents PanelDatos As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
@@ -224,13 +272,18 @@ Partial Class diagnostico
     Friend WithEvents modificarBT As Button
     Friend WithEvents nuevoBT As Button
     Friend WithEvents eliminarBT As Button
-    Friend WithEvents IdDiag As DataGridViewTextBoxColumn
-    Friend WithEvents IdEnfermedad As DataGridViewTextBoxColumn
-    Friend WithEvents diag As DataGridViewTextBoxColumn
-    Friend WithEvents desc As DataGridViewTextBoxColumn
-    Friend WithEvents nombre As DataGridViewTextBoxColumn
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents PanelBuscarDiag As Panel
+    Friend WithEvents PanelBD As Panel
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents IdDiag As DataGridViewTextBoxColumn
+    Friend WithEvents IdEnfermedad As DataGridViewTextBoxColumn
+    Friend WithEvents nombre As DataGridViewTextBoxColumn
+    Friend WithEvents diag As DataGridViewTextBoxColumn
+    Friend WithEvents descripcion As DataGridViewTextBoxColumn
 End Class

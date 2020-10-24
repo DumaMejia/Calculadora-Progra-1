@@ -17,7 +17,6 @@ Public Class db_conexion
     Private Sub parametros()
         micomand.Parameters.Add("@id", SqlDbType.Int).Value = 0
         micomand.Parameters.Add("@idEspec", SqlDbType.Int).Value = 0
-        micomand.Parameters.Add("@IdDiag", SqlDbType.Int).Value = 0
         micomand.Parameters.Add("@IdEnfer", SqlDbType.Int).Value = 0
         micomand.Parameters.Add("@diag", SqlDbType.Char).Value = ""
         micomand.Parameters.Add("@desc", SqlDbType.Char).Value = ""
@@ -143,21 +142,21 @@ Public Class db_conexion
 
         Return msg
     End Function
-    Public Function mantenimientoDiag(ByVal datos As String(), ByVal accion As String)
+    Public Function mantenimientoDiag(ByVal datos As String(), ByVal cambio As String)
         Dim sql, msg As String
-        Select Case accion
+        Select Case cambio
             Case "nuevo"
-                sql = "INSERT INTO diagnostico (diag,descripcion) VALUES(@diag,@desc)"
+                sql = "INSERT INTO diagnostico (IdEnfermedad,diag,descripcion) VALUES(@IdEnfer,@diag,@desc)"
             Case "modificar"
-                sql = "UPDATE diagnostico SET IdEnfermedad=@IdEnfer,diag=@diag,descripcion=@desc WHERE IdDiag=@id"
+                sql = "UPDATE diagnostico SET IdEnfermedad=@idEnfer,diag=@diag,descripcion=@desc WHERE IdDiag=@id"
             Case "eliminar"
-                sql = "DELETE FROM diagnostico WHERE idDiag=@id"
+                sql = "DELETE FROM diagnostico WHERE IdDiag=@id"
         End Select
         micomand.Parameters("@id").Value = datos(0)
-        If accion IsNot "eliminar" Then
-            micomand.Parameters("@idEnfer").Value = datos(1)
+        If cambio IsNot "eliminar" Then
+            micomand.Parameters("@IdEnfer").Value = datos(1)
             micomand.Parameters("@diag").Value = datos(2)
-            micomand.Parameters("@des").Value = datos(3)
+            micomand.Parameters("@desc").Value = datos(3)
         End If
         If (executeSql(sql) > 0) Then
             msg = "exito"
