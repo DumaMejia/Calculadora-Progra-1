@@ -38,4 +38,9 @@
         Dim objhorario As New horario
         objhorario.Show()
     End Sub
+
+    Private Sub TRASLADOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TRASLADOToolStripMenuItem.Click
+        Dim objtraslado As New traslado
+        objtraslado.Show()
+    End Sub
 End Class
