@@ -132,6 +132,12 @@
     <Compile Include="FormCargo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="horario.Designer.vb">
+      <DependentUpon>horario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="horario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="menu.Designer.vb">
       <DependentUpon>menu.vb</DependentUpon>
     </Compile>
@@ -160,6 +166,18 @@
     <Compile Include="Proveedor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="receta.Designer.vb">
+      <DependentUpon>receta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="receta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usuario.Designer.vb">
+      <DependentUpon>usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BuscarProveedor.resx">
@@ -183,6 +201,9 @@
     <EmbeddedResource Include="FormCargo.resx">
       <DependentUpon>FormCargo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="horario.resx">
+      <DependentUpon>horario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="menu.resx">
       <DependentUpon>menu.vb</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +215,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedor.resx">
       <DependentUpon>Proveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="receta.resx">
+      <DependentUpon>receta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuario.resx">
+      <DependentUpon>usuario.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

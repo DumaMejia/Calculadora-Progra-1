@@ -23,4 +23,19 @@
         Dim objDiagnostico As New diagnostico
         objDiagnostico.Show()
     End Sub
+
+    Private Sub USUARIOSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles USUARIOSToolStripMenuItem.Click
+        Dim objUsuario As New usuario
+        objUsuario.Show()
+    End Sub
+
+    Private Sub RECETAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RECETAToolStripMenuItem.Click
+        Dim objreceta As New receta
+        objreceta.Show()
+    End Sub
+
+    Private Sub HORARIOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HORARIOToolStripMenuItem.Click
+        Dim objhorario As New horario
+        objhorario.Show()
+    End Sub
 End Class

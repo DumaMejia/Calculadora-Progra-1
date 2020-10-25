@@ -12,18 +12,7 @@ Public Class db_conexion
         miconexion.ConnectionString = c_conexion
 
         miconexion.Open()
-        parametros()
     End Sub
-    Private Sub parametros()
-        micomand.Parameters.Add("@id", SqlDbType.Int).Value = 0
-        micomand.Parameters.Add("@idEspec", SqlDbType.Int).Value = 0
-        micomand.Parameters.Add("@IdEnfer", SqlDbType.Int).Value = 0
-        micomand.Parameters.Add("@diag", SqlDbType.Char).Value = ""
-        micomand.Parameters.Add("@desc", SqlDbType.Char).Value = ""
-        micomand.Parameters.Add("@cargo", SqlDbType.Char).Value = ""
-        micomand.Parameters.Add("@espe", SqlDbType.Char).Value = ""
-    End Sub
-
     Public Function obtenerdatos()
         ds.Clear()
         micomand.Connection = miconexion
@@ -56,10 +45,41 @@ Public Class db_conexion
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "diagnostico")
 
+        micomand.CommandText = "
+            select usuario.Idusuario, usuario.Idusertype, usuario.username, usuario.contra, tipoUsuario.tipo
+            from usuario
+            inner join tipoUsuario on(tipoUsuario.Idusertype=usuario.Idusertype)
+        "
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "usuario")
+
+        micomand.CommandText = "
+            select receta.Idreceta, receta.id, receta.descripcion, medicina.nombre 
+            from receta
+            inner join medicina on(medicina.Id=receta.id)
+        "
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "receta")
+
+        micomand.CommandText = "
+            select horario.Idhorario, horario.IdCargo, horario.horario, CargoPersonal.cargoper, CargoPersonal.IdEspecialista
+            from horario
+            inner join CargoPersonal on(CargoPersonal.IdCargo=horario.IdCargo)
+        "
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "horario")
+
+        micomand.CommandText = "select * from tipoUsuario"
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "tipoUsuario")
+
         micomand.CommandText = "select * from especialista"
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "especialista")
+
+
         Return ds
+
     End Function
     Public Function mantenimientoMedicina(ByVal datos As String(), ByVal cambio As String)
         Dim sql, msg As String
@@ -115,25 +135,16 @@ Public Class db_conexion
 
         Return msg
     End Function
-    Private Function executeSql(ByVal sql As String)
-        micomand.Connection = miconexion
-        micomand.CommandText = sql
-        Return micomand.ExecuteNonQuery()
-    End Function
     Public Function mantenimientoDatosCargo(ByVal datos As String(), ByVal accion As String)
         Dim sql, msg As String
         Select Case accion
             Case "nuevo"
-                sql = "INSERT INTO Cargo (cargo) VALUES(@cargo)"
+                sql = "INSERT INTO CargoPersonal (IdEspecialista,cargoper) VALUES('" + datos(1) + "','" + datos(2) + "')"
             Case "modificar"
-                sql = "UPDATE cargo SET cargo=@cargo WHERE idcargo=@id"
+                sql = "UPDATE CargoPersonal SET IdEspecialista='" + datos(1) + "',cargoper='" + datos(2) + "' WHERE IdCargo='" + datos(0) + "'"
             Case "eliminar"
-                sql = "DELETE FROM cargo WHERE idCargo=@id"
+                sql = "DELETE FROM CargoPersonal WHERE IdCargo='" + datos(0) + "'"
         End Select
-        micomand.Parameters("@id").Value = datos(0)
-        If accion IsNot "eliminar" Then
-            micomand.Parameters("@cargo").Value = datos(1)
-        End If
         If (executeSql(sql) > 0) Then
             msg = "exito"
         Else
@@ -146,18 +157,12 @@ Public Class db_conexion
         Dim sql, msg As String
         Select Case cambio
             Case "nuevo"
-                sql = "INSERT INTO diagnostico (IdEnfermedad,diag,descripcion) VALUES(@IdEnfer,@diag,@desc)"
+                sql = "INSERT INTO diagnostico (IdEnfermedad,diag,descripcion) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "')"
             Case "modificar"
-                sql = "UPDATE diagnostico SET IdEnfermedad=@idEnfer,diag=@diag,descripcion=@desc WHERE IdDiag=@id"
+                sql = "UPDATE diagnostico SET Idenfermedad='" + datos(1) + "',diag='" + datos(2) + "',descripcion='" + datos(3) + "' WHERE IdDiag='" + datos(0) + "'"
             Case "eliminar"
-                sql = "DELETE FROM diagnostico WHERE IdDiag=@id"
+                sql = "DELETE FROM diagnostico WHERE IdDiag='" + datos(0) + "'"
         End Select
-        micomand.Parameters("@id").Value = datos(0)
-        If cambio IsNot "eliminar" Then
-            micomand.Parameters("@IdEnfer").Value = datos(1)
-            micomand.Parameters("@diag").Value = datos(2)
-            micomand.Parameters("@desc").Value = datos(3)
-        End If
         If (executeSql(sql) > 0) Then
             msg = "exito"
         Else
@@ -165,5 +170,64 @@ Public Class db_conexion
         End If
 
         Return msg
+    End Function
+    Public Function mantenimientoUsuario(ByVal datos As String(), ByVal cambio As String)
+        Dim sql, msg As String
+        Select Case cambio
+            Case "nuevo"
+                sql = "INSERT INTO usuario (Idusertype,username,contra) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "')"
+            Case "modificar"
+                sql = "UPDATE usuario SET Idusertype='" + datos(1) + "',username='" + datos(2) + "',contra='" + datos(3) + "' WHERE Idusuario='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM usuario WHERE Idusuario='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
+    Public Function mantenimientoReceta(ByVal datos As String(), ByVal cambio As String)
+        Dim sql, msg As String
+        Select Case cambio
+            Case "nuevo"
+                sql = "INSERT INTO receta (Id,descripcion) VALUES('" + datos(1) + "','" + datos(2) + "')"
+            Case "modificar"
+                sql = "UPDATE receta SET Id='" + datos(1) + "',descripcion='" + datos(2) + "' WHERE Idreceta='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM receta WHERE Idreceta='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
+    Public Function mantenimientoHorario(ByVal datos As String(), ByVal cambio As String)
+        Dim sql, msg As String
+        Select Case cambio
+            Case "nuevo"
+                sql = "INSERT INTO horario (IdCargo,horario) VALUES('" + datos(1) + "','" + datos(2) + "')"
+            Case "modificar"
+                sql = "UPDATE horario SET IdCargo='" + datos(1) + "',horario='" + datos(2) + "' WHERE Idhorario='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM receta WHERE Idhorario='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
+    Private Function executeSql(ByVal sql As String)
+            micomand.Connection = miconexion
+            micomand.CommandText = sql
+            Return micomand.ExecuteNonQuery()
     End Function
 End Class
