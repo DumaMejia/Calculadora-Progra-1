@@ -128,7 +128,7 @@
         If eliminarBT.Text = "Eliminar" Then
             If (MessageBox.Show("Esta seguro de borrar " + "este registro", "de la base de datos",
                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
-                conexion.mantenimientoUsuario(New String() {Me.Tag}, "eliminar")
+                conexion.mantenimientoTraslado(New String() {Me.Tag}, "eliminar")
                 limpiarCampos()
             End If
         Else

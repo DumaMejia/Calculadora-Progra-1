@@ -70,9 +70,10 @@ Public Class db_conexion
         miadapter.Fill(ds, "receta")
 
         micomand.CommandText = "
-            select horario.Idhorario, horario.IdCargo, horario.horario, CargoPersonal.cargoper, CargoPersonal.IdEspecialista
+            select horario.Idhorario, horario.IdCargo, horario.horario, CargoPersonal.cargoper, CargoPersonal.IdEspecialista, especialista.especialidad
             from horario
             inner join CargoPersonal on(CargoPersonal.IdCargo=horario.IdCargo)
+            inner join especialista on(especialista.IdEspecialista=CargoPersonal.IdEspecialista)
         "
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "horario")
@@ -259,7 +260,7 @@ Public Class db_conexion
             Case "modificar"
                 sql = "UPDATE horario SET IdCargo='" + datos(1) + "',horario='" + datos(2) + "' WHERE Idhorario='" + datos(0) + "'"
             Case "eliminar"
-                sql = "DELETE FROM receta WHERE Idhorario='" + datos(0) + "'"
+                sql = "DELETE FROM horario WHERE Idhorario='" + datos(0) + "'"
         End Select
         If (executeSql(sql) > 0) Then
             msg = "exito"

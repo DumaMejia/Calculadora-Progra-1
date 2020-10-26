@@ -17,15 +17,11 @@
         ComboBox1.DisplayMember = "cargoper"
         ComboBox1.ValueMember = "CargoPersonal.IdCargo"
 
-        ComboBox2.DataSource = conexion.obtenerdatos().Tables("especialista").DefaultView()
-        ComboBox2.DisplayMember = "especialidad"
-        ComboBox2.ValueMember = "especialista.IdEspecialista"
     End Sub
     Sub mostrardatos()
         Me.Tag = datatable.Rows(posicion).ItemArray(0).ToString()
 
         ComboBox1.SelectedValue = datatable.Rows(posicion).ItemArray(1).ToString()
-        ComboBox2.SelectedValue = datatable.Rows(posicion).ItemArray(1).ToString()
         TextBox2.Text = datatable.Rows(posicion).ItemArray(2).ToString()
     End Sub
     Private Sub SeleccionarDato()
@@ -49,6 +45,7 @@
         eliminarBT.Enabled = Not estado
         Button1.Enabled = Not estado
         modificarBT.Enabled = estado
+
     End Sub
     Private Sub controlesInicio(ByVal estado As Boolean)
         nuevoBT.Enabled = estado
@@ -57,6 +54,7 @@
         eliminarBT.Enabled = Not estado
         Button1.Enabled = estado
         modificarBT.Enabled = Not estado
+
     End Sub
     Private Sub controlesBuscar(ByVal estado As Boolean)
         PanelDatos.Enabled = Not estado
@@ -131,9 +129,9 @@
     End Sub
     Private Sub eliminarBT_Click(sender As Object, e As EventArgs) Handles eliminarBT.Click
         If eliminarBT.Text = "Eliminar" Then
-            If (MessageBox.Show("Esta seguro de borrar " + TextBox2.Text, "Diagnostico",
+            If (MessageBox.Show("Esta seguro de borrar " + "este", " registro",
                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
-                conexion.mantenimientoReceta(New String() {Me.Tag}, "eliminar")
+                conexion.mantenimientoHorario(New String() {Me.Tag}, "eliminar")
                 limpiarCampos()
             End If
         Else
