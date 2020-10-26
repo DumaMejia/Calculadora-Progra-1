@@ -21,6 +21,10 @@ Public Class db_conexion
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "medicina")
 
+        micomand.CommandText = "select * from alergia"
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "alergia")
+
         micomand.CommandText = "select * from enfermedades"
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "enfermedades")
@@ -148,6 +152,24 @@ Public Class db_conexion
                 sql = "UPDATE traslado SET lugar='" + datos(1) + "',motivo='" + datos(2) + "',fecha='" + datos(3) + "' WHERE Idtraslado='" + datos(0) + "'"
             Case "eliminar"
                 sql = "DELETE FROM traslado WHERE Idtraslado='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
+    Public Function mantenimientoAlergia(ByVal datos As String(), ByVal cambio As String)
+        Dim sql, msg As String
+        Select Case cambio
+            Case "nuevo"
+                sql = "INSERT INTO alergia (nombre,descripcion,tratamiento) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "')"
+            Case "modificar"
+                sql = "UPDATE alergia SET nombre='" + datos(1) + "',descripcion='" + datos(2) + "',tratamiento='" + datos(3) + "' WHERE Idalergia='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM alergia WHERE Idalergia='" + datos(0) + "'"
         End Select
         If (executeSql(sql) > 0) Then
             msg = "exito"

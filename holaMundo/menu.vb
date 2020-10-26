@@ -43,4 +43,9 @@
         Dim objtraslado As New traslado
         objtraslado.Show()
     End Sub
+
+    Private Sub ALERGIAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ALERGIAToolStripMenuItem.Click
+        Dim objalergia As New alergia
+        objalergia.Show()
+    End Sub
 End Class
