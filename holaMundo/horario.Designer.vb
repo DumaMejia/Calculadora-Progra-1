@@ -24,9 +24,18 @@ Partial Class horario
     Private Sub InitializeComponent()
         Me.PanelBD = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Idhorario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCargo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdEspecialista = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cargoper = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.especialidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.hora = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PanelDatos = New System.Windows.Forms.Panel()
+        Me.PanelDCargo = New System.Windows.Forms.Panel()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelBuscarDiag = New System.Windows.Forms.Panel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -34,15 +43,6 @@ Partial Class horario
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
-        Me.PanelDCargo = New System.Windows.Forms.Panel()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Idhorario = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCargo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEspecialista = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cargoper = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.especialidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.hora = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,6 +74,64 @@ Partial Class horario
         Me.DataGridView1.Size = New System.Drawing.Size(529, 216)
         Me.DataGridView1.TabIndex = 45
         '
+        'Idhorario
+        '
+        Me.Idhorario.DataPropertyName = "Idhorario"
+        Me.Idhorario.HeaderText = "ID"
+        Me.Idhorario.MinimumWidth = 8
+        Me.Idhorario.Name = "Idhorario"
+        Me.Idhorario.ReadOnly = True
+        Me.Idhorario.Visible = False
+        Me.Idhorario.Width = 150
+        '
+        'IdCargo
+        '
+        Me.IdCargo.DataPropertyName = "IdCargo"
+        Me.IdCargo.HeaderText = "IDCARGO"
+        Me.IdCargo.MinimumWidth = 8
+        Me.IdCargo.Name = "IdCargo"
+        Me.IdCargo.ReadOnly = True
+        Me.IdCargo.Visible = False
+        Me.IdCargo.Width = 150
+        '
+        'IdEspecialista
+        '
+        Me.IdEspecialista.DataPropertyName = "Idespecialista"
+        Me.IdEspecialista.HeaderText = "IDESPEC"
+        Me.IdEspecialista.MinimumWidth = 8
+        Me.IdEspecialista.Name = "IdEspecialista"
+        Me.IdEspecialista.ReadOnly = True
+        Me.IdEspecialista.Visible = False
+        Me.IdEspecialista.Width = 150
+        '
+        'cargoper
+        '
+        Me.cargoper.DataPropertyName = "cargoper"
+        Me.cargoper.HeaderText = "CARGO"
+        Me.cargoper.MinimumWidth = 8
+        Me.cargoper.Name = "cargoper"
+        Me.cargoper.ReadOnly = True
+        Me.cargoper.Width = 150
+        '
+        'especialidad
+        '
+        Me.especialidad.DataPropertyName = "especialidad"
+        Me.especialidad.HeaderText = "ESPECIALISTA"
+        Me.especialidad.MinimumWidth = 8
+        Me.especialidad.Name = "especialidad"
+        Me.especialidad.ReadOnly = True
+        Me.especialidad.Width = 150
+        '
+        'hora
+        '
+        Me.hora.DataPropertyName = "horario"
+        Me.hora.FillWeight = 200.0!
+        Me.hora.HeaderText = "HORARIO"
+        Me.hora.MinimumWidth = 8
+        Me.hora.Name = "hora"
+        Me.hora.ReadOnly = True
+        Me.hora.Width = 150
+        '
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(140, 57)
@@ -100,6 +158,32 @@ Partial Class horario
         Me.PanelDatos.Name = "PanelDatos"
         Me.PanelDatos.Size = New System.Drawing.Size(592, 316)
         Me.PanelDatos.TabIndex = 51
+        '
+        'PanelDCargo
+        '
+        Me.PanelDCargo.Controls.Add(Me.ComboBox1)
+        Me.PanelDCargo.Controls.Add(Me.Label1)
+        Me.PanelDCargo.Location = New System.Drawing.Point(107, 3)
+        Me.PanelDCargo.Name = "PanelDCargo"
+        Me.PanelDCargo.Size = New System.Drawing.Size(442, 118)
+        Me.PanelDCargo.TabIndex = 20
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(217, 60)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox1.TabIndex = 23
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(26, 63)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(68, 20)
+        Me.Label1.TabIndex = 21
+        Me.Label1.Text = "CARGO"
         '
         'PanelBuscarDiag
         '
@@ -159,90 +243,6 @@ Partial Class horario
         Me.eliminarBT.TabIndex = 47
         Me.eliminarBT.Text = "Eliminar"
         Me.eliminarBT.UseVisualStyleBackColor = True
-        '
-        'PanelDCargo
-        '
-        Me.PanelDCargo.Controls.Add(Me.ComboBox1)
-        Me.PanelDCargo.Controls.Add(Me.Label1)
-        Me.PanelDCargo.Location = New System.Drawing.Point(107, 3)
-        Me.PanelDCargo.Name = "PanelDCargo"
-        Me.PanelDCargo.Size = New System.Drawing.Size(442, 118)
-        Me.PanelDCargo.TabIndex = 20
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(217, 60)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(187, 28)
-        Me.ComboBox1.TabIndex = 23
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(26, 63)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(68, 20)
-        Me.Label1.TabIndex = 21
-        Me.Label1.Text = "CARGO"
-        '
-        'Idhorario
-        '
-        Me.Idhorario.DataPropertyName = "Idhorario"
-        Me.Idhorario.HeaderText = "ID"
-        Me.Idhorario.MinimumWidth = 8
-        Me.Idhorario.Name = "Idhorario"
-        Me.Idhorario.ReadOnly = True
-        Me.Idhorario.Visible = False
-        Me.Idhorario.Width = 150
-        '
-        'IdCargo
-        '
-        Me.IdCargo.DataPropertyName = "IdCargo"
-        Me.IdCargo.HeaderText = "IDCARGO"
-        Me.IdCargo.MinimumWidth = 8
-        Me.IdCargo.Name = "IdCargo"
-        Me.IdCargo.ReadOnly = True
-        Me.IdCargo.Visible = False
-        Me.IdCargo.Width = 150
-        '
-        'IdEspecialista
-        '
-        Me.IdEspecialista.DataPropertyName = "Idespecialista"
-        Me.IdEspecialista.HeaderText = "IDESPEC"
-        Me.IdEspecialista.MinimumWidth = 8
-        Me.IdEspecialista.Name = "IdEspecialista"
-        Me.IdEspecialista.ReadOnly = True
-        Me.IdEspecialista.Visible = False
-        Me.IdEspecialista.Width = 150
-        '
-        'cargoper
-        '
-        Me.cargoper.DataPropertyName = "cargoper"
-        Me.cargoper.HeaderText = "CARGO"
-        Me.cargoper.MinimumWidth = 8
-        Me.cargoper.Name = "cargoper"
-        Me.cargoper.ReadOnly = True
-        Me.cargoper.Width = 150
-        '
-        'especialidad
-        '
-        Me.especialidad.DataPropertyName = "especialidad"
-        Me.especialidad.HeaderText = "ESPECIALISTA"
-        Me.especialidad.MinimumWidth = 8
-        Me.especialidad.Name = "especialidad"
-        Me.especialidad.ReadOnly = True
-        Me.especialidad.Width = 150
-        '
-        'hora
-        '
-        Me.hora.DataPropertyName = "horario"
-        Me.hora.FillWeight = 200.0!
-        Me.hora.HeaderText = "HORARIO"
-        Me.hora.MinimumWidth = 8
-        Me.hora.Name = "hora"
-        Me.hora.ReadOnly = True
-        Me.hora.Width = 150
         '
         'Label2
         '

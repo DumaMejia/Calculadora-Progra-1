@@ -101,6 +101,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Class1.vb" />
+    <Compile Include="DatosPersonales.Designer.vb">
+      <DependentUpon>DatosPersonales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DatosPersonales.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="diagnostico.Designer.vb">
       <DependentUpon>diagnostico.vb</DependentUpon>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarProveedor.resx">
       <DependentUpon>BuscarProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatosPersonales.resx">
+      <DependentUpon>DatosPersonales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="diagnostico.resx">
       <DependentUpon>diagnostico.vb</DependentUpon>

@@ -21,6 +21,23 @@ Public Class db_conexion
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "medicina")
 
+        micomand.CommandText = "select * from Ecivil"
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "Ecivil")
+
+        micomand.CommandText = "select * from genero"
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "genero")
+
+        micomand.CommandText = "select * from oficio"
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "oficio")
+
+        micomand.CommandText = "select * from TipoSangre"
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "TipoSangre")
+
+
         micomand.CommandText = "select * from alergia"
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "alergia")
@@ -36,6 +53,18 @@ Public Class db_conexion
         micomand.CommandText = "select * from traslado"
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "traslado")
+
+        micomand.CommandText = "
+            select DatosPersonales.IdDatos, DatosPersonales.IdCivil, DatosPersonales.IdOficio, DatosPersonales.Idsangre, DatosPersonales.Idgenero, DatosPersonales.IdEnfermedad, DatosPersonales.nacimiento, DatosPersonales.telefono, DatosPersonales.direccion, DatosPersonales.correo, Ecivil.estado, oficio.oficio, TipoSangre.tipo, genero.genero, enfermedades.nombre
+            from DatosPersonales
+            inner join Ecivil on(Ecivil.Idcivil=DatosPersonales.IdCivil)
+            inner join oficio on(oficio.IdOficio=DatosPersonales.IdOficio)
+            inner join TipoSangre on(TipoSangre.Idsangre=DatosPersonales.Idsangre)
+            inner join genero on(genero.Idgenero=DatosPersonales.Idgenero)
+            inner join enfermedades on(enfermedades.IdEnfermedad=DatosPersonales.IdEnfermedad)
+        "
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "DatosPersonales")
 
         micomand.CommandText = "
             select CargoPersonal.IdCargo, CargoPersonal.IdEspecialista, CargoPersonal.cargoper, especialista.especialidad
@@ -261,6 +290,24 @@ Public Class db_conexion
                 sql = "UPDATE horario SET IdCargo='" + datos(1) + "',horario='" + datos(2) + "' WHERE Idhorario='" + datos(0) + "'"
             Case "eliminar"
                 sql = "DELETE FROM horario WHERE Idhorario='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
+    Public Function mantenimientoDatosPersonales(ByVal datos As String(), ByVal cambio As String)
+        Dim sql, msg As String
+        Select Case cambio
+            Case "nuevo"
+                sql = "INSERT INTO DatosPersonales (IdCivil,IdOficio,Idsangre,Idgenero,IdEnfermedad,nacimiento,telefono,direccion,correo) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "','" + datos(6) + "','" + datos(7) + "','" + datos(8) + "','" + datos(9) + "')"
+            Case "modificar"
+                sql = "UPDATE DatosPersonales SET IdCivil='" + datos(1) + "',IdOficio='" + datos(2) + "',Idsangre='" + datos(3) + "',Idgenero='" + datos(4) + "',IdEnfermedad='" + datos(5) + "',nacimiento='" + datos(6) + "',telefono='" + datos(7) + "',direccion='" + datos(8) + "',correo='" + datos(9) + "' WHERE IdDatos='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM DatosPersonales WHERE IdDatos='" + datos(0) + "'"
         End Select
         If (executeSql(sql) > 0) Then
             msg = "exito"

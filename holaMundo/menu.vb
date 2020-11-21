@@ -48,4 +48,9 @@
         Dim objalergia As New alergia
         objalergia.Show()
     End Sub
+
+    Private Sub DATOSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DATOSToolStripMenuItem.Click
+        Dim objDatosPersonales As New DatosPersonales
+        objDatosPersonales.Show()
+    End Sub
 End Class
