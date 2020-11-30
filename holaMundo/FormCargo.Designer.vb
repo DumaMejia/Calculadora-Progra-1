@@ -28,18 +28,14 @@ Partial Class FormCargo
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PanelDatos = New System.Windows.Forms.Panel()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.PanelBuscarDiag = New System.Windows.Forms.Panel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
         Me.IdCargo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEspecialista = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.especialidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cargoper = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,7 +65,7 @@ Partial Class FormCargo
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdCargo, Me.IdEspecialista, Me.especialidad, Me.cargoper})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdCargo, Me.cargoper})
         Me.DataGridView1.Location = New System.Drawing.Point(57, 112)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -96,23 +92,13 @@ Partial Class FormCargo
         '
         'PanelDatos
         '
-        Me.PanelDatos.Controls.Add(Me.ComboBox2)
         Me.PanelDatos.Controls.Add(Me.PanelBuscarDiag)
         Me.PanelDatos.Controls.Add(Me.TextBox2)
-        Me.PanelDatos.Controls.Add(Me.Label2)
         Me.PanelDatos.Controls.Add(Me.Label1)
         Me.PanelDatos.Location = New System.Drawing.Point(-3, 62)
         Me.PanelDatos.Name = "PanelDatos"
         Me.PanelDatos.Size = New System.Drawing.Size(592, 316)
         Me.PanelDatos.TabIndex = 57
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(324, 87)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(187, 28)
-        Me.ComboBox2.TabIndex = 20
         '
         'PanelBuscarDiag
         '
@@ -127,15 +113,6 @@ Partial Class FormCargo
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(187, 26)
         Me.TextBox2.TabIndex = 17
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(133, 90)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(150, 20)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "ESPECIALISTA EN"
         '
         'Label1
         '
@@ -192,25 +169,6 @@ Partial Class FormCargo
         Me.IdCargo.Visible = False
         Me.IdCargo.Width = 150
         '
-        'IdEspecialista
-        '
-        Me.IdEspecialista.DataPropertyName = "IdEspecialista"
-        Me.IdEspecialista.HeaderText = "IDESPEC"
-        Me.IdEspecialista.MinimumWidth = 8
-        Me.IdEspecialista.Name = "IdEspecialista"
-        Me.IdEspecialista.ReadOnly = True
-        Me.IdEspecialista.Visible = False
-        Me.IdEspecialista.Width = 150
-        '
-        'especialidad
-        '
-        Me.especialidad.DataPropertyName = "especialidad"
-        Me.especialidad.HeaderText = "ESPECIALISTA "
-        Me.especialidad.MinimumWidth = 8
-        Me.especialidad.Name = "especialidad"
-        Me.especialidad.ReadOnly = True
-        Me.especialidad.Width = 150
-        '
         'cargoper
         '
         Me.cargoper.DataPropertyName = "cargoper"
@@ -224,7 +182,7 @@ Partial Class FormCargo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1201, 491)
+        Me.ClientSize = New System.Drawing.Size(1247, 542)
         Me.Controls.Add(Me.PanelBD)
         Me.Controls.Add(Me.PanelDatos)
         Me.Controls.Add(Me.Button1)
@@ -249,17 +207,13 @@ Partial Class FormCargo
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents PanelDatos As Panel
-    Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents PanelBuscarDiag As Panel
     Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents modificarBT As Button
     Friend WithEvents nuevoBT As Button
     Friend WithEvents eliminarBT As Button
     Friend WithEvents IdCargo As DataGridViewTextBoxColumn
-    Friend WithEvents IdEspecialista As DataGridViewTextBoxColumn
-    Friend WithEvents especialidad As DataGridViewTextBoxColumn
     Friend WithEvents cargoper As DataGridViewTextBoxColumn
 End Class

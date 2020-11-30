@@ -13,16 +13,11 @@
         datatable = conexion.obtenerdatos().Tables("CargoPersonal")
         datatable.PrimaryKey = New DataColumn() {datatable.Columns("IdCargo")}
 
-        ComboBox2.DataSource = conexion.obtenerdatos().Tables("especialista").DefaultView()
-        ComboBox2.DisplayMember = "especialidad"
-        ComboBox2.ValueMember = "especialista.IdEspecialista"
 
     End Sub
     Sub mostrardatos()
         Me.Tag = datatable.Rows(posicion).ItemArray(0).ToString()
-
-        ComboBox2.SelectedValue = datatable.Rows(posicion).ItemArray(1).ToString()
-        TextBox2.Text = datatable.Rows(posicion).ItemArray(2).ToString()
+        TextBox2.Text = datatable.Rows(posicion).ItemArray(1).ToString()
     End Sub
     Private Sub SeleccionarDato()
         idc = DataGridView1.CurrentRow.Cells("IdCargo").Value.ToString()
@@ -83,7 +78,7 @@
             limpiarCampos()
         Else 'Guardar
             Dim msg = conexion.mantenimientoDatosCargo(New String() {
-                Me.Tag, ComboBox2.SelectedValue, TextBox2.Text
+                Me.Tag, TextBox2.Text
                }, cambio)
             If msg = "error" Then
                 MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro de Clientes",
@@ -114,7 +109,7 @@
         If eliminarBT.Text = "Eliminar" Then
             If (MessageBox.Show("Esta seguro de borrar " + "Este dato", "Diagnostico",
                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
-                conexion.mantenimientoReceta(New String() {Me.Tag}, "eliminar")
+                conexion.mantenimientoDatosCargo(New String() {Me.Tag}, "eliminar")
                 limpiarCampos()
             End If
         Else
@@ -140,5 +135,13 @@
             Button1.Text = "Buscar"
             eliminarBT.Text = "Eliminar"
         End If
+    End Sub
+
+    Private Sub PanelDatos_Paint(sender As Object, e As PaintEventArgs) Handles PanelDatos.Paint
+
+    End Sub
+
+    Private Sub PanelBD_Paint(sender As Object, e As PaintEventArgs) Handles PanelBD.Paint
+
     End Sub
 End Class

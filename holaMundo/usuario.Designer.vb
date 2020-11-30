@@ -43,6 +43,8 @@ Partial Class usuario
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDatos.SuspendLayout()
@@ -138,6 +140,8 @@ Partial Class usuario
         '
         'PanelDatos
         '
+        Me.PanelDatos.Controls.Add(Me.ComboBox2)
+        Me.PanelDatos.Controls.Add(Me.Label5)
         Me.PanelDatos.Controls.Add(Me.PanelBuscarDiag)
         Me.PanelDatos.Controls.Add(Me.ComboBox1)
         Me.PanelDatos.Controls.Add(Me.TextBox2)
@@ -167,14 +171,14 @@ Partial Class usuario
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(324, 110)
+        Me.TextBox2.Location = New System.Drawing.Point(324, 146)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(187, 26)
         Me.TextBox2.TabIndex = 17
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(324, 37)
+        Me.TextBox1.Location = New System.Drawing.Point(324, 104)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(187, 26)
         Me.TextBox1.TabIndex = 16
@@ -182,7 +186,7 @@ Partial Class usuario
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(133, 194)
+        Me.Label3.Location = New System.Drawing.Point(99, 194)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(151, 20)
         Me.Label3.TabIndex = 15
@@ -191,7 +195,7 @@ Partial Class usuario
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(133, 116)
+        Me.Label2.Location = New System.Drawing.Point(99, 152)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(119, 20)
         Me.Label2.TabIndex = 10
@@ -200,7 +204,7 @@ Partial Class usuario
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(133, 40)
+        Me.Label1.Location = New System.Drawing.Point(99, 110)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(185, 20)
         Me.Label1.TabIndex = 9
@@ -241,6 +245,23 @@ Partial Class usuario
         Me.eliminarBT.TabIndex = 41
         Me.eliminarBT.Text = "Eliminar"
         Me.eliminarBT.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(99, 63)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(206, 20)
+        Me.Label5.TabIndex = 20
+        Me.Label5.Text = "NOMBRE DEL PERSONAL"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(324, 55)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox2.TabIndex = 21
         '
         'usuario
         '
@@ -285,4 +306,6 @@ Partial Class usuario
     Friend WithEvents tipo As DataGridViewTextBoxColumn
     Friend WithEvents username As DataGridViewTextBoxColumn
     Friend WithEvents contra As DataGridViewTextBoxColumn
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label5 As Label
 End Class

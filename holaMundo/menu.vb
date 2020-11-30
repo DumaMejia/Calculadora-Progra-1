@@ -53,4 +53,19 @@
         Dim objDatosPersonales As New DatosPersonales
         objDatosPersonales.Show()
     End Sub
+
+    Private Sub PruebaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PruebaToolStripMenuItem.Click
+        Dim ObjDfamiliar As New DatosFamiliar
+        ObjDfamiliar.Show()
+    End Sub
+
+    Private Sub PERSONALToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PERSONALToolStripMenuItem.Click
+        Dim Objpersonal As New Personal
+        Objpersonal.Show()
+    End Sub
+
+    Private Sub EXPEDIENTEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EXPEDIENTEToolStripMenuItem.Click
+        Dim objexpediente As New expediente
+        objexpediente.Show()
+    End Sub
 End Class

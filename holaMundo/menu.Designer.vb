@@ -32,11 +32,14 @@ Partial Class menu
         Me.RECETAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TRASLADOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ALERGIAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DATOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PruebaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PEROSNALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CARGOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.USUARIOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HORARIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DATOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PERSONALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EXPEDIENTEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -73,7 +76,7 @@ Partial Class menu
         '
         'PACIENTEToolStripMenuItem
         '
-        Me.PACIENTEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ENFERMEDADESToolStripMenuItem, Me.DIAGNOSTICOToolStripMenuItem, Me.RECETAToolStripMenuItem, Me.TRASLADOToolStripMenuItem, Me.ALERGIAToolStripMenuItem, Me.DATOSToolStripMenuItem})
+        Me.PACIENTEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ENFERMEDADESToolStripMenuItem, Me.DIAGNOSTICOToolStripMenuItem, Me.RECETAToolStripMenuItem, Me.TRASLADOToolStripMenuItem, Me.ALERGIAToolStripMenuItem, Me.DATOSToolStripMenuItem, Me.PruebaToolStripMenuItem, Me.EXPEDIENTEToolStripMenuItem})
         Me.PACIENTEToolStripMenuItem.Name = "PACIENTEToolStripMenuItem"
         Me.PACIENTEToolStripMenuItem.Size = New System.Drawing.Size(105, 29)
         Me.PACIENTEToolStripMenuItem.Text = "PACIENTE"
@@ -81,36 +84,48 @@ Partial Class menu
         'ENFERMEDADESToolStripMenuItem
         '
         Me.ENFERMEDADESToolStripMenuItem.Name = "ENFERMEDADESToolStripMenuItem"
-        Me.ENFERMEDADESToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.ENFERMEDADESToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.ENFERMEDADESToolStripMenuItem.Text = "ENFERMEDADES"
         '
         'DIAGNOSTICOToolStripMenuItem
         '
         Me.DIAGNOSTICOToolStripMenuItem.Name = "DIAGNOSTICOToolStripMenuItem"
-        Me.DIAGNOSTICOToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.DIAGNOSTICOToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.DIAGNOSTICOToolStripMenuItem.Text = "DIAGNOSTICO"
         '
         'RECETAToolStripMenuItem
         '
         Me.RECETAToolStripMenuItem.Name = "RECETAToolStripMenuItem"
-        Me.RECETAToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.RECETAToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.RECETAToolStripMenuItem.Text = "RECETA"
         '
         'TRASLADOToolStripMenuItem
         '
         Me.TRASLADOToolStripMenuItem.Name = "TRASLADOToolStripMenuItem"
-        Me.TRASLADOToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.TRASLADOToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.TRASLADOToolStripMenuItem.Text = "TRASLADO"
         '
         'ALERGIAToolStripMenuItem
         '
         Me.ALERGIAToolStripMenuItem.Name = "ALERGIAToolStripMenuItem"
-        Me.ALERGIAToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.ALERGIAToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.ALERGIAToolStripMenuItem.Text = "ALERGIA"
+        '
+        'DATOSToolStripMenuItem
+        '
+        Me.DATOSToolStripMenuItem.Name = "DATOSToolStripMenuItem"
+        Me.DATOSToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
+        Me.DATOSToolStripMenuItem.Text = "DATOS"
+        '
+        'PruebaToolStripMenuItem
+        '
+        Me.PruebaToolStripMenuItem.Name = "PruebaToolStripMenuItem"
+        Me.PruebaToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
+        Me.PruebaToolStripMenuItem.Text = "DATOS DE FAMILIARES"
         '
         'PEROSNALToolStripMenuItem
         '
-        Me.PEROSNALToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CARGOToolStripMenuItem, Me.USUARIOSToolStripMenuItem, Me.HORARIOToolStripMenuItem})
+        Me.PEROSNALToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CARGOToolStripMenuItem, Me.USUARIOSToolStripMenuItem, Me.HORARIOToolStripMenuItem, Me.PERSONALToolStripMenuItem})
         Me.PEROSNALToolStripMenuItem.Name = "PEROSNALToolStripMenuItem"
         Me.PEROSNALToolStripMenuItem.Size = New System.Drawing.Size(115, 29)
         Me.PEROSNALToolStripMenuItem.Text = "PERSONAL"
@@ -118,26 +133,32 @@ Partial Class menu
         'CARGOToolStripMenuItem
         '
         Me.CARGOToolStripMenuItem.Name = "CARGOToolStripMenuItem"
-        Me.CARGOToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.CARGOToolStripMenuItem.Size = New System.Drawing.Size(201, 34)
         Me.CARGOToolStripMenuItem.Text = "CARGO"
         '
         'USUARIOSToolStripMenuItem
         '
         Me.USUARIOSToolStripMenuItem.Name = "USUARIOSToolStripMenuItem"
-        Me.USUARIOSToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.USUARIOSToolStripMenuItem.Size = New System.Drawing.Size(201, 34)
         Me.USUARIOSToolStripMenuItem.Text = "USUARIOS"
         '
         'HORARIOToolStripMenuItem
         '
         Me.HORARIOToolStripMenuItem.Name = "HORARIOToolStripMenuItem"
-        Me.HORARIOToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.HORARIOToolStripMenuItem.Size = New System.Drawing.Size(201, 34)
         Me.HORARIOToolStripMenuItem.Text = "HORARIO"
         '
-        'DATOSToolStripMenuItem
+        'PERSONALToolStripMenuItem
         '
-        Me.DATOSToolStripMenuItem.Name = "DATOSToolStripMenuItem"
-        Me.DATOSToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
-        Me.DATOSToolStripMenuItem.Text = "DATOS"
+        Me.PERSONALToolStripMenuItem.Name = "PERSONALToolStripMenuItem"
+        Me.PERSONALToolStripMenuItem.Size = New System.Drawing.Size(201, 34)
+        Me.PERSONALToolStripMenuItem.Text = "PERSONAL"
+        '
+        'EXPEDIENTEToolStripMenuItem
+        '
+        Me.EXPEDIENTEToolStripMenuItem.Name = "EXPEDIENTEToolStripMenuItem"
+        Me.EXPEDIENTEToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
+        Me.EXPEDIENTEToolStripMenuItem.Text = "EXPEDIENTE"
         '
         'menu
         '
@@ -170,4 +191,7 @@ Partial Class menu
     Friend WithEvents TRASLADOToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ALERGIAToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DATOSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PruebaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PERSONALToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EXPEDIENTEToolStripMenuItem As ToolStripMenuItem
 End Class

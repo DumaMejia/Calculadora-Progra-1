@@ -3,6 +3,7 @@
     Dim datatable As New DataTable
     Dim posicion As Integer
     Public idc As Integer
+    Public idc2 As Integer
     Dim cambio As String = "nuevo"
     Private Sub DatosPersonales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         posicion = 0
