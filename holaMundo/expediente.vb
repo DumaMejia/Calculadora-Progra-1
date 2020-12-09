@@ -2,6 +2,8 @@
     Dim conexion As New db_conexion
     Dim datatable As New DataTable
     Dim posicion As Integer
+    Dim posicion2 As Integer
+    Dim posicion3 As Integer
     Public idc As Integer
     Public idc2 As Integer
     Dim cambio As String = "nuevo"
@@ -69,7 +71,7 @@
         eliminarBT.Enabled = Not estado
         Button1.Enabled = Not estado
         modificarBT.Enabled = estado
-
+        PanelD.Enabled = Not estado
     End Sub
     Private Sub controlesInicio(ByVal estado As Boolean)
         nuevoBT.Enabled = estado
@@ -78,7 +80,7 @@
         eliminarBT.Enabled = Not estado
         Button1.Enabled = estado
         modificarBT.Enabled = Not estado
-
+        PanelD.Enabled = Not estado
     End Sub
     Private Sub controlesBuscar(ByVal estado As Boolean)
         PanelDatos.Enabled = Not estado
@@ -87,6 +89,7 @@
         Button1.Enabled = estado
         modificarBT.Enabled = Not estado
         nuevoBT.Enabled = Not estado
+        PanelD.Enabled = Not estado
     End Sub
     Private Sub controlesOpen(ByVal estado As Boolean)
         PanelDatos.Enabled = Not estado
@@ -95,6 +98,7 @@
         Button1.Enabled = estado
         modificarBT.Enabled = estado
         nuevoBT.Enabled = estado
+        PanelD.Enabled = Not estado
     End Sub
     Private Sub limpiarCampos()
         TextBox1.Text = ""
@@ -166,5 +170,15 @@
             Button1.Text = "Buscar"
             eliminarBT.Text = "Eliminar"
         End If
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim objDatosPersonales As New DatosPersonales
+        objDatosPersonales.ShowDialog()
+
+        obtenerdatos()
+
+        ComboBox3.SelectedValue = objDatosPersonales.idc2
+
     End Sub
 End Class

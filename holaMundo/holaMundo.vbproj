@@ -67,6 +67,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -113,6 +114,11 @@
     <Compile Include="DatosPersonales.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DBClinicaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBClinicaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="diagnostico.Designer.vb">
       <DependentUpon>diagnostico.vb</DependentUpon>
     </Compile>
@@ -123,6 +129,12 @@
       <DependentUpon>expediente.vb</DependentUpon>
     </Compile>
     <Compile Include="expediente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FichaExpediente.Designer.vb">
+      <DependentUpon>FichaExpediente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FichaExpediente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -154,6 +166,12 @@
       <DependentUpon>FormCargo.vb</DependentUpon>
     </Compile>
     <Compile Include="FormCargo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FVentas.Designer.vb">
+      <DependentUpon>FVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FVentas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="horario.Designer.vb">
@@ -234,6 +252,9 @@
     <EmbeddedResource Include="expediente.resx">
       <DependentUpon>expediente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FichaExpediente.resx">
+      <DependentUpon>FichaExpediente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCargo.resx">
       <DependentUpon>FormCargo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FVentas.resx">
+      <DependentUpon>FVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="horario.resx">
       <DependentUpon>horario.vb</DependentUpon>
@@ -278,6 +302,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DBClinicaDataSet.xsc">
+      <DependentUpon>DBClinicaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBClinicaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBClinicaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBClinicaDataSet.xss">
+      <DependentUpon>DBClinicaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

@@ -68,4 +68,9 @@
         Dim objexpediente As New expediente
         objexpediente.Show()
     End Sub
+
+    Private Sub VENTAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VENTAToolStripMenuItem.Click
+        Dim objventa As New FVentas
+        objventa.Show()
+    End Sub
 End Class

@@ -34,12 +34,13 @@ Partial Class menu
         Me.ALERGIAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DATOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PruebaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EXPEDIENTEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PEROSNALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CARGOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.USUARIOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HORARIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PERSONALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EXPEDIENTEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VENTAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,7 +58,7 @@ Partial Class menu
         '
         'PACIENTESToolStripMenuItem
         '
-        Me.PACIENTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MEDICAMENTOSToolStripMenuItem, Me.PROVEEDORToolStripMenuItem})
+        Me.PACIENTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MEDICAMENTOSToolStripMenuItem, Me.PROVEEDORToolStripMenuItem, Me.VENTAToolStripMenuItem})
         Me.PACIENTESToolStripMenuItem.Name = "PACIENTESToolStripMenuItem"
         Me.PACIENTESToolStripMenuItem.Size = New System.Drawing.Size(112, 29)
         Me.PACIENTESToolStripMenuItem.Text = "MEDICINA"
@@ -65,13 +66,13 @@ Partial Class menu
         'MEDICAMENTOSToolStripMenuItem
         '
         Me.MEDICAMENTOSToolStripMenuItem.Name = "MEDICAMENTOSToolStripMenuItem"
-        Me.MEDICAMENTOSToolStripMenuItem.Size = New System.Drawing.Size(250, 34)
+        Me.MEDICAMENTOSToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
         Me.MEDICAMENTOSToolStripMenuItem.Text = "MEDICAMENTOS"
         '
         'PROVEEDORToolStripMenuItem
         '
         Me.PROVEEDORToolStripMenuItem.Name = "PROVEEDORToolStripMenuItem"
-        Me.PROVEEDORToolStripMenuItem.Size = New System.Drawing.Size(250, 34)
+        Me.PROVEEDORToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
         Me.PROVEEDORToolStripMenuItem.Text = "PROVEEDOR"
         '
         'PACIENTEToolStripMenuItem
@@ -123,6 +124,12 @@ Partial Class menu
         Me.PruebaToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.PruebaToolStripMenuItem.Text = "DATOS DE FAMILIARES"
         '
+        'EXPEDIENTEToolStripMenuItem
+        '
+        Me.EXPEDIENTEToolStripMenuItem.Name = "EXPEDIENTEToolStripMenuItem"
+        Me.EXPEDIENTEToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
+        Me.EXPEDIENTEToolStripMenuItem.Text = "EXPEDIENTE"
+        '
         'PEROSNALToolStripMenuItem
         '
         Me.PEROSNALToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CARGOToolStripMenuItem, Me.USUARIOSToolStripMenuItem, Me.HORARIOToolStripMenuItem, Me.PERSONALToolStripMenuItem})
@@ -154,11 +161,11 @@ Partial Class menu
         Me.PERSONALToolStripMenuItem.Size = New System.Drawing.Size(201, 34)
         Me.PERSONALToolStripMenuItem.Text = "PERSONAL"
         '
-        'EXPEDIENTEToolStripMenuItem
+        'VENTAToolStripMenuItem
         '
-        Me.EXPEDIENTEToolStripMenuItem.Name = "EXPEDIENTEToolStripMenuItem"
-        Me.EXPEDIENTEToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
-        Me.EXPEDIENTEToolStripMenuItem.Text = "EXPEDIENTE"
+        Me.VENTAToolStripMenuItem.Name = "VENTAToolStripMenuItem"
+        Me.VENTAToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.VENTAToolStripMenuItem.Text = "VENTA "
         '
         'menu
         '
@@ -194,4 +201,5 @@ Partial Class menu
     Friend WithEvents PruebaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PERSONALToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EXPEDIENTEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents VENTAToolStripMenuItem As ToolStripMenuItem
 End Class

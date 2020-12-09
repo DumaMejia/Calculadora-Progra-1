@@ -137,6 +137,13 @@
                 controlesInicio(True)
                 nuevoBT.Text = "Nuevo"
                 modificarBT.Text = "Modificar"
+
+                obtenerdatos()
+                posicion = datatable.Rows.Count - 1
+                mostrardatos()
+
+                idc2 = Me.Tag
+                Close()
             End If
         End If
     End Sub
