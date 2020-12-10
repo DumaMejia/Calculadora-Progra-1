@@ -177,7 +177,7 @@
         objDatosPersonales.ShowDialog()
 
         obtenerdatos()
-
+        MessageBox.Show(objDatosPersonales.idc2)
         ComboBox3.SelectedValue = objDatosPersonales.idc2
 
     End Sub

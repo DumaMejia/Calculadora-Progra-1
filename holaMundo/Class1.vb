@@ -360,9 +360,9 @@ Public Class db_conexion
         Dim sql, msg As String
         Select Case cambio
             Case "nuevo"
-                sql = "INSERT INTO DatosPersonales (IdCivil,IdOficio,Idsangre,Idgenero,IdEnfermedad,nacimiento,telefono,direccion,correo) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "','" + datos(6) + "','" + datos(7) + "','" + datos(8) + "','" + datos(9) + "')"
+                sql = "INSERT INTO DatosPersonales (IdCivil,IdOficio,Idsangre,Idgenero,nacimiento,telefono,direccion,correo) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "','" + datos(6) + "','" + datos(7) + "','" + datos(8) + "')"
             Case "modificar"
-                sql = "UPDATE DatosPersonales SET IdCivil='" + datos(1) + "',IdOficio='" + datos(2) + "',Idsangre='" + datos(3) + "',Idgenero='" + datos(4) + "',IdEnfermedad='" + datos(5) + "',nacimiento='" + datos(6) + "',telefono='" + datos(7) + "',direccion='" + datos(8) + "',correo='" + datos(9) + "' WHERE IdDatos='" + datos(0) + "'"
+                sql = "UPDATE DatosPersonales SET IdCivil='" + datos(1) + "',IdOficio='" + datos(2) + "',Idsangre='" + datos(3) + "',Idgenero='" + datos(4) + "',nacimiento='" + datos(5) + "',telefono='" + datos(6) + "',direccion='" + datos(7) + "',correo='" + datos(8) + "' WHERE IdDatos='" + datos(0) + "'"
             Case "eliminar"
                 sql = "DELETE FROM DatosPersonales WHERE IdDatos='" + datos(0) + "'"
         End Select

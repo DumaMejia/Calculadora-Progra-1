@@ -24,6 +24,20 @@ Partial Class DatosPersonales
     Private Sub InitializeComponent()
         Me.PanelBD = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdDatos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCivil = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdOficio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Idsangre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Idgenero = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdEnfermedad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nacimiento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.oficio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.genero = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PanelDatos = New System.Windows.Forms.Panel()
@@ -50,20 +64,6 @@ Partial Class DatosPersonales
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
-        Me.IdDatos = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCivil = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdOficio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Idsangre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Idgenero = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEnfermedad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nacimiento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.oficio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.genero = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDatos.SuspendLayout()
@@ -92,6 +92,139 @@ Partial Class DatosPersonales
         Me.DataGridView1.RowTemplate.Height = 28
         Me.DataGridView1.Size = New System.Drawing.Size(529, 375)
         Me.DataGridView1.TabIndex = 45
+        '
+        'IdDatos
+        '
+        Me.IdDatos.DataPropertyName = "IdDatos"
+        Me.IdDatos.HeaderText = "IDDATOS"
+        Me.IdDatos.MinimumWidth = 8
+        Me.IdDatos.Name = "IdDatos"
+        Me.IdDatos.ReadOnly = True
+        Me.IdDatos.Visible = False
+        Me.IdDatos.Width = 150
+        '
+        'IdCivil
+        '
+        Me.IdCivil.DataPropertyName = "IdCivil"
+        Me.IdCivil.HeaderText = "IDCIVIL"
+        Me.IdCivil.MinimumWidth = 8
+        Me.IdCivil.Name = "IdCivil"
+        Me.IdCivil.ReadOnly = True
+        Me.IdCivil.Visible = False
+        Me.IdCivil.Width = 150
+        '
+        'IdOficio
+        '
+        Me.IdOficio.DataPropertyName = "IdOficio"
+        Me.IdOficio.HeaderText = "IDOFICIO"
+        Me.IdOficio.MinimumWidth = 8
+        Me.IdOficio.Name = "IdOficio"
+        Me.IdOficio.ReadOnly = True
+        Me.IdOficio.Visible = False
+        Me.IdOficio.Width = 150
+        '
+        'Idsangre
+        '
+        Me.Idsangre.DataPropertyName = "Idsangre"
+        Me.Idsangre.HeaderText = "IDSANGRE"
+        Me.Idsangre.MinimumWidth = 8
+        Me.Idsangre.Name = "Idsangre"
+        Me.Idsangre.ReadOnly = True
+        Me.Idsangre.Visible = False
+        Me.Idsangre.Width = 150
+        '
+        'Idgenero
+        '
+        Me.Idgenero.DataPropertyName = "Idgenero"
+        Me.Idgenero.HeaderText = "IDGENERO"
+        Me.Idgenero.MinimumWidth = 8
+        Me.Idgenero.Name = "Idgenero"
+        Me.Idgenero.ReadOnly = True
+        Me.Idgenero.Visible = False
+        Me.Idgenero.Width = 150
+        '
+        'IdEnfermedad
+        '
+        Me.IdEnfermedad.DataPropertyName = "IdEnfermedad"
+        Me.IdEnfermedad.HeaderText = "IDENFERMEDAD"
+        Me.IdEnfermedad.MinimumWidth = 8
+        Me.IdEnfermedad.Name = "IdEnfermedad"
+        Me.IdEnfermedad.ReadOnly = True
+        Me.IdEnfermedad.Visible = False
+        Me.IdEnfermedad.Width = 150
+        '
+        'nacimiento
+        '
+        Me.nacimiento.DataPropertyName = "nacimiento"
+        Me.nacimiento.HeaderText = "NACIMIENTO"
+        Me.nacimiento.MinimumWidth = 8
+        Me.nacimiento.Name = "nacimiento"
+        Me.nacimiento.ReadOnly = True
+        Me.nacimiento.Width = 150
+        '
+        'telefono
+        '
+        Me.telefono.DataPropertyName = "telefono"
+        Me.telefono.HeaderText = "TELEFONO"
+        Me.telefono.MinimumWidth = 8
+        Me.telefono.Name = "telefono"
+        Me.telefono.ReadOnly = True
+        Me.telefono.Width = 150
+        '
+        'direccion
+        '
+        Me.direccion.DataPropertyName = "direccion"
+        Me.direccion.FillWeight = 200.0!
+        Me.direccion.HeaderText = "DIRECCION"
+        Me.direccion.MinimumWidth = 8
+        Me.direccion.Name = "direccion"
+        Me.direccion.ReadOnly = True
+        Me.direccion.Width = 150
+        '
+        'correo
+        '
+        Me.correo.DataPropertyName = "correo"
+        Me.correo.HeaderText = "CORREO"
+        Me.correo.MinimumWidth = 8
+        Me.correo.Name = "correo"
+        Me.correo.ReadOnly = True
+        Me.correo.Width = 150
+        '
+        'estado
+        '
+        Me.estado.DataPropertyName = "estado"
+        Me.estado.HeaderText = "ESTADO CIVIL"
+        Me.estado.MinimumWidth = 8
+        Me.estado.Name = "estado"
+        Me.estado.ReadOnly = True
+        Me.estado.Width = 150
+        '
+        'oficio
+        '
+        Me.oficio.DataPropertyName = "oficio"
+        Me.oficio.HeaderText = "OFICIO"
+        Me.oficio.MinimumWidth = 8
+        Me.oficio.Name = "oficio"
+        Me.oficio.ReadOnly = True
+        Me.oficio.Width = 150
+        '
+        'genero
+        '
+        Me.genero.DataPropertyName = "genero"
+        Me.genero.HeaderText = "GENERO"
+        Me.genero.MinimumWidth = 8
+        Me.genero.Name = "genero"
+        Me.genero.ReadOnly = True
+        Me.genero.Width = 150
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "ENFERMEDADES"
+        Me.nombre.MinimumWidth = 8
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 150
         '
         'TextBox3
         '
@@ -326,139 +459,6 @@ Partial Class DatosPersonales
         Me.eliminarBT.TabIndex = 47
         Me.eliminarBT.Text = "Eliminar"
         Me.eliminarBT.UseVisualStyleBackColor = True
-        '
-        'IdDatos
-        '
-        Me.IdDatos.DataPropertyName = "IdDatos"
-        Me.IdDatos.HeaderText = "IDDATOS"
-        Me.IdDatos.MinimumWidth = 8
-        Me.IdDatos.Name = "IdDatos"
-        Me.IdDatos.ReadOnly = True
-        Me.IdDatos.Visible = False
-        Me.IdDatos.Width = 150
-        '
-        'IdCivil
-        '
-        Me.IdCivil.DataPropertyName = "IdCivil"
-        Me.IdCivil.HeaderText = "IDCIVIL"
-        Me.IdCivil.MinimumWidth = 8
-        Me.IdCivil.Name = "IdCivil"
-        Me.IdCivil.ReadOnly = True
-        Me.IdCivil.Visible = False
-        Me.IdCivil.Width = 150
-        '
-        'IdOficio
-        '
-        Me.IdOficio.DataPropertyName = "IdOficio"
-        Me.IdOficio.HeaderText = "IDOFICIO"
-        Me.IdOficio.MinimumWidth = 8
-        Me.IdOficio.Name = "IdOficio"
-        Me.IdOficio.ReadOnly = True
-        Me.IdOficio.Visible = False
-        Me.IdOficio.Width = 150
-        '
-        'Idsangre
-        '
-        Me.Idsangre.DataPropertyName = "Idsangre"
-        Me.Idsangre.HeaderText = "IDSANGRE"
-        Me.Idsangre.MinimumWidth = 8
-        Me.Idsangre.Name = "Idsangre"
-        Me.Idsangre.ReadOnly = True
-        Me.Idsangre.Visible = False
-        Me.Idsangre.Width = 150
-        '
-        'Idgenero
-        '
-        Me.Idgenero.DataPropertyName = "Idgenero"
-        Me.Idgenero.HeaderText = "IDGENERO"
-        Me.Idgenero.MinimumWidth = 8
-        Me.Idgenero.Name = "Idgenero"
-        Me.Idgenero.ReadOnly = True
-        Me.Idgenero.Visible = False
-        Me.Idgenero.Width = 150
-        '
-        'IdEnfermedad
-        '
-        Me.IdEnfermedad.DataPropertyName = "IdEnfermedad"
-        Me.IdEnfermedad.HeaderText = "IDENFERMEDAD"
-        Me.IdEnfermedad.MinimumWidth = 8
-        Me.IdEnfermedad.Name = "IdEnfermedad"
-        Me.IdEnfermedad.ReadOnly = True
-        Me.IdEnfermedad.Visible = False
-        Me.IdEnfermedad.Width = 150
-        '
-        'nacimiento
-        '
-        Me.nacimiento.DataPropertyName = "nacimiento"
-        Me.nacimiento.HeaderText = "NACIMIENTO"
-        Me.nacimiento.MinimumWidth = 8
-        Me.nacimiento.Name = "nacimiento"
-        Me.nacimiento.ReadOnly = True
-        Me.nacimiento.Width = 150
-        '
-        'telefono
-        '
-        Me.telefono.DataPropertyName = "telefono"
-        Me.telefono.HeaderText = "TELEFONO"
-        Me.telefono.MinimumWidth = 8
-        Me.telefono.Name = "telefono"
-        Me.telefono.ReadOnly = True
-        Me.telefono.Width = 150
-        '
-        'direccion
-        '
-        Me.direccion.DataPropertyName = "direccion"
-        Me.direccion.FillWeight = 200.0!
-        Me.direccion.HeaderText = "DIRECCION"
-        Me.direccion.MinimumWidth = 8
-        Me.direccion.Name = "direccion"
-        Me.direccion.ReadOnly = True
-        Me.direccion.Width = 150
-        '
-        'correo
-        '
-        Me.correo.DataPropertyName = "correo"
-        Me.correo.HeaderText = "CORREO"
-        Me.correo.MinimumWidth = 8
-        Me.correo.Name = "correo"
-        Me.correo.ReadOnly = True
-        Me.correo.Width = 150
-        '
-        'estado
-        '
-        Me.estado.DataPropertyName = "estado"
-        Me.estado.HeaderText = "ESTADO CIVIL"
-        Me.estado.MinimumWidth = 8
-        Me.estado.Name = "estado"
-        Me.estado.ReadOnly = True
-        Me.estado.Width = 150
-        '
-        'oficio
-        '
-        Me.oficio.DataPropertyName = "oficio"
-        Me.oficio.HeaderText = "OFICIO"
-        Me.oficio.MinimumWidth = 8
-        Me.oficio.Name = "oficio"
-        Me.oficio.ReadOnly = True
-        Me.oficio.Width = 150
-        '
-        'genero
-        '
-        Me.genero.DataPropertyName = "genero"
-        Me.genero.HeaderText = "GENERO"
-        Me.genero.MinimumWidth = 8
-        Me.genero.Name = "genero"
-        Me.genero.ReadOnly = True
-        Me.genero.Width = 150
-        '
-        'nombre
-        '
-        Me.nombre.DataPropertyName = "nombre"
-        Me.nombre.HeaderText = "ENFERMEDADES"
-        Me.nombre.MinimumWidth = 8
-        Me.nombre.Name = "nombre"
-        Me.nombre.ReadOnly = True
-        Me.nombre.Width = 150
         '
         'DatosPersonales
         '

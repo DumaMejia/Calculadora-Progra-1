@@ -4,12 +4,12 @@
     Dim posicion As Integer
     Public idc As Integer
     Dim cambio As String = "nuevo"
+    Public VentaDetalle As Integer
     Private Sub FVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        posicion = 1
+        posicion = 0
+        VentaDetalle = 2
         controlesInicio(True)
         obtenerdatos()
-        mostrardatos()
-        DatosGrid()
     End Sub
     Sub obtenerdatos()
         datatable = conexion.obtenerdatos().Tables("Ventas")
@@ -42,15 +42,7 @@
 
 
     End Sub
-    'Private Sub SeleccionarDato()
-    '  idc = DataGridView1.CurrentRow.Cells("Idfamiliar").Value.ToString()
-    'End Sub
-    'Private Sub TextBox4_KeyUp(sender As Object, e As KeyEventArgs) Handles TextBox3.KeyUp
-    '   filtrar(TextBox4.Text)
-    'If e.KeyCode = 13 Then
-    '       SeleccionarDato()
-    'End If
-    'End Sub
+
     Private Sub DatosGrid()
         DataGridView1.DataSource = conexion.obtenerdatos().Tables("DVenta").DefaultView
         filtrar(TextBox2.Text.Trim)
@@ -109,6 +101,7 @@
             If idc > 0 Then
                 posicion = datatable.Rows.IndexOf(datatable.Rows.Find(idc))
                 mostrardatos()
+
             End If
             controlesOpen(True)
             Button1.Text = "Buscar"
@@ -124,13 +117,22 @@
             controlesNuevo(True)
             limpiarCampos()
         Else 'Guardar
-            Dim msg = conexion.mantenimientoDatosFamiliar(New String() {
-                Me.Tag, TextBox1.Text, TextBox2.Text, ComboBox1.SelectedValue, TextBox3.Text, ComboBox2.SelectedValue, ComboBox3.SelectedValue
+            Dim msg = conexion.mantenimientoVenta(New String() {
+                Me.Tag, ComboBox1.SelectedValue, ComboBox2.SelectedValue, ComboBox3.SelectedValue, TextBox1.Text, TextBox2.Text, TextBox3.Text
                }, cambio)
             If msg = "error" Then
-                MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro de Clientes",
+                MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
+                obtenerdatos()
+                posicion = datatable.Rows.Count - 1
+                mostrardatos()
+                Dim detalle As New DetalleVenta
+                detalle.factura = TextBox2.Text
+                detalle.IdV = Me.Tag
+                detalle.ShowDialog()
+
+                DatosGrid()
                 controlesInicio(True)
                 nuevoBT.Text = "Nuevo"
                 modificarBT.Text = "Modificar"
@@ -154,7 +156,7 @@
         If eliminarBT.Text = "Eliminar" Then
             If (MessageBox.Show("Esta seguro de borrar " + "este", " registro",
                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
-                conexion.mantenimientoDatosFamiliar(New String() {Me.Tag}, "eliminar")
+                conexion.mantenimientoVenta(New String() {Me.Tag}, "eliminar")
                 limpiarCampos()
             End If
         Else

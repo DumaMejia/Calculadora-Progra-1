@@ -41,11 +41,10 @@
         ComboBox2.SelectedValue = datatable.Rows(posicion).ItemArray(2).ToString()
         ComboBox3.SelectedValue = datatable.Rows(posicion).ItemArray(3).ToString()
         ComboBox4.SelectedValue = datatable.Rows(posicion).ItemArray(4).ToString()
-        ComboBox5.SelectedValue = datatable.Rows(posicion).ItemArray(5).ToString()
-        TextBox1.Text = datatable.Rows(posicion).ItemArray(6).ToString()
-        TextBox2.Text = datatable.Rows(posicion).ItemArray(7).ToString()
-        TextBox4.Text = datatable.Rows(posicion).ItemArray(8).ToString()
-        TextBox5.Text = datatable.Rows(posicion).ItemArray(9).ToString()
+        TextBox1.Text = datatable.Rows(posicion).ItemArray(5).ToString()
+        TextBox2.Text = datatable.Rows(posicion).ItemArray(6).ToString()
+        TextBox4.Text = datatable.Rows(posicion).ItemArray(7).ToString()
+        TextBox5.Text = datatable.Rows(posicion).ItemArray(8).ToString()
     End Sub
     Private Sub SeleccionarDato()
         idc = DataGridView1.CurrentRow.Cells("IdDatos").Value.ToString()
@@ -128,7 +127,7 @@
             limpiarCampos()
         Else 'Guardar
             Dim msg = conexion.mantenimientoDatosPersonales(New String() {
-                Me.Tag, ComboBox1.SelectedValue, ComboBox2.SelectedValue, ComboBox3.SelectedValue, ComboBox4.SelectedValue, ComboBox5.SelectedValue, TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox5.Text
+                Me.Tag, ComboBox1.SelectedValue, ComboBox2.SelectedValue, ComboBox3.SelectedValue, ComboBox4.SelectedValue, TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox5.Text
                }, cambio)
             If msg = "error" Then
                 MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro de Clientes",
@@ -172,5 +171,9 @@
             Button1.Text = "Buscar"
             eliminarBT.Text = "Eliminar"
         End If
+    End Sub
+
+    Private Sub PanelDatos_Paint(sender As Object, e As PaintEventArgs) Handles PanelDatos.Paint
+
     End Sub
 End Class

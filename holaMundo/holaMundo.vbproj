@@ -119,6 +119,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBClinicaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DetalleVenta.Designer.vb">
+      <DependentUpon>DetalleVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="diagnostico.Designer.vb">
       <DependentUpon>diagnostico.vb</DependentUpon>
     </Compile>
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DatosPersonales.resx">
       <DependentUpon>DatosPersonales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetalleVenta.resx">
+      <DependentUpon>DetalleVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="diagnostico.resx">
       <DependentUpon>diagnostico.vb</DependentUpon>
