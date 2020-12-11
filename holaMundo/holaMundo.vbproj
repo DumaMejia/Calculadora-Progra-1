@@ -101,6 +101,12 @@
     <Compile Include="BuscarProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BuscarVenta.Designer.vb">
+      <DependentUpon>BuscarVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Class1.vb" />
     <Compile Include="DatosFamiliar.Designer.vb">
       <DependentUpon>DatosFamiliar.vb</DependentUpon>
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarProveedor.resx">
       <DependentUpon>BuscarProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarVenta.resx">
+      <DependentUpon>BuscarVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DatosFamiliar.resx">
       <DependentUpon>DatosFamiliar.vb</DependentUpon>

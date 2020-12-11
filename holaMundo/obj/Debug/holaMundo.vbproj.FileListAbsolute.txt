@@ -220,3 +220,4 @@ C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.expedi
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.FichaExpediente.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.FVentas.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.DetalleVenta.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.BuscarVenta.resources

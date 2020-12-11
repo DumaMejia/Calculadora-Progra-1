@@ -32,8 +32,8 @@
 
         ComboBox2.SelectedValue = datatable.Rows(posicion).ItemArray(2).ToString()
 
-        TextBox1.Text = datatable.Rows(posicion).ItemArray(3).ToString()
-        TextBox2.Text = datatable.Rows(posicion).ItemArray(4).ToString()
+        TextBox2.Text = datatable.Rows(posicion).ItemArray(3).ToString()
+        TextBox3.Text = datatable.Rows(posicion).ItemArray(4).ToString()
 
     End Sub
 
@@ -94,6 +94,7 @@
             DatosGrid()
             controlesBuscar(True)
         Else
+            SeleccionarDato()
             If idc > 0 Then
                 posicion = datatable.Rows.IndexOf(datatable.Rows.Find(idc))
                 mostrardatos()

@@ -22,7 +22,6 @@ Partial Class BuscarProveedor
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.nuevo = New System.Windows.Forms.Button()
         Me.cancelar = New System.Windows.Forms.Button()
         Me.seleccionar = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -37,16 +36,6 @@ Partial Class BuscarProveedor
         Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'nuevo
-        '
-        Me.nuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.nuevo.Location = New System.Drawing.Point(125, 487)
-        Me.nuevo.Name = "nuevo"
-        Me.nuevo.Size = New System.Drawing.Size(190, 35)
-        Me.nuevo.TabIndex = 14
-        Me.nuevo.Text = "Nuevo"
-        Me.nuevo.UseVisualStyleBackColor = True
         '
         'cancelar
         '
@@ -167,7 +156,6 @@ Partial Class BuscarProveedor
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1116, 566)
-        Me.Controls.Add(Me.nuevo)
         Me.Controls.Add(Me.cancelar)
         Me.Controls.Add(Me.seleccionar)
         Me.Controls.Add(Me.DataGridView1)
@@ -181,8 +169,6 @@ Partial Class BuscarProveedor
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents nuevo As Button
     Friend WithEvents cancelar As Button
     Friend WithEvents seleccionar As Button
     Friend WithEvents DataGridView1 As DataGridView

@@ -49,6 +49,13 @@ Partial Class FVentas
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.LSuma = New System.Windows.Forms.Label()
+        Me.LIva = New System.Windows.Forms.Label()
+        Me.LTotal = New System.Windows.Forms.Label()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDatos.SuspendLayout()
@@ -56,7 +63,7 @@ Partial Class FVentas
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(378, 651)
+        Me.Button1.Location = New System.Drawing.Point(380, 602)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(113, 44)
         Me.Button1.TabIndex = 63
@@ -69,12 +76,12 @@ Partial Class FVentas
         Me.PanelBD.Controls.Add(Me.DataGridView1)
         Me.PanelBD.Location = New System.Drawing.Point(23, 175)
         Me.PanelBD.Name = "PanelBD"
-        Me.PanelBD.Size = New System.Drawing.Size(1179, 444)
+        Me.PanelBD.Size = New System.Drawing.Size(1179, 421)
         Me.PanelBD.TabIndex = 65
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(16, 388)
+        Me.Button2.Location = New System.Drawing.Point(16, 369)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(298, 44)
         Me.Button2.TabIndex = 66
@@ -86,7 +93,7 @@ Partial Class FVentas
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDVenta, Me.IdVentas, Me.Nfactura, Me.Id, Me.nombre, Me.cantidad, Me.precio})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDVenta, Me.IdVentas, Me.Nfactura, Me.Id, Me.nombre, Me.cantidad, Me.precio, Me.subtotal})
         Me.DataGridView1.Location = New System.Drawing.Point(16, 26)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -97,7 +104,7 @@ Partial Class FVentas
         '
         'modificarBT
         '
-        Me.modificarBT.Location = New System.Drawing.Point(140, 651)
+        Me.modificarBT.Location = New System.Drawing.Point(142, 602)
         Me.modificarBT.Name = "modificarBT"
         Me.modificarBT.Size = New System.Drawing.Size(113, 44)
         Me.modificarBT.TabIndex = 62
@@ -224,7 +231,7 @@ Partial Class FVentas
         '
         'nuevoBT
         '
-        Me.nuevoBT.Location = New System.Drawing.Point(12, 651)
+        Me.nuevoBT.Location = New System.Drawing.Point(14, 602)
         Me.nuevoBT.Name = "nuevoBT"
         Me.nuevoBT.Size = New System.Drawing.Size(113, 44)
         Me.nuevoBT.TabIndex = 61
@@ -233,7 +240,7 @@ Partial Class FVentas
         '
         'eliminarBT
         '
-        Me.eliminarBT.Location = New System.Drawing.Point(259, 651)
+        Me.eliminarBT.Location = New System.Drawing.Point(261, 602)
         Me.eliminarBT.Name = "eliminarBT"
         Me.eliminarBT.Size = New System.Drawing.Size(113, 44)
         Me.eliminarBT.TabIndex = 60
@@ -306,11 +313,79 @@ Partial Class FVentas
         Me.precio.ReadOnly = True
         Me.precio.Width = 150
         '
+        'subtotal
+        '
+        Me.subtotal.HeaderText = "SUBTOTAL"
+        Me.subtotal.MinimumWidth = 8
+        Me.subtotal.Name = "subtotal"
+        Me.subtotal.ReadOnly = True
+        Me.subtotal.Width = 150
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(897, 599)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(60, 20)
+        Me.Label2.TabIndex = 32
+        Me.Label2.Text = "SUMA:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(897, 619)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(40, 20)
+        Me.Label4.TabIndex = 66
+        Me.Label4.Text = "IVA:"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(897, 639)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(63, 20)
+        Me.Label9.TabIndex = 67
+        Me.Label9.Text = "TOTAL:"
+        '
+        'LSuma
+        '
+        Me.LSuma.AutoSize = True
+        Me.LSuma.Location = New System.Drawing.Point(1090, 599)
+        Me.LSuma.Name = "LSuma"
+        Me.LSuma.Size = New System.Drawing.Size(49, 20)
+        Me.LSuma.TabIndex = 68
+        Me.LSuma.Text = "00.00"
+        '
+        'LIva
+        '
+        Me.LIva.AutoSize = True
+        Me.LIva.Location = New System.Drawing.Point(1090, 619)
+        Me.LIva.Name = "LIva"
+        Me.LIva.Size = New System.Drawing.Size(49, 20)
+        Me.LIva.TabIndex = 69
+        Me.LIva.Text = "00.00"
+        '
+        'LTotal
+        '
+        Me.LTotal.AutoSize = True
+        Me.LTotal.Location = New System.Drawing.Point(1090, 639)
+        Me.LTotal.Name = "LTotal"
+        Me.LTotal.Size = New System.Drawing.Size(49, 20)
+        Me.LTotal.TabIndex = 70
+        Me.LTotal.Text = "00.00"
+        '
         'FVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1237, 719)
+        Me.ClientSize = New System.Drawing.Size(1237, 673)
+        Me.Controls.Add(Me.LTotal)
+        Me.Controls.Add(Me.LIva)
+        Me.Controls.Add(Me.LSuma)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PanelBD)
         Me.Controls.Add(Me.modificarBT)
@@ -324,6 +399,7 @@ Partial Class FVentas
         Me.PanelDatos.ResumeLayout(False)
         Me.PanelDatos.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -354,4 +430,11 @@ Partial Class FVentas
     Friend WithEvents nombre As DataGridViewTextBoxColumn
     Friend WithEvents cantidad As DataGridViewTextBoxColumn
     Friend WithEvents precio As DataGridViewTextBoxColumn
+    Friend WithEvents subtotal As DataGridViewTextBoxColumn
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents LSuma As Label
+    Friend WithEvents LIva As Label
+    Friend WithEvents LTotal As Label
 End Class

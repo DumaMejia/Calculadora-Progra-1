@@ -30,7 +30,7 @@
         idc = 0
     End Sub
 
-    Private Sub nuevo_Click(sender As Object, e As EventArgs) Handles nuevo.Click
+    Private Sub nuevo_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class
