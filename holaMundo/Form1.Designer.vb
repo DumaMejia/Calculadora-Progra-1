@@ -41,7 +41,7 @@ Partial Class Form1
         '
         'eliminarBT
         '
-        Me.eliminarBT.Location = New System.Drawing.Point(621, 303)
+        Me.eliminarBT.Location = New System.Drawing.Point(534, 303)
         Me.eliminarBT.Name = "eliminarBT"
         Me.eliminarBT.Size = New System.Drawing.Size(113, 44)
         Me.eliminarBT.TabIndex = 9
@@ -76,7 +76,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(502, 303)
+        Me.Button1.Location = New System.Drawing.Point(383, 303)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(113, 44)
         Me.Button1.TabIndex = 13
@@ -100,36 +100,36 @@ Partial Class Form1
         '
         'txtdescripcion
         '
-        Me.txtdescripcion.Location = New System.Drawing.Point(298, 119)
+        Me.txtdescripcion.Location = New System.Drawing.Point(298, 90)
         Me.txtdescripcion.Name = "txtdescripcion"
-        Me.txtdescripcion.Size = New System.Drawing.Size(293, 26)
+        Me.txtdescripcion.Size = New System.Drawing.Size(217, 26)
         Me.txtdescripcion.TabIndex = 16
         '
         'txtcantidad
         '
-        Me.txtcantidad.Location = New System.Drawing.Point(298, 172)
+        Me.txtcantidad.Location = New System.Drawing.Point(298, 135)
         Me.txtcantidad.Name = "txtcantidad"
-        Me.txtcantidad.Size = New System.Drawing.Size(293, 26)
+        Me.txtcantidad.Size = New System.Drawing.Size(217, 26)
         Me.txtcantidad.TabIndex = 15
         '
         'txtcaducidad
         '
-        Me.txtcaducidad.Location = New System.Drawing.Point(298, 219)
+        Me.txtcaducidad.Location = New System.Drawing.Point(300, 183)
         Me.txtcaducidad.Name = "txtcaducidad"
-        Me.txtcaducidad.Size = New System.Drawing.Size(293, 26)
+        Me.txtcaducidad.Size = New System.Drawing.Size(215, 26)
         Me.txtcaducidad.TabIndex = 14
         '
         'txtnombre
         '
         Me.txtnombre.Location = New System.Drawing.Point(298, 40)
         Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(293, 26)
+        Me.txtnombre.Size = New System.Drawing.Size(217, 26)
         Me.txtnombre.TabIndex = 13
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(132, 172)
+        Me.Label4.Location = New System.Drawing.Point(132, 141)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(91, 20)
         Me.Label4.TabIndex = 12
@@ -138,7 +138,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(132, 219)
+        Me.Label3.Location = New System.Drawing.Point(132, 189)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(106, 20)
         Me.Label3.TabIndex = 11
@@ -147,7 +147,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(132, 119)
+        Me.Label2.Location = New System.Drawing.Point(132, 96)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(120, 20)
         Me.Label2.TabIndex = 10
@@ -166,7 +166,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(756, 374)
+        Me.ClientSize = New System.Drawing.Size(1233, 609)
         Me.Controls.Add(Me.PanelDatos)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)

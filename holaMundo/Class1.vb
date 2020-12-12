@@ -54,6 +54,11 @@ Public Class db_conexion
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "traslado")
 
+        micomand.CommandText = "select * from habitacion"
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "habitacion")
+
+
         micomand.CommandText = "select * from edades"
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "edades")
@@ -99,6 +104,24 @@ Public Class db_conexion
         miadapter.Fill(ds, "personal")
 
         micomand.CommandText = "
+            select CitaConsulta.Idconsulta, CitaConsulta.IdPersonal, CitaConsulta.Idhab, CitaConsulta.fecha, CitaConsulta.hora, personal.nombre, habitacion.habitacion
+            from CitaConsulta
+            inner join personal on(personal.IdPersonal=CitaConsulta.IdPersonal)
+            inner join habitacion on(habitacion.Idhab=CitaConsulta.Idhab)
+        "
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "CitaConsulta")
+
+        micomand.CommandText = "
+            select examenes.Idexamen, examenes.IdPersonal, examenes.Idhab, examenes.Tipo, Examenes.descripcion, personal.nombre, habitacion.habitacion
+            from examenes
+            inner join personal on(personal.IdPersonal=examenes.IdPersonal)
+            inner join habitacion on(habitacion.Idhab=examenes.Idhab)
+        "
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "examenes")
+
+        micomand.CommandText = "
             select Dfamilia.Idfamiliar, Dfamilia.nombre, Dfamilia.apellido, Dfamilia.Idedad, Dfamilia.parentesco, Dfamilia.Idgenero, Dfamilia.Idsangre, edades.edad, genero.genero, TipoSangre.tipo
             from Dfamilia
             inner join edades on(edades.Idedad=Dfamilia.Idedad)
@@ -119,6 +142,17 @@ Public Class db_conexion
         miadapter.Fill(ds, "Ventas")
 
         micomand.CommandText = "
+            select CompraM.IdCompra, CompraM.IdPersonal, CompraM.IdTfactura, CompraM.IdPago, CompraM.Idproveedor, CompraM.Nfactura, CompraM.fecha, personal.nombre, Tfactura.tipo, pago.forma, proveedor.nombre
+            from CompraM
+            inner join personal on(personal.IdPersonal=CompraM.IdPersonal)
+            inner join Tfactura on(Tfactura.IdTfactura=CompraM.IdTfactura)
+            inner join Pago on(Pago.IdPago=CompraM.IdPago)
+            inner join proveedor on(proveedor.Idproveedor=CompraM.Idproveedor)
+        "
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "CompraM")
+
+        micomand.CommandText = "
             select Dventa.IdDventa, Dventa.IdVentas, Dventa.Id, Dventa.cantidad, Dventa.precio, Ventas.Nfactura, medicina.nombre
             from Dventa
             inner join Ventas on(Ventas.IdVentas=Dventa.IdVentas)
@@ -126,6 +160,24 @@ Public Class db_conexion
         "
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "Dventa")
+
+        micomand.CommandText = "
+            select Dcompra.IdDcompra, Dcompra.IdCompra, Dcompra.Id, Dcompra.cantidad, Dcompra.precio, CompraM.Nfactura, medicina.nombre
+            from Dcompra
+            inner join CompraM on(CompraM.IdCompra=Dcompra.IdCompra)
+            inner join medicina on(medicina.Id=Dcompra.Id)
+        "
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "Dcompra")
+
+        micomand.CommandText = "
+            select Dreceta.IdDreceta, Dreceta.Idreceta, Dreceta.Id, Dreceta.Cantidad, Dreceta.DosisD, receta.Nreceta, medicina.nombre
+            from Dreceta
+            inner join receta on(receta.Idreceta=Dreceta.Idreceta)
+            inner join medicina on(medicina.Id=Dreceta.Id)
+        "
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "Dreceta")
 
         micomand.CommandText = "select * from CargoPersonal"
         miadapter.SelectCommand = micomand
@@ -149,9 +201,11 @@ Public Class db_conexion
         miadapter.Fill(ds, "usuario")
 
         micomand.CommandText = "
-            select receta.Idreceta, receta.id, receta.descripcion, medicina.nombre 
+            select receta.Idreceta, receta.descripcion, receta.IdPersonal, receta.IdExpediente, receta.IdEnfermedad, receta.Nreceta, personal.nombre, expediente.nombre, enfermedades.nombre  
             from receta
-            inner join medicina on(medicina.Id=receta.id)
+            inner join personal on(personal.IdPersonal=receta.IdPersonal)
+            inner join expediente on(expediente.IdExpediente=receta.IdExpediente)
+            inner join enfermedades on(enfermedades.IdEnfermedad=receta.IdEnfermedad)
         "
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "receta")
@@ -320,13 +374,49 @@ Public Class db_conexion
 
         Return msg
     End Function
+    Public Function mantenimientoConsulta(ByVal datos As String(), ByVal cambio As String)
+        Dim sql, msg As String
+        Select Case cambio
+            Case "nuevo"
+                sql = "INSERT INTO CitaConsulta (IdPersonal,Idhab,fecha,hora) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "')"
+            Case "modificar"
+                sql = "UPDATE CitaConsulta SET IdPersonal='" + datos(1) + "',Idhab='" + datos(2) + "',fecha='" + datos(3) + "',hora='" + datos(4) + "' WHERE Idconsulta='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM CitaConsulta WHERE Idconsulta='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
+    Public Function mantenimientoExamenes(ByVal datos As String(), ByVal cambio As String)
+        Dim sql, msg As String
+        Select Case cambio
+            Case "nuevo"
+                sql = "INSERT INTO examenes (IdPersonal,Idhab,Tipo,descripcion) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "')"
+            Case "modificar"
+                sql = "UPDATE examenes SET IdPersonal='" + datos(1) + "',Idhab='" + datos(2) + "',Tipo='" + datos(3) + "',descripcion='" + datos(4) + "' WHERE Idexamen='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM examenes WHERE Idexamen='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
     Public Function mantenimientoReceta(ByVal datos As String(), ByVal cambio As String)
         Dim sql, msg As String
         Select Case cambio
             Case "nuevo"
-                sql = "INSERT INTO receta (Id,descripcion) VALUES('" + datos(1) + "','" + datos(2) + "')"
+                sql = "INSERT INTO receta (descripcion,IdPersonal,IdExpediente,IdEnfermedad,Nreceta) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "')"
             Case "modificar"
-                sql = "UPDATE receta SET Id='" + datos(1) + "',descripcion='" + datos(2) + "' WHERE Idreceta='" + datos(0) + "'"
+                sql = "UPDATE receta SET descripcion='" + datos(1) + "',IdPersonal='" + datos(2) + "',IdExpediente='" + datos(3) + "',IdEnfermedad='" + datos(4) + "',Nreceta='" + datos(5) + "' WHERE Idreceta='" + datos(0) + "'"
             Case "eliminar"
                 sql = "DELETE FROM receta WHERE Idreceta='" + datos(0) + "'"
         End Select
@@ -464,7 +554,60 @@ Public Class db_conexion
 
         Return msg
     End Function
+    Public Function mantenimientoCompra(ByVal datos As String(), ByVal cambio As String)
+        Dim sql, msg As String
+        Select Case cambio
+            Case "nuevo"
+                sql = "INSERT INTO CompraM (IdPersonal,IdTfactura,IdPago,Idproveedor,Nfactura,fecha) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "','" + datos(6) + "')"
+            Case "modificar"
+                sql = "UPDATE CompraM SET IdPersonal='" + datos(1) + "',IdTfactura='" + datos(2) + "',IdPago='" + datos(3) + "',Idproveedor='" + datos(4) + "',Nfactura='" + datos(5) + "',fecha='" + datos(6) + "' WHERE IdCompra='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM CompraM WHERE IdCompra='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
 
+        Return msg
+    End Function
+    Public Function mantenimientoDcompra(ByVal datos As String(), ByVal cambio As String)
+        Dim sql, msg As String
+        Select Case cambio
+            Case "nuevo"
+                sql = "INSERT INTO Dcompra (IdCompra,Id,cantidad,precio) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "')"
+            Case "modificar"
+                sql = "UPDATE Dcompra SET IdCompra='" + datos(1) + "',Id='" + datos(2) + "',cantidad='" + datos(3) + "',precio='" + datos(4) + "' WHERE IdDcompra='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM Dcompra WHERE IdDcompra='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
+    Public Function mantenimientoDreceta(ByVal datos As String(), ByVal cambio As String)
+        Dim sql, msg As String
+        Select Case cambio
+            Case "nuevo"
+                sql = "INSERT INTO Dreceta (Idreceta,Id,Cantidad,DosisD) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "')"
+            Case "modificar"
+                sql = "UPDATE Dreceta SET Idreceta='" + datos(1) + "',Id='" + datos(2) + "',Cantidad='" + datos(3) + "',DosisD='" + datos(4) + "' WHERE IdDreceta='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM Dreceta WHERE IdDreceta='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
     Private Function executeSql(ByVal sql As String)
             micomand.Connection = miconexion
             micomand.CommandText = sql

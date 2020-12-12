@@ -221,3 +221,10 @@ C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.FichaE
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.FVentas.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.DetalleVenta.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.BuscarVenta.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.BuscarCompra.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.compraM.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.Dcompra.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.consulta.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.examen.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.BuscarReceta.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.DetalleReceta.resources

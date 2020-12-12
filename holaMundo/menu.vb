@@ -73,4 +73,28 @@
         Dim objventa As New FVentas
         objventa.Show()
     End Sub
+
+    Private Sub menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub COMPRADEMEDICAMENTOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles COMPRADEMEDICAMENTOToolStripMenuItem.Click
+        Dim objcompra As New compraM
+        objcompra.Show()
+    End Sub
+
+    Private Sub CITACONSULTAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CITACONSULTAToolStripMenuItem.Click
+        Dim objconsulta As New consulta
+        objconsulta.Show()
+    End Sub
+
+    Private Sub EXAMENESToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EXAMENESToolStripMenuItem.Click
+        Dim objexamen As New examen
+        objexamen.Show()
+    End Sub
+
+    Private Sub RECETASToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RECETASToolStripMenuItem.Click
+        Dim objrecetas As New receta
+        objrecetas.Show()
+    End Sub
 End Class

@@ -25,15 +25,17 @@ Partial Class BuscarProveedor
         Me.cancelar = New System.Windows.Forms.Button()
         Me.seleccionar = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.idproveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Idproveedo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombres = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.propietario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -63,14 +65,38 @@ Partial Class BuscarProveedor
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idproveedor, Me.nombre, Me.propietario, Me.direccion, Me.telefono, Me.correo})
-        Me.DataGridView1.Location = New System.Drawing.Point(125, 92)
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idproveedor, Me.Idproveedo, Me.nombre, Me.nombres, Me.propietario, Me.direccion, Me.telefono, Me.correo})
+        Me.DataGridView1.Location = New System.Drawing.Point(26, 88)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 62
         Me.DataGridView1.RowTemplate.Height = 28
-        Me.DataGridView1.Size = New System.Drawing.Size(920, 374)
+        Me.DataGridView1.Size = New System.Drawing.Size(1065, 374)
         Me.DataGridView1.TabIndex = 11
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(221, 44)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(501, 26)
+        Me.TextBox1.TabIndex = 10
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(217, 211)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(0, 20)
+        Me.Label2.TabIndex = 9
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(121, 51)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(79, 20)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "NOMBRE"
         '
         'idproveedor
         '
@@ -82,6 +108,16 @@ Partial Class BuscarProveedor
         Me.idproveedor.Visible = False
         Me.idproveedor.Width = 150
         '
+        'Idproveedo
+        '
+        Me.Idproveedo.DataPropertyName = "Idproveedor"
+        Me.Idproveedo.HeaderText = "IDPROVEEDOR"
+        Me.Idproveedo.MinimumWidth = 8
+        Me.Idproveedo.Name = "Idproveedo"
+        Me.Idproveedo.ReadOnly = True
+        Me.Idproveedo.Visible = False
+        Me.Idproveedo.Width = 150
+        '
         'nombre
         '
         Me.nombre.DataPropertyName = "nombre"
@@ -90,6 +126,15 @@ Partial Class BuscarProveedor
         Me.nombre.Name = "nombre"
         Me.nombre.ReadOnly = True
         Me.nombre.Width = 250
+        '
+        'nombres
+        '
+        Me.nombres.DataPropertyName = "nombre"
+        Me.nombres.HeaderText = "PROVEEDOR"
+        Me.nombres.MinimumWidth = 8
+        Me.nombres.Name = "nombres"
+        Me.nombres.ReadOnly = True
+        Me.nombres.Width = 150
         '
         'propietario
         '
@@ -127,30 +172,6 @@ Partial Class BuscarProveedor
         Me.correo.ReadOnly = True
         Me.correo.Width = 150
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(221, 44)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(501, 26)
-        Me.TextBox1.TabIndex = 10
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(217, 211)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(0, 20)
-        Me.Label2.TabIndex = 9
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(121, 51)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(79, 20)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "NOMBRE"
-        '
         'BuscarProveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -176,7 +197,9 @@ Partial Class BuscarProveedor
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents idproveedor As DataGridViewTextBoxColumn
+    Friend WithEvents Idproveedo As DataGridViewTextBoxColumn
     Friend WithEvents nombre As DataGridViewTextBoxColumn
+    Friend WithEvents nombres As DataGridViewTextBoxColumn
     Friend WithEvents propietario As DataGridViewTextBoxColumn
     Friend WithEvents direccion As DataGridViewTextBoxColumn
     Friend WithEvents telefono As DataGridViewTextBoxColumn
