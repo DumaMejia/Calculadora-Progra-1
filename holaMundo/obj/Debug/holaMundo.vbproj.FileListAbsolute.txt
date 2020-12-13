@@ -194,7 +194,6 @@ C:\Users\Usuario\Source\Repos\ProyectoFinal\holaMundo\bin\Debug\holaMundo.pdb
 C:\Users\Usuario\Source\Repos\ProyectoFinal\holaMundo\bin\Debug\holaMundo.xml
 C:\Users\Usuario\Source\Repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.vbprojAssemblyReference.cache
 C:\Users\Usuario\Source\Repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.alergia.resources
-C:\Users\Usuario\Source\Repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.BuscarProveedor.resources
 C:\Users\Usuario\Source\Repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.DatosPersonales.resources
 C:\Users\Usuario\Source\Repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.diagnostico.resources
 C:\Users\Usuario\Source\Repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.Form1.resources

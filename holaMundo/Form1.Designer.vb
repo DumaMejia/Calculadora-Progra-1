@@ -36,7 +36,18 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PanelBD = New System.Windows.Forms.Panel()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.caducidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PanelDatos.SuspendLayout()
+        Me.PanelBD.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'eliminarBT
@@ -95,7 +106,7 @@ Partial Class Form1
         Me.PanelDatos.Controls.Add(Me.Label1)
         Me.PanelDatos.Location = New System.Drawing.Point(22, 12)
         Me.PanelDatos.Name = "PanelDatos"
-        Me.PanelDatos.Size = New System.Drawing.Size(722, 285)
+        Me.PanelDatos.Size = New System.Drawing.Size(625, 285)
         Me.PanelDatos.TabIndex = 14
         '
         'txtdescripcion
@@ -162,11 +173,99 @@ Partial Class Form1
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "NOMBRE"
         '
+        'PanelBD
+        '
+        Me.PanelBD.Controls.Add(Me.DataGridView1)
+        Me.PanelBD.Controls.Add(Me.TextBox3)
+        Me.PanelBD.Controls.Add(Me.Label6)
+        Me.PanelBD.Location = New System.Drawing.Point(653, 12)
+        Me.PanelBD.Name = "PanelBD"
+        Me.PanelBD.Size = New System.Drawing.Size(608, 357)
+        Me.PanelBD.TabIndex = 59
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(137, 25)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(421, 26)
+        Me.TextBox3.TabIndex = 44
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(50, 31)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(81, 20)
+        Me.Label6.TabIndex = 42
+        Me.Label6.Text = "BUSCAR:"
+        '
+        'descripcion
+        '
+        Me.descripcion.DataPropertyName = "descripcion"
+        Me.descripcion.HeaderText = "DESCRIPCION"
+        Me.descripcion.MinimumWidth = 8
+        Me.descripcion.Name = "descripcion"
+        Me.descripcion.ReadOnly = True
+        Me.descripcion.Width = 150
+        '
+        'caducidad
+        '
+        Me.caducidad.DataPropertyName = "caducidad"
+        Me.caducidad.HeaderText = "CADUCIDAD"
+        Me.caducidad.MinimumWidth = 8
+        Me.caducidad.Name = "caducidad"
+        Me.caducidad.ReadOnly = True
+        Me.caducidad.Width = 150
+        '
+        'cantidad
+        '
+        Me.cantidad.DataPropertyName = "cantidad"
+        Me.cantidad.HeaderText = "CANTIDAD"
+        Me.cantidad.MinimumWidth = 8
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.ReadOnly = True
+        Me.cantidad.Width = 150
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "NOMBRE"
+        Me.nombre.MinimumWidth = 8
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 250
+        '
+        'id
+        '
+        Me.id.DataPropertyName = "id"
+        Me.id.HeaderText = "ID"
+        Me.id.MinimumWidth = 8
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        Me.id.Visible = False
+        Me.id.Width = 150
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.nombre, Me.cantidad, Me.caducidad, Me.descripcion})
+        Me.DataGridView1.Location = New System.Drawing.Point(42, 72)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 62
+        Me.DataGridView1.RowTemplate.Height = 28
+        Me.DataGridView1.Size = New System.Drawing.Size(516, 227)
+        Me.DataGridView1.TabIndex = 46
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1233, 609)
+        Me.ClientSize = New System.Drawing.Size(1274, 407)
+        Me.Controls.Add(Me.PanelBD)
         Me.Controls.Add(Me.PanelDatos)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
@@ -181,6 +280,9 @@ Partial Class Form1
         Me.Text = "FARMACIA"
         Me.PanelDatos.ResumeLayout(False)
         Me.PanelDatos.PerformLayout()
+        Me.PanelBD.ResumeLayout(False)
+        Me.PanelBD.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -199,4 +301,13 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents PanelBD As Panel
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents id As DataGridViewTextBoxColumn
+    Friend WithEvents nombre As DataGridViewTextBoxColumn
+    Friend WithEvents cantidad As DataGridViewTextBoxColumn
+    Friend WithEvents caducidad As DataGridViewTextBoxColumn
+    Friend WithEvents descripcion As DataGridViewTextBoxColumn
 End Class

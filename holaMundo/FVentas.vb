@@ -106,6 +106,7 @@
         Button1.Enabled = estado
         modificarBT.Enabled = estado
         nuevoBT.Enabled = estado
+        Button2.Enabled = estado
         Button3.Enabled = estado
     End Sub
     Private Sub limpiarCampos()
@@ -117,9 +118,9 @@
         LTotal.Text = "00.00"
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim Buscar As New BuscarVenta
         limpiarCampos()
         obtenerdatos()
-        Dim Buscar As New BuscarVenta
         Buscar.ShowDialog()
 
         If Buscar.idc > 0 Then
@@ -148,48 +149,28 @@
                 MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
+                If cambio = "nuevo" Then
+                    obtenerdatos()
+                    posicion = datatable.Rows.Count - 1
+                    mostrardatos()
+                    controlesOpen(True)
+                End If
                 obtenerdatos()
-                posicion = datatable.Rows.Count - 1
                 mostrardatos()
-                Dim detalle As New DetalleVenta
-                detalle.factura = TextBox2.Text
-                detalle.IdV = Me.Tag
-                detalle.ShowDialog()
-
-                mostrardatos()
-                DatosGrid()
-                mostrardatos()
+                totalizar()
                 controlesOpen(True)
                 nuevoBT.Text = "Nuevo"
                 modificarBT.Text = "Modificar"
-                obtenerdatos()
-                mostrardatos()
-                totalizar()
-            End If
-        End If
-        If nuevoBT.Text = "Aceptar" Then
-            Dim msg2 = conexion.mantenimientoVenta(New String() {
-            Me.Tag, ComboBox1.SelectedValue, ComboBox2.SelectedValue, ComboBox3.SelectedValue, TextBox1.Text, TextBox2.Text, TextBox3.Text
-           }, cambio)
-            If msg2 = "error" Then
-                MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Else
-                nuevoBT.Text = "Nuevo"
-                modificarBT.Text = "Modificar"
-                obtenerdatos()
-                mostrardatos()
-                totalizar()
-                Button2.Enabled = True
             End If
         End If
     End Sub
     Private Sub modificarBT_Click(sender As Object, e As EventArgs) Handles modificarBT.Click
         If modificarBT.Text = "Modificar" Then 'Modificar
-            nuevoBT.Text = "Aceptar"
+            nuevoBT.Text = "Guardar"
             modificarBT.Text = "Cancelar"
             cambio = "modificar"
             controlesNuevo(True)
+            Button2.Enabled = True
             mostrardatos()
         Else 'Cancelar
             mostrardatos()
@@ -200,7 +181,6 @@
     End Sub
     Private Sub eliminarBT_Click(sender As Object, e As EventArgs) Handles eliminarBT.Click
         If eliminarBT.Text = "Eliminar" Then
-            mostrardatos()
             If (MessageBox.Show("Esta seguro de borrar " + "este", " registro",
                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
                 Dim Nfilas As Integer = DataGridView1.Rows.Count
@@ -225,7 +205,6 @@
         End If
 
     End Sub
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         mostrardatos()
         Dim detalle As New DetalleVenta
@@ -235,6 +214,7 @@
 
         mostrardatos()
         DatosGrid()
+        mostrardatos()
         totalizar()
     End Sub
 

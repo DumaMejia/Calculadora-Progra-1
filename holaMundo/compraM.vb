@@ -33,16 +33,12 @@
     End Sub
     Sub mostrardatos()
         Me.Tag = datatable.Rows(posicion).ItemArray(0).ToString()
-
         ComboBox1.SelectedValue = datatable.Rows(posicion).ItemArray(1).ToString()
         ComboBox2.SelectedValue = datatable.Rows(posicion).ItemArray(2).ToString()
         ComboBox3.SelectedValue = datatable.Rows(posicion).ItemArray(3).ToString()
         ComboBox4.SelectedValue = datatable.Rows(posicion).ItemArray(4).ToString()
         TextBox2.Text = datatable.Rows(posicion).ItemArray(5).ToString()
         TextBox3.Text = datatable.Rows(posicion).ItemArray(6).ToString()
-
-
-
     End Sub
     Private Sub totalizar()
         Try
@@ -155,8 +151,13 @@
                 MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
+                If cambio = "nuevo" Then
+                    obtenerdatos()
+                    posicion = datatable.Rows.Count - 1
+                    mostrardatos()
+                    controlesOpen(True)
+                End If
                 obtenerdatos()
-                posicion = datatable.Rows.Count - 1
                 mostrardatos()
                 totalizar()
                 controlesOpen(True)
@@ -171,6 +172,7 @@
             modificarBT.Text = "Cancelar"
             cambio = "modificar"
             controlesNuevo(True)
+            Button2.Enabled = True
             mostrardatos()
         Else 'Cancelar
             mostrardatos()

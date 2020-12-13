@@ -183,7 +183,7 @@ Partial Class receta
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(16, 369)
+        Me.Button2.Location = New System.Drawing.Point(34, 574)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(298, 44)
         Me.Button2.TabIndex = 66
@@ -193,10 +193,9 @@ Partial Class receta
         'PanelBD
         '
         Me.PanelBD.Controls.Add(Me.DataGridView1)
-        Me.PanelBD.Controls.Add(Me.Button2)
         Me.PanelBD.Location = New System.Drawing.Point(43, 193)
         Me.PanelBD.Name = "PanelBD"
-        Me.PanelBD.Size = New System.Drawing.Size(712, 421)
+        Me.PanelBD.Size = New System.Drawing.Size(712, 375)
         Me.PanelBD.TabIndex = 77
         '
         'DataGridView1
@@ -303,6 +302,7 @@ Partial Class receta
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 716)
         Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PanelBD)
         Me.Controls.Add(Me.modificarBT)

@@ -29,7 +29,7 @@
         objUsuario.Show()
     End Sub
 
-    Private Sub RECETAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RECETAToolStripMenuItem.Click
+    Private Sub RECETAToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim objreceta As New receta
         objreceta.Show()
     End Sub

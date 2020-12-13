@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class compraM
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class compraM
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.LTotal = New System.Windows.Forms.Label()
         Me.LIva = New System.Windows.Forms.Label()
@@ -30,7 +30,6 @@ Partial Class compraM
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PanelBD = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.IdDcompra = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdCompra = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -40,6 +39,7 @@ Partial Class compraM
         Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.PanelDatos = New System.Windows.Forms.Panel()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
@@ -133,15 +133,6 @@ Partial Class compraM
         Me.PanelBD.Size = New System.Drawing.Size(1179, 372)
         Me.PanelBD.TabIndex = 77
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(28, 552)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(298, 44)
-        Me.Button2.TabIndex = 66
-        Me.Button2.Text = "EDITAR MEDICAMENTOS"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
@@ -229,6 +220,15 @@ Partial Class compraM
         Me.subtotal.Name = "subtotal"
         Me.subtotal.ReadOnly = True
         Me.subtotal.Width = 150
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(28, 552)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(298, 44)
+        Me.Button2.TabIndex = 66
+        Me.Button2.Text = "EDITAR MEDICAMENTOS"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'modificarBT
         '

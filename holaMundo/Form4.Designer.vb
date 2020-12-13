@@ -32,7 +32,16 @@ Partial Class Form4
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
+        Me.PanelBD = New System.Windows.Forms.Panel()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.idEnfermedad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PanelDatos.SuspendLayout()
+        Me.PanelBD.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelDatos
@@ -41,23 +50,23 @@ Partial Class Form4
         Me.PanelDatos.Controls.Add(Me.txtnombre)
         Me.PanelDatos.Controls.Add(Me.Label2)
         Me.PanelDatos.Controls.Add(Me.Label1)
-        Me.PanelDatos.Location = New System.Drawing.Point(44, 58)
+        Me.PanelDatos.Location = New System.Drawing.Point(44, 29)
         Me.PanelDatos.Name = "PanelDatos"
-        Me.PanelDatos.Size = New System.Drawing.Size(722, 285)
+        Me.PanelDatos.Size = New System.Drawing.Size(542, 314)
         Me.PanelDatos.TabIndex = 20
         '
         'txtdescripcion
         '
         Me.txtdescripcion.Location = New System.Drawing.Point(298, 119)
         Me.txtdescripcion.Name = "txtdescripcion"
-        Me.txtdescripcion.Size = New System.Drawing.Size(293, 26)
+        Me.txtdescripcion.Size = New System.Drawing.Size(229, 26)
         Me.txtdescripcion.TabIndex = 16
         '
         'txtnombre
         '
         Me.txtnombre.Location = New System.Drawing.Point(298, 40)
         Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(293, 26)
+        Me.txtnombre.Size = New System.Drawing.Size(229, 26)
         Me.txtnombre.TabIndex = 13
         '
         'Label2
@@ -80,7 +89,7 @@ Partial Class Form4
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(524, 349)
+        Me.Button1.Location = New System.Drawing.Point(329, 349)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(113, 44)
         Me.Button1.TabIndex = 19
@@ -115,18 +124,88 @@ Partial Class Form4
         '
         'eliminarBT
         '
-        Me.eliminarBT.Location = New System.Drawing.Point(643, 349)
+        Me.eliminarBT.Location = New System.Drawing.Point(458, 349)
         Me.eliminarBT.Name = "eliminarBT"
         Me.eliminarBT.Size = New System.Drawing.Size(113, 44)
         Me.eliminarBT.TabIndex = 15
         Me.eliminarBT.Text = "Eliminar"
         Me.eliminarBT.UseVisualStyleBackColor = True
         '
+        'PanelBD
+        '
+        Me.PanelBD.Controls.Add(Me.DataGridView1)
+        Me.PanelBD.Controls.Add(Me.TextBox3)
+        Me.PanelBD.Controls.Add(Me.Label4)
+        Me.PanelBD.Location = New System.Drawing.Point(592, 29)
+        Me.PanelBD.Name = "PanelBD"
+        Me.PanelBD.Size = New System.Drawing.Size(598, 409)
+        Me.PanelBD.TabIndex = 65
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(136, 58)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(441, 26)
+        Me.TextBox3.TabIndex = 44
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(52, 63)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(81, 20)
+        Me.Label4.TabIndex = 42
+        Me.Label4.Text = "BUSCAR:"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idEnfermedad, Me.nombre, Me.descripcion})
+        Me.DataGridView1.Location = New System.Drawing.Point(58, 99)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 62
+        Me.DataGridView1.RowTemplate.Height = 28
+        Me.DataGridView1.Size = New System.Drawing.Size(519, 292)
+        Me.DataGridView1.TabIndex = 45
+        '
+        'idEnfermedad
+        '
+        Me.idEnfermedad.DataPropertyName = "idEnfermedad"
+        Me.idEnfermedad.HeaderText = "IDENFERMEDAD"
+        Me.idEnfermedad.MinimumWidth = 8
+        Me.idEnfermedad.Name = "idEnfermedad"
+        Me.idEnfermedad.ReadOnly = True
+        Me.idEnfermedad.Visible = False
+        Me.idEnfermedad.Width = 150
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "NOMBRE"
+        Me.nombre.MinimumWidth = 8
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 250
+        '
+        'descripcion
+        '
+        Me.descripcion.DataPropertyName = "descripcion"
+        Me.descripcion.HeaderText = "DESCRIPCION"
+        Me.descripcion.MinimumWidth = 8
+        Me.descripcion.Name = "descripcion"
+        Me.descripcion.ReadOnly = True
+        Me.descripcion.Width = 150
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1224, 450)
+        Me.Controls.Add(Me.PanelBD)
         Me.Controls.Add(Me.PanelDatos)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
@@ -137,6 +216,9 @@ Partial Class Form4
         Me.Text = "Form4"
         Me.PanelDatos.ResumeLayout(False)
         Me.PanelDatos.PerformLayout()
+        Me.PanelBD.ResumeLayout(False)
+        Me.PanelBD.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -152,4 +234,11 @@ Partial Class Form4
     Friend WithEvents modificarBT As Button
     Friend WithEvents nuevoBT As Button
     Friend WithEvents eliminarBT As Button
+    Friend WithEvents PanelBD As Panel
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents idEnfermedad As DataGridViewTextBoxColumn
+    Friend WithEvents nombre As DataGridViewTextBoxColumn
+    Friend WithEvents descripcion As DataGridViewTextBoxColumn
 End Class

@@ -12,6 +12,10 @@
     Sub obtenerdatos()
         datatable = conexion.obtenerdatos().Tables("traslado")
         datatable.PrimaryKey = New DataColumn() {datatable.Columns("Idtraslado")}
+
+        ComboBox1.DataSource = conexion.obtenerdatos().Tables("expediente").DefaultView()
+        ComboBox1.DisplayMember = "nombre"
+        ComboBox1.ValueMember = "expediente.IdExpediente"
     End Sub
     Sub mostrardatos()
         Me.Tag = datatable.Rows(posicion).ItemArray(0).ToString()
@@ -19,6 +23,7 @@
         TextBox1.Text = datatable.Rows(posicion).ItemArray(1).ToString()
         TextBox2.Text = datatable.Rows(posicion).ItemArray(2).ToString()
         TextBox4.Text = datatable.Rows(posicion).ItemArray(3).ToString()
+        ComboBox1.SelectedValue = datatable.Rows(posicion).ItemArray(4).ToString()
 
     End Sub
     Private Sub SeleccionarDato()
@@ -33,7 +38,7 @@
     Private Sub filtrar(ByVal valor As String)
         Dim bs As New BindingSource()
         bs.DataSource = DataGridView1.DataSource
-        bs.Filter = "lugar like '%" & valor & "%' or lugar like '%" & valor & "%'"
+        bs.Filter = "nombre like '%" & valor & "%' or nombre like '%" & valor & "%'"
         DataGridView1.DataSource = bs
     End Sub
     Private Sub controlesNuevo(ByVal estado As Boolean)
@@ -99,7 +104,7 @@
             limpiarCampos()
         Else 'Guardar
             Dim msg = conexion.mantenimientoTraslado(New String() {
-                Me.Tag, TextBox1.Text, TextBox2.Text, TextBox4.Text
+                Me.Tag, TextBox1.Text, TextBox2.Text, TextBox4.Text, ComboBox1.SelectedValue
                }, cambio)
             If msg = "error" Then
                 MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro",

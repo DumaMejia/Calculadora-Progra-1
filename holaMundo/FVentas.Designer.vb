@@ -73,16 +73,15 @@ Partial Class FVentas
         '
         'PanelBD
         '
-        Me.PanelBD.Controls.Add(Me.Button2)
         Me.PanelBD.Controls.Add(Me.DataGridView1)
         Me.PanelBD.Location = New System.Drawing.Point(23, 175)
         Me.PanelBD.Name = "PanelBD"
-        Me.PanelBD.Size = New System.Drawing.Size(1179, 421)
+        Me.PanelBD.Size = New System.Drawing.Size(1179, 357)
         Me.PanelBD.TabIndex = 65
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(16, 369)
+        Me.Button2.Location = New System.Drawing.Point(23, 538)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(298, 44)
         Me.Button2.TabIndex = 66
@@ -95,7 +94,7 @@ Partial Class FVentas
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDVenta, Me.IdVentas, Me.Nfactura, Me.Id, Me.nombre, Me.cantidad, Me.precio, Me.subtotal})
-        Me.DataGridView1.Location = New System.Drawing.Point(16, 26)
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 3)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 62
@@ -390,6 +389,7 @@ Partial Class FVentas
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1237, 673)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.LTotal)
         Me.Controls.Add(Me.LIva)

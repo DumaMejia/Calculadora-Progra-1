@@ -50,7 +50,11 @@ Public Class db_conexion
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "proveedor")
 
-        micomand.CommandText = "select * from traslado"
+        micomand.CommandText = "
+          select traslado.Idtraslado, traslado.lugar, traslado.motivo, traslado.fecha, traslado.IdExpediente, expediente.nombre 
+          from traslado
+          inner join expediente on(expediente.IdExpediente=traslado.IdExpediente)
+        "
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "traslado")
 
@@ -184,9 +188,10 @@ Public Class db_conexion
         miadapter.Fill(ds, "CargoPersonal")
 
         micomand.CommandText = "
-            select diagnostico.IdDiag, diagnostico.IdEnfermedad, diagnostico.diag, diagnostico.descripcion, enfermedades.nombre
+            select diagnostico.IdDiag, diagnostico.IdEnfermedad, diagnostico.diag, diagnostico.descripcion, diagnostico.IdExpediente, enfermedades.nombre, expediente.nombre
             from diagnostico 
             inner join enfermedades on(enfermedades.IdEnfermedad=diagnostico.IdEnfermedad)
+            inner join expediente on(expediente.IdExpediente=diagnostico.IdExpediente)
         "
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "diagnostico")
@@ -247,7 +252,7 @@ Public Class db_conexion
         Dim sql, msg As String
         Select Case cambio
             Case "nuevo"
-                sql = "INSERT INTO medicina (nombre,cantidad,caducidad,descripcion) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "')"
+                sql = "INSERT INTO medicina (nombre,cant,caducidad,descripcion) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "')"
             Case "modificar"
                 sql = "UPDATE medicina SET nombre='" + datos(1) + "',cantidad='" + datos(2) + "',caducidad='" + datos(3) + "',descripcion='" + datos(4) + "' WHERE id='" + datos(0) + "'"
             Case "eliminar"
@@ -301,9 +306,9 @@ Public Class db_conexion
         Dim sql, msg As String
         Select Case cambio
             Case "nuevo"
-                sql = "INSERT INTO traslado (lugar,motivo,fecha) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "')"
+                sql = "INSERT INTO traslado (lugar,motivo,fecha,IdExpediente) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "')"
             Case "modificar"
-                sql = "UPDATE traslado SET lugar='" + datos(1) + "',motivo='" + datos(2) + "',fecha='" + datos(3) + "' WHERE Idtraslado='" + datos(0) + "'"
+                sql = "UPDATE traslado SET lugar='" + datos(1) + "',motivo='" + datos(2) + "',fecha='" + datos(3) + "',IdExpediente='" + datos(4) + "' WHERE Idtraslado='" + datos(0) + "'"
             Case "eliminar"
                 sql = "DELETE FROM traslado WHERE Idtraslado='" + datos(0) + "'"
         End Select
@@ -373,9 +378,9 @@ Public Class db_conexion
         Dim sql, msg As String
         Select Case cambio
             Case "nuevo"
-                sql = "INSERT INTO diagnostico (IdEnfermedad,diag,descripcion) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "')"
+                sql = "INSERT INTO diagnostico (IdEnfermedad,diag,descripcion,IdExpediente) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "')"
             Case "modificar"
-                sql = "UPDATE diagnostico SET Idenfermedad='" + datos(1) + "',diag='" + datos(2) + "',descripcion='" + datos(3) + "' WHERE IdDiag='" + datos(0) + "'"
+                sql = "UPDATE diagnostico SET Idenfermedad='" + datos(1) + "',diag='" + datos(2) + "',descripcion='" + datos(3) + "',IdExpediente='" + datos(4) + "' WHERE IdDiag='" + datos(0) + "'"
             Case "eliminar"
                 sql = "DELETE FROM diagnostico WHERE IdDiag='" + datos(0) + "'"
         End Select
