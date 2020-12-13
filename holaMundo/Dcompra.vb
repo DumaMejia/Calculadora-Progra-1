@@ -129,7 +129,7 @@
     End Sub
     Private Sub modificarBT_Click(sender As Object, e As EventArgs) Handles modificarBT.Click
         If modificarBT.Text = "Modificar" Then 'Modificar
-            nuevoBT.Text = "Guardar"
+            nuevoBT.Text = "Aceptar"
             modificarBT.Text = "Cancelar"
             cambio = "modificar"
             controlesNuevo(True)

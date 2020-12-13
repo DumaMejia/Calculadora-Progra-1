@@ -4,10 +4,10 @@
     Dim posicion As Integer
     Public idD As Integer
     Dim cambio As String = "nuevo"
-    Private Sub FVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub receta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        obtenerdatos()
         posicion = 0
         controlesInicio(True)
-        obtenerdatos()
     End Sub
     Sub obtenerdatos()
         datatable = conexion.obtenerdatos().Tables("receta")
@@ -60,6 +60,7 @@
         Button1.Enabled = estado
         modificarBT.Enabled = Not estado
         Button2.Enabled = Not estado
+        Button3.Enabled = Not estado
     End Sub
     Private Sub controlesBuscar(ByVal estado As Boolean)
         PanelDatos.Enabled = Not estado
@@ -69,6 +70,7 @@
         modificarBT.Enabled = estado
         nuevoBT.Enabled = estado
         Button2.Enabled = estado
+        Button3.Enabled = estado
     End Sub
     Private Sub controlesOpen(ByVal estado As Boolean)
         PanelDatos.Enabled = Not estado
@@ -77,12 +79,15 @@
         Button1.Enabled = estado
         modificarBT.Enabled = estado
         nuevoBT.Enabled = estado
+        Button3.Enabled = estado
     End Sub
     Private Sub limpiarCampos()
         TextBox1.Text = ""
         TextBox2.Text = ""
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        limpiarCampos()
+        obtenerdatos()
         Dim Buscar As New BuscarReceta
         Buscar.ShowDialog()
 
@@ -90,9 +95,10 @@
             controlesBuscar(True)
             posicion = datatable.Rows.IndexOf(datatable.Rows.Find(Buscar.idc))
         End If
+        controlesOpen(True)
         mostrardatos()
         DatosGrid()
-        controlesBuscar(True)
+        mostrardatos()
     End Sub
     Private Sub nuevoBT_Click(sender As Object, e As EventArgs) Handles nuevoBT.Click
         If nuevoBT.Text = "Nuevo" Then 'Nuevo
@@ -102,7 +108,7 @@
 
             controlesNuevo(True)
             limpiarCampos()
-        Else 'Guardar
+        Else
             Dim msg = conexion.mantenimientoReceta(New String() {
                 Me.Tag, TextBox1.Text, ComboBox1.SelectedValue, ComboBox2.SelectedValue, ComboBox3.SelectedValue, TextBox2.Text
                }, cambio)
@@ -118,16 +124,35 @@
                 detalle.IdV = Me.Tag
                 detalle.ShowDialog()
 
+                mostrardatos()
                 DatosGrid()
-                controlesBuscar(True)
+                mostrardatos()
+                controlesOpen(True)
                 nuevoBT.Text = "Nuevo"
                 modificarBT.Text = "Modificar"
+                obtenerdatos()
+                mostrardatos()
+            End If
+        End If
+        If nuevoBT.Text = "Aceptar" Then
+            Dim msg2 = conexion.mantenimientoReceta(New String() {
+            Me.Tag, TextBox1.Text, ComboBox1.SelectedValue, ComboBox2.SelectedValue, ComboBox3.SelectedValue, TextBox2.Text
+           }, cambio)
+            If msg2 = "error" Then
+                MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                nuevoBT.Text = "Nuevo"
+                modificarBT.Text = "Modificar"
+                obtenerdatos()
+                mostrardatos()
+                Button2.Enabled = True
             End If
         End If
     End Sub
     Private Sub modificarBT_Click(sender As Object, e As EventArgs) Handles modificarBT.Click
         If modificarBT.Text = "Modificar" Then 'Modificar
-            nuevoBT.Text = "Guardar"
+            nuevoBT.Text = "Aceptar"
             modificarBT.Text = "Cancelar"
             cambio = "modificar"
             controlesNuevo(True)
@@ -140,6 +165,7 @@
     End Sub
     Private Sub eliminarBT_Click(sender As Object, e As EventArgs) Handles eliminarBT.Click
         If eliminarBT.Text = "Eliminar" Then
+            mostrardatos()
             If (MessageBox.Show("Esta seguro de borrar " + "este", " registro",
                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
                 Dim Nfilas As Integer = DataGridView1.Rows.Count
@@ -166,11 +192,19 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        mostrardatos()
         Dim detalle As New DetalleReceta
         detalle.factura = TextBox2.Text
         detalle.IdV = Me.Tag
         detalle.ShowDialog()
 
+        mostrardatos()
         DatosGrid()
+    End Sub
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim Imprimir As New ReporteRecetas
+        Imprimir._idRta = Me.Tag
+        Imprimir.ShowDialog()
+        mostrardatos()
     End Sub
 End Class

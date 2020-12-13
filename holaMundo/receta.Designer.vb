@@ -47,6 +47,7 @@ Partial Class receta
         Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DosisD = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.PanelDatos.SuspendLayout()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -287,11 +288,21 @@ Partial Class receta
         Me.Button1.Text = "Buscar"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(519, 620)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(113, 44)
+        Me.Button3.TabIndex = 78
+        Me.Button3.Text = "Imprimir"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'receta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 716)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PanelBD)
         Me.Controls.Add(Me.modificarBT)
@@ -333,4 +344,5 @@ Partial Class receta
     Friend WithEvents nombre As DataGridViewTextBoxColumn
     Friend WithEvents cantidad As DataGridViewTextBoxColumn
     Friend WithEvents DosisD As DataGridViewTextBoxColumn
+    Friend WithEvents Button3 As Button
 End Class

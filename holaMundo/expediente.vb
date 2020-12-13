@@ -24,14 +24,6 @@
         ComboBox2.DisplayMember = "nombre"
         ComboBox2.ValueMember = "alergia.Idalergia"
 
-        ComboBox3.DataSource = conexion.obtenerdatos().Tables("DatosPersonales").DefaultView()
-        ComboBox3.DisplayMember = "nacimiento"
-        ComboBox3.ValueMember = "DatosPersonales.IdDatos"
-
-        ComboBox4.DataSource = conexion.obtenerdatos().Tables("Dfamilia").DefaultView()
-        ComboBox4.DisplayMember = "nombre"
-        ComboBox4.ValueMember = "Dfamilia.Idfamiliar"
-
     End Sub
     Sub mostrardatos()
         Me.Tag = datatable.Rows(posicion).ItemArray(0).ToString()
@@ -44,10 +36,8 @@
         TextBox4.Text = datatable.Rows(posicion).ItemArray(4).ToString()
 
         ComboBox2.SelectedValue = datatable.Rows(posicion).ItemArray(5).ToString()
-        ComboBox3.SelectedValue = datatable.Rows(posicion).ItemArray(6).ToString()
-        ComboBox4.SelectedValue = datatable.Rows(posicion).ItemArray(7).ToString()
 
-        TextBox5.Text = datatable.Rows(posicion).ItemArray(8).ToString()
+        TextBox5.Text = datatable.Rows(posicion).ItemArray(6).ToString()
 
     End Sub
     Private Sub SeleccionarDato()
@@ -71,7 +61,6 @@
         eliminarBT.Enabled = Not estado
         Button1.Enabled = Not estado
         modificarBT.Enabled = estado
-        PanelD.Enabled = Not estado
     End Sub
     Private Sub controlesInicio(ByVal estado As Boolean)
         nuevoBT.Enabled = estado
@@ -80,7 +69,6 @@
         eliminarBT.Enabled = Not estado
         Button1.Enabled = estado
         modificarBT.Enabled = Not estado
-        PanelD.Enabled = Not estado
     End Sub
     Private Sub controlesBuscar(ByVal estado As Boolean)
         PanelDatos.Enabled = Not estado
@@ -89,7 +77,6 @@
         Button1.Enabled = estado
         modificarBT.Enabled = Not estado
         nuevoBT.Enabled = Not estado
-        PanelD.Enabled = Not estado
     End Sub
     Private Sub controlesOpen(ByVal estado As Boolean)
         PanelDatos.Enabled = Not estado
@@ -98,7 +85,6 @@
         Button1.Enabled = estado
         modificarBT.Enabled = estado
         nuevoBT.Enabled = estado
-        PanelD.Enabled = Not estado
     End Sub
     Private Sub limpiarCampos()
         TextBox1.Text = ""
@@ -133,7 +119,7 @@
             limpiarCampos()
         Else 'Guardar
             Dim msg = conexion.mantenimientoExpediente(New String() {
-                Me.Tag, TextBox1.Text, TextBox2.Text, ComboBox1.SelectedValue, TextBox4.Text, ComboBox2.SelectedValue, ComboBox3.SelectedValue, ComboBox4.SelectedValue, TextBox5.Text
+                Me.Tag, TextBox1.Text, TextBox2.Text, ComboBox1.SelectedValue, TextBox4.Text, ComboBox2.SelectedValue, TextBox5.Text
                }, cambio)
             If msg = "error" Then
                 MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro de Clientes",
@@ -172,13 +158,23 @@
         End If
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         Dim objDatosPersonales As New DatosPersonales
         objDatosPersonales.ShowDialog()
 
         obtenerdatos()
-        MessageBox.Show(objDatosPersonales.idc2)
-        ComboBox3.SelectedValue = objDatosPersonales.idc2
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub TextBox7_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class

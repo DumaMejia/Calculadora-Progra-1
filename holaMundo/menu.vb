@@ -97,4 +97,24 @@
         Dim objrecetas As New receta
         objrecetas.Show()
     End Sub
+
+    Private Sub ADMINISTRARTARJETASToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ADMINISTRARTARJETASToolStripMenuItem.Click
+        Dim objtarjetas As New tarjetas
+        objtarjetas.Show()
+    End Sub
+
+    Private Sub LISTADEPERSONALDECLINICAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LISTADEPERSONALDECLINICAToolStripMenuItem.Click
+        Dim objreppersnal As New Listapersonal
+        objreppersnal.Show()
+    End Sub
+
+    Private Sub LISTAMEDICAMENTOSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LISTAMEDICAMENTOSToolStripMenuItem.Click
+        Dim objmedlist As New listamed
+        objmedlist.Show()
+    End Sub
+
+    Private Sub LISTADEUSUARIOSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LISTADEUSUARIOSToolStripMenuItem.Click
+        Dim Objusuariolist As New ListaDeUsuarios
+        Objusuariolist.Show()
+    End Sub
 End Class

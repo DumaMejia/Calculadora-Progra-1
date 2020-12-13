@@ -8,6 +8,7 @@
         posicion = 0
         controlesInicio(True)
         obtenerdatos()
+        totalizar()
     End Sub
     Sub obtenerdatos()
         datatable = conexion.obtenerdatos().Tables("CompraM")
@@ -93,6 +94,7 @@
         Button1.Enabled = estado
         modificarBT.Enabled = Not estado
         Button2.Enabled = Not estado
+        Button3.Enabled = Not estado
     End Sub
     Private Sub controlesBuscar(ByVal estado As Boolean)
         PanelDatos.Enabled = Not estado
@@ -102,6 +104,7 @@
         modificarBT.Enabled = estado
         nuevoBT.Enabled = estado
         Button2.Enabled = estado
+        Button3.Enabled = estado
     End Sub
     Private Sub controlesOpen(ByVal estado As Boolean)
         PanelDatos.Enabled = Not estado
@@ -110,6 +113,8 @@
         Button1.Enabled = estado
         modificarBT.Enabled = estado
         nuevoBT.Enabled = estado
+        Button2.Enabled = estado
+        Button3.Enabled = estado
     End Sub
     Private Sub limpiarCampos()
         TextBox2.Text = ""
@@ -120,16 +125,19 @@
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim Buscar As New BuscarCompra
+        limpiarCampos()
+        obtenerdatos()
         Buscar.ShowDialog()
 
         If Buscar.idc > 0 Then
             controlesBuscar(True)
             posicion = datatable.Rows.IndexOf(datatable.Rows.Find(Buscar.idc))
         End If
+        controlesOpen(True)
         mostrardatos()
         DatosGrid()
+        mostrardatos()
         totalizar()
-        controlesBuscar(True)
     End Sub
     Private Sub nuevoBT_Click(sender As Object, e As EventArgs) Handles nuevoBT.Click
         If nuevoBT.Text = "Nuevo" Then 'Nuevo
@@ -139,7 +147,7 @@
 
             controlesNuevo(True)
             limpiarCampos()
-        Else 'Guardar
+        Else
             Dim msg = conexion.mantenimientoCompra(New String() {
                 Me.Tag, ComboBox1.SelectedValue, ComboBox2.SelectedValue, ComboBox3.SelectedValue, ComboBox4.SelectedValue, TextBox2.Text, TextBox3.Text
                }, cambio)
@@ -150,16 +158,10 @@
                 obtenerdatos()
                 posicion = datatable.Rows.Count - 1
                 mostrardatos()
-                Dim detalle As New Dcompra
-                detalle.factura = TextBox2.Text
-                detalle.IdV = Me.Tag
-                detalle.ShowDialog()
-
-                DatosGrid()
-                controlesBuscar(True)
+                totalizar()
+                controlesOpen(True)
                 nuevoBT.Text = "Nuevo"
                 modificarBT.Text = "Modificar"
-                totalizar()
             End If
         End If
     End Sub
@@ -169,13 +171,13 @@
             modificarBT.Text = "Cancelar"
             cambio = "modificar"
             controlesNuevo(True)
+            mostrardatos()
         Else 'Cancelar
-            obtenerdatos()
-            controlesInicio(True)
+            mostrardatos()
+            controlesOpen(True)
             nuevoBT.Text = "Nuevo"
             modificarBT.Text = "Modificar"
         End If
-        totalizar()
     End Sub
     Private Sub eliminarBT_Click(sender As Object, e As EventArgs) Handles eliminarBT.Click
         If eliminarBT.Text = "Eliminar" Then
@@ -203,14 +205,22 @@
         End If
 
     End Sub
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        mostrardatos()
         Dim detalle As New Dcompra
         detalle.factura = TextBox2.Text
         detalle.IdV = Me.Tag
         detalle.ShowDialog()
 
+        mostrardatos()
         DatosGrid()
+        mostrardatos()
         totalizar()
+    End Sub
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim Imprimir As New ReporteCompra
+        Imprimir._idCpra = Me.Tag
+        Imprimir.ShowDialog()
+        mostrardatos()
     End Sub
 End Class

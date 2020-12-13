@@ -63,6 +63,24 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -149,6 +167,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBClinicaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DBClinicaDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBClinicaDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dcompra.Designer.vb">
       <DependentUpon>Dcompra.vb</DependentUpon>
     </Compile>
@@ -185,12 +208,6 @@
     <Compile Include="expediente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FichaExpediente.Designer.vb">
-      <DependentUpon>FichaExpediente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FichaExpediente.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +239,12 @@
     <Compile Include="FormCargo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FRventa.Designer.vb">
+      <DependentUpon>FRventa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRventa.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FVentas.Designer.vb">
       <DependentUpon>FVentas.vb</DependentUpon>
     </Compile>
@@ -232,6 +255,24 @@
       <DependentUpon>horario.vb</DependentUpon>
     </Compile>
     <Compile Include="horario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaDeUsuarios.Designer.vb">
+      <DependentUpon>ListaDeUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListaDeUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listamed.Designer.vb">
+      <DependentUpon>listamed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="listamed.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listapersonal.Designer.vb">
+      <DependentUpon>Listapersonal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listapersonal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="menu.Designer.vb">
@@ -272,6 +313,24 @@
       <DependentUpon>receta.vb</DependentUpon>
     </Compile>
     <Compile Include="receta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteCompra.Designer.vb">
+      <DependentUpon>ReporteCompra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteRecetas.Designer.vb">
+      <DependentUpon>ReporteRecetas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteRecetas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tarjetas.Designer.vb">
+      <DependentUpon>tarjetas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tarjetas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="traslado.Designer.vb">
@@ -333,9 +392,6 @@
     <EmbeddedResource Include="expediente.resx">
       <DependentUpon>expediente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FichaExpediente.resx">
-      <DependentUpon>FichaExpediente.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -351,12 +407,26 @@
     <EmbeddedResource Include="FormCargo.resx">
       <DependentUpon>FormCargo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FRventa.resx">
+      <DependentUpon>FRventa.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FVentas.resx">
       <DependentUpon>FVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="horario.resx">
       <DependentUpon>horario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InformeVentas.rdlc" />
+    <EmbeddedResource Include="ListaDeUsuarios.resx">
+      <DependentUpon>ListaDeUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listamed.resx">
+      <DependentUpon>listamed.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listapersonal.resx">
+      <DependentUpon>Listapersonal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medicamentos.rdlc" />
     <EmbeddedResource Include="menu.resx">
       <DependentUpon>menu.vb</DependentUpon>
     </EmbeddedResource>
@@ -369,11 +439,24 @@
     <EmbeddedResource Include="Personal.resx">
       <DependentUpon>Personal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Personallis.rdlc" />
     <EmbeddedResource Include="Proveedor.resx">
       <DependentUpon>Proveedor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RCompra.rdlc" />
     <EmbeddedResource Include="receta.resx">
       <DependentUpon>receta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReporteCompra.resx">
+      <DependentUpon>ReporteCompra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteReceta1.rdlc" />
+    <EmbeddedResource Include="ReporteRecetas.resx">
+      <DependentUpon>ReporteRecetas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tarjetas.resx">
+      <DependentUpon>tarjetas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="traslado.resx">
       <DependentUpon>traslado.vb</DependentUpon>
@@ -381,6 +464,7 @@
     <EmbeddedResource Include="usuario.resx">
       <DependentUpon>usuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UsuariosList.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DBClinicaDataSet.xsc">
@@ -394,6 +478,17 @@
     <None Include="DBClinicaDataSet.xss">
       <DependentUpon>DBClinicaDataSet.xsd</DependentUpon>
     </None>
+    <None Include="DBClinicaDataSet3.xsc">
+      <DependentUpon>DBClinicaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DBClinicaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBClinicaDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBClinicaDataSet3.xss">
+      <DependentUpon>DBClinicaDataSet3.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -404,6 +499,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DBClinica.mdf">
@@ -412,6 +508,20 @@
     <Content Include="DBClinica_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DBClinica.mdf</DependentUpon>
+    </Content>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

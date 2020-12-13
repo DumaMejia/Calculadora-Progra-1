@@ -26,6 +26,14 @@ Partial Class FVentas
         Me.PanelBD = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdDVenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdVentas = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nfactura = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.PanelDatos = New System.Windows.Forms.Panel()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -42,20 +50,13 @@ Partial Class FVentas
         Me.Label1 = New System.Windows.Forms.Label()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
-        Me.IdDVenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdVentas = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nfactura = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.LSuma = New System.Windows.Forms.Label()
         Me.LIva = New System.Windows.Forms.Label()
         Me.LTotal = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDatos.SuspendLayout()
@@ -101,6 +102,80 @@ Partial Class FVentas
         Me.DataGridView1.RowTemplate.Height = 28
         Me.DataGridView1.Size = New System.Drawing.Size(1097, 337)
         Me.DataGridView1.TabIndex = 45
+        '
+        'IdDVenta
+        '
+        Me.IdDVenta.DataPropertyName = "IdDVenta"
+        Me.IdDVenta.HeaderText = "IDDVENTA"
+        Me.IdDVenta.MinimumWidth = 8
+        Me.IdDVenta.Name = "IdDVenta"
+        Me.IdDVenta.ReadOnly = True
+        Me.IdDVenta.Visible = False
+        Me.IdDVenta.Width = 150
+        '
+        'IdVentas
+        '
+        Me.IdVentas.DataPropertyName = "IdVentas"
+        Me.IdVentas.HeaderText = "IDVENTAS"
+        Me.IdVentas.MinimumWidth = 8
+        Me.IdVentas.Name = "IdVentas"
+        Me.IdVentas.ReadOnly = True
+        Me.IdVentas.Visible = False
+        Me.IdVentas.Width = 150
+        '
+        'Nfactura
+        '
+        Me.Nfactura.DataPropertyName = "Nfactura"
+        Me.Nfactura.HeaderText = "NFACTURA"
+        Me.Nfactura.MinimumWidth = 8
+        Me.Nfactura.Name = "Nfactura"
+        Me.Nfactura.ReadOnly = True
+        Me.Nfactura.Width = 150
+        '
+        'Id
+        '
+        Me.Id.DataPropertyName = "Id"
+        Me.Id.HeaderText = "IDMEDICAMENTO"
+        Me.Id.MinimumWidth = 8
+        Me.Id.Name = "Id"
+        Me.Id.ReadOnly = True
+        Me.Id.Visible = False
+        Me.Id.Width = 150
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "MEDICAMENTO"
+        Me.nombre.MinimumWidth = 8
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 150
+        '
+        'cantidad
+        '
+        Me.cantidad.DataPropertyName = "cantidad"
+        Me.cantidad.HeaderText = "CANTIDAD"
+        Me.cantidad.MinimumWidth = 8
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.ReadOnly = True
+        Me.cantidad.Width = 150
+        '
+        'precio
+        '
+        Me.precio.DataPropertyName = "precio"
+        Me.precio.HeaderText = "PRECIO"
+        Me.precio.MinimumWidth = 8
+        Me.precio.Name = "precio"
+        Me.precio.ReadOnly = True
+        Me.precio.Width = 150
+        '
+        'subtotal
+        '
+        Me.subtotal.HeaderText = "SUBTOTAL"
+        Me.subtotal.MinimumWidth = 8
+        Me.subtotal.Name = "subtotal"
+        Me.subtotal.ReadOnly = True
+        Me.subtotal.Width = 150
         '
         'modificarBT
         '
@@ -247,80 +322,6 @@ Partial Class FVentas
         Me.eliminarBT.Text = "Eliminar"
         Me.eliminarBT.UseVisualStyleBackColor = True
         '
-        'IdDVenta
-        '
-        Me.IdDVenta.DataPropertyName = "IdDVenta"
-        Me.IdDVenta.HeaderText = "IDDVENTA"
-        Me.IdDVenta.MinimumWidth = 8
-        Me.IdDVenta.Name = "IdDVenta"
-        Me.IdDVenta.ReadOnly = True
-        Me.IdDVenta.Visible = False
-        Me.IdDVenta.Width = 150
-        '
-        'IdVentas
-        '
-        Me.IdVentas.DataPropertyName = "IdVentas"
-        Me.IdVentas.HeaderText = "IDVENTAS"
-        Me.IdVentas.MinimumWidth = 8
-        Me.IdVentas.Name = "IdVentas"
-        Me.IdVentas.ReadOnly = True
-        Me.IdVentas.Visible = False
-        Me.IdVentas.Width = 150
-        '
-        'Nfactura
-        '
-        Me.Nfactura.DataPropertyName = "Nfactura"
-        Me.Nfactura.HeaderText = "NFACTURA"
-        Me.Nfactura.MinimumWidth = 8
-        Me.Nfactura.Name = "Nfactura"
-        Me.Nfactura.ReadOnly = True
-        Me.Nfactura.Width = 150
-        '
-        'Id
-        '
-        Me.Id.DataPropertyName = "Id"
-        Me.Id.HeaderText = "IDMEDICAMENTO"
-        Me.Id.MinimumWidth = 8
-        Me.Id.Name = "Id"
-        Me.Id.ReadOnly = True
-        Me.Id.Visible = False
-        Me.Id.Width = 150
-        '
-        'nombre
-        '
-        Me.nombre.DataPropertyName = "nombre"
-        Me.nombre.HeaderText = "MEDICAMENTO"
-        Me.nombre.MinimumWidth = 8
-        Me.nombre.Name = "nombre"
-        Me.nombre.ReadOnly = True
-        Me.nombre.Width = 150
-        '
-        'cantidad
-        '
-        Me.cantidad.DataPropertyName = "cantidad"
-        Me.cantidad.HeaderText = "CANTIDAD"
-        Me.cantidad.MinimumWidth = 8
-        Me.cantidad.Name = "cantidad"
-        Me.cantidad.ReadOnly = True
-        Me.cantidad.Width = 150
-        '
-        'precio
-        '
-        Me.precio.DataPropertyName = "precio"
-        Me.precio.HeaderText = "PRECIO"
-        Me.precio.MinimumWidth = 8
-        Me.precio.Name = "precio"
-        Me.precio.ReadOnly = True
-        Me.precio.Width = 150
-        '
-        'subtotal
-        '
-        Me.subtotal.HeaderText = "SUBTOTAL"
-        Me.subtotal.MinimumWidth = 8
-        Me.subtotal.Name = "subtotal"
-        Me.subtotal.ReadOnly = True
-        Me.subtotal.Width = 150
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -375,11 +376,21 @@ Partial Class FVentas
         Me.LTotal.TabIndex = 70
         Me.LTotal.Text = "00.00"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(499, 602)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(113, 44)
+        Me.Button3.TabIndex = 71
+        Me.Button3.Text = "Imprimir"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'FVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1237, 673)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.LTotal)
         Me.Controls.Add(Me.LIva)
         Me.Controls.Add(Me.LSuma)
@@ -437,4 +448,5 @@ Partial Class FVentas
     Friend WithEvents LSuma As Label
     Friend WithEvents LIva As Label
     Friend WithEvents LTotal As Label
+    Friend WithEvents Button3 As Button
 End Class

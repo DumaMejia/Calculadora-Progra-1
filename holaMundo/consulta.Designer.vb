@@ -24,6 +24,13 @@ Partial Class consulta
     Private Sub InitializeComponent()
         Me.PanelBD = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Idconsulta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdPersonal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Idhab = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.habitacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HORA = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PanelDatos = New System.Windows.Forms.Panel()
@@ -40,13 +47,7 @@ Partial Class consulta
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
-        Me.Idconsulta = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdPersonal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Idhab = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.habitacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HORA = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDatos.SuspendLayout()
@@ -75,6 +76,73 @@ Partial Class consulta
         Me.DataGridView1.RowTemplate.Height = 28
         Me.DataGridView1.Size = New System.Drawing.Size(529, 216)
         Me.DataGridView1.TabIndex = 45
+        '
+        'Idconsulta
+        '
+        Me.Idconsulta.DataPropertyName = "Idconsulta"
+        Me.Idconsulta.HeaderText = "IDCONSULTA"
+        Me.Idconsulta.MinimumWidth = 8
+        Me.Idconsulta.Name = "Idconsulta"
+        Me.Idconsulta.ReadOnly = True
+        Me.Idconsulta.Visible = False
+        Me.Idconsulta.Width = 150
+        '
+        'IdPersonal
+        '
+        Me.IdPersonal.DataPropertyName = "IdPersonal"
+        Me.IdPersonal.HeaderText = "IDPERSONAL"
+        Me.IdPersonal.MinimumWidth = 8
+        Me.IdPersonal.Name = "IdPersonal"
+        Me.IdPersonal.ReadOnly = True
+        Me.IdPersonal.Visible = False
+        Me.IdPersonal.Width = 150
+        '
+        'Idhab
+        '
+        Me.Idhab.DataPropertyName = "Idhab"
+        Me.Idhab.HeaderText = "IDHAB"
+        Me.Idhab.MinimumWidth = 8
+        Me.Idhab.Name = "Idhab"
+        Me.Idhab.ReadOnly = True
+        Me.Idhab.Visible = False
+        Me.Idhab.Width = 150
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.FillWeight = 200.0!
+        Me.nombre.HeaderText = "DOCTOR:"
+        Me.nombre.MinimumWidth = 8
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 150
+        '
+        'habitacion
+        '
+        Me.habitacion.DataPropertyName = "habitacion"
+        Me.habitacion.HeaderText = "CONSULTORIO"
+        Me.habitacion.MinimumWidth = 8
+        Me.habitacion.Name = "habitacion"
+        Me.habitacion.ReadOnly = True
+        Me.habitacion.Width = 150
+        '
+        'fecha
+        '
+        Me.fecha.DataPropertyName = "fecha"
+        Me.fecha.HeaderText = "FECHA"
+        Me.fecha.MinimumWidth = 8
+        Me.fecha.Name = "fecha"
+        Me.fecha.ReadOnly = True
+        Me.fecha.Width = 150
+        '
+        'HORA
+        '
+        Me.HORA.DataPropertyName = "HORA"
+        Me.HORA.HeaderText = "HORA"
+        Me.HORA.MinimumWidth = 8
+        Me.HORA.Name = "HORA"
+        Me.HORA.ReadOnly = True
+        Me.HORA.Width = 150
         '
         'TextBox3
         '
@@ -183,7 +251,7 @@ Partial Class consulta
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(458, 306)
+        Me.Button1.Location = New System.Drawing.Point(374, 306)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(113, 44)
         Me.Button1.TabIndex = 50
@@ -192,7 +260,7 @@ Partial Class consulta
         '
         'modificarBT
         '
-        Me.modificarBT.Location = New System.Drawing.Point(150, 306)
+        Me.modificarBT.Location = New System.Drawing.Point(136, 306)
         Me.modificarBT.Name = "modificarBT"
         Me.modificarBT.Size = New System.Drawing.Size(113, 44)
         Me.modificarBT.TabIndex = 49
@@ -210,85 +278,28 @@ Partial Class consulta
         '
         'eliminarBT
         '
-        Me.eliminarBT.Location = New System.Drawing.Point(296, 306)
+        Me.eliminarBT.Location = New System.Drawing.Point(255, 306)
         Me.eliminarBT.Name = "eliminarBT"
         Me.eliminarBT.Size = New System.Drawing.Size(113, 44)
         Me.eliminarBT.TabIndex = 47
         Me.eliminarBT.Text = "Eliminar"
         Me.eliminarBT.UseVisualStyleBackColor = True
         '
-        'Idconsulta
+        'Button2
         '
-        Me.Idconsulta.DataPropertyName = "Idconsulta"
-        Me.Idconsulta.HeaderText = "IDCONSULTA"
-        Me.Idconsulta.MinimumWidth = 8
-        Me.Idconsulta.Name = "Idconsulta"
-        Me.Idconsulta.ReadOnly = True
-        Me.Idconsulta.Visible = False
-        Me.Idconsulta.Width = 150
-        '
-        'IdPersonal
-        '
-        Me.IdPersonal.DataPropertyName = "IdPersonal"
-        Me.IdPersonal.HeaderText = "IDPERSONAL"
-        Me.IdPersonal.MinimumWidth = 8
-        Me.IdPersonal.Name = "IdPersonal"
-        Me.IdPersonal.ReadOnly = True
-        Me.IdPersonal.Visible = False
-        Me.IdPersonal.Width = 150
-        '
-        'Idhab
-        '
-        Me.Idhab.DataPropertyName = "Idhab"
-        Me.Idhab.HeaderText = "IDHAB"
-        Me.Idhab.MinimumWidth = 8
-        Me.Idhab.Name = "Idhab"
-        Me.Idhab.ReadOnly = True
-        Me.Idhab.Visible = False
-        Me.Idhab.Width = 150
-        '
-        'nombre
-        '
-        Me.nombre.DataPropertyName = "nombre"
-        Me.nombre.FillWeight = 200.0!
-        Me.nombre.HeaderText = "DOCTOR:"
-        Me.nombre.MinimumWidth = 8
-        Me.nombre.Name = "nombre"
-        Me.nombre.ReadOnly = True
-        Me.nombre.Width = 150
-        '
-        'habitacion
-        '
-        Me.habitacion.DataPropertyName = "habitacion"
-        Me.habitacion.HeaderText = "CONSULTORIO"
-        Me.habitacion.MinimumWidth = 8
-        Me.habitacion.Name = "habitacion"
-        Me.habitacion.ReadOnly = True
-        Me.habitacion.Width = 150
-        '
-        'fecha
-        '
-        Me.fecha.DataPropertyName = "fecha"
-        Me.fecha.HeaderText = "FECHA"
-        Me.fecha.MinimumWidth = 8
-        Me.fecha.Name = "fecha"
-        Me.fecha.ReadOnly = True
-        Me.fecha.Width = 150
-        '
-        'HORA
-        '
-        Me.HORA.DataPropertyName = "HORA"
-        Me.HORA.HeaderText = "HORA"
-        Me.HORA.MinimumWidth = 8
-        Me.HORA.Name = "HORA"
-        Me.HORA.ReadOnly = True
-        Me.HORA.Width = 150
+        Me.Button2.Location = New System.Drawing.Point(492, 306)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(113, 44)
+        Me.Button2.TabIndex = 53
+        Me.Button2.Text = "Imprimir"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'consulta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1237, 411)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PanelBD)
         Me.Controls.Add(Me.PanelDatos)
         Me.Controls.Add(Me.Button1)
@@ -331,4 +342,5 @@ Partial Class consulta
     Friend WithEvents habitacion As DataGridViewTextBoxColumn
     Friend WithEvents fecha As DataGridViewTextBoxColumn
     Friend WithEvents HORA As DataGridViewTextBoxColumn
+    Friend WithEvents Button2 As Button
 End Class

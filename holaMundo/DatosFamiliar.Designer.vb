@@ -44,7 +44,11 @@ Partial Class DatosFamiliar
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.Idfamiliar = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdExpediente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Idedad = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -61,6 +65,8 @@ Partial Class DatosFamiliar
         '
         'PanelDatos
         '
+        Me.PanelDatos.Controls.Add(Me.ComboBox4)
+        Me.PanelDatos.Controls.Add(Me.Label2)
         Me.PanelDatos.Controls.Add(Me.TextBox3)
         Me.PanelDatos.Controls.Add(Me.Label8)
         Me.PanelDatos.Controls.Add(Me.Label7)
@@ -200,7 +206,7 @@ Partial Class DatosFamiliar
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Idfamiliar, Me.nombre, Me.apellido, Me.Idedad, Me.parentesco, Me.Idgenero, Me.Idsangre, Me.edad, Me.genero, Me.tipo})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Idfamiliar, Me.IdExpediente, Me.nombre1, Me.nombre, Me.apellido, Me.Idedad, Me.parentesco, Me.Idgenero, Me.Idsangre, Me.edad, Me.genero, Me.tipo})
         Me.DataGridView1.Location = New System.Drawing.Point(46, 116)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -261,6 +267,23 @@ Partial Class DatosFamiliar
         Me.eliminarBT.Text = "Eliminar"
         Me.eliminarBT.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(113, 27)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(92, 20)
+        Me.Label2.TabIndex = 32
+        Me.Label2.Text = "PACIENTE "
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(337, 19)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox4.TabIndex = 33
+        '
         'Idfamiliar
         '
         Me.Idfamiliar.DataPropertyName = "Idfamiliar"
@@ -270,6 +293,25 @@ Partial Class DatosFamiliar
         Me.Idfamiliar.ReadOnly = True
         Me.Idfamiliar.Visible = False
         Me.Idfamiliar.Width = 150
+        '
+        'IdExpediente
+        '
+        Me.IdExpediente.DataPropertyName = "IdExpediente"
+        Me.IdExpediente.HeaderText = "IDEXPEDIENTE"
+        Me.IdExpediente.MinimumWidth = 8
+        Me.IdExpediente.Name = "IdExpediente"
+        Me.IdExpediente.ReadOnly = True
+        Me.IdExpediente.Visible = False
+        Me.IdExpediente.Width = 150
+        '
+        'nombre1
+        '
+        Me.nombre1.DataPropertyName = "nombre1"
+        Me.nombre1.HeaderText = "PACIENTE"
+        Me.nombre1.MinimumWidth = 8
+        Me.nombre1.Name = "nombre1"
+        Me.nombre1.ReadOnly = True
+        Me.nombre1.Width = 150
         '
         'nombre
         '
@@ -399,7 +441,11 @@ Partial Class DatosFamiliar
     Friend WithEvents modificarBT As Button
     Friend WithEvents nuevoBT As Button
     Friend WithEvents eliminarBT As Button
+    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents Label2 As Label
     Friend WithEvents Idfamiliar As DataGridViewTextBoxColumn
+    Friend WithEvents IdExpediente As DataGridViewTextBoxColumn
+    Friend WithEvents nombre1 As DataGridViewTextBoxColumn
     Friend WithEvents nombre As DataGridViewTextBoxColumn
     Friend WithEvents apellido As DataGridViewTextBoxColumn
     Friend WithEvents Idedad As DataGridViewTextBoxColumn

@@ -5,9 +5,10 @@
     Public idD As Integer
     Dim cambio As String = "nuevo"
     Private Sub FVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        obtenerdatos()
         posicion = 0
         controlesInicio(True)
-        obtenerdatos()
+        totalizar()
     End Sub
     Sub obtenerdatos()
         datatable = conexion.obtenerdatos().Tables("Ventas")
@@ -24,7 +25,6 @@
         ComboBox3.DataSource = conexion.obtenerdatos().Tables("Pago").DefaultView()
         ComboBox3.DisplayMember = "forma"
         ComboBox3.ValueMember = "Pago.IdPago"
-
     End Sub
     Sub mostrardatos()
         Me.Tag = datatable.Rows(posicion).ItemArray(0).ToString()
@@ -36,9 +36,6 @@
         TextBox1.Text = datatable.Rows(posicion).ItemArray(4).ToString()
         TextBox2.Text = datatable.Rows(posicion).ItemArray(5).ToString()
         TextBox3.Text = datatable.Rows(posicion).ItemArray(6).ToString()
-
-
-
     End Sub
     Private Sub totalizar()
         Try
@@ -90,6 +87,7 @@
         Button1.Enabled = estado
         modificarBT.Enabled = Not estado
         Button2.Enabled = Not estado
+        Button3.Enabled = Not estado
     End Sub
     Private Sub controlesBuscar(ByVal estado As Boolean)
         PanelDatos.Enabled = Not estado
@@ -99,6 +97,7 @@
         modificarBT.Enabled = estado
         nuevoBT.Enabled = estado
         Button2.Enabled = estado
+        Button3.Enabled = estado
     End Sub
     Private Sub controlesOpen(ByVal estado As Boolean)
         PanelDatos.Enabled = Not estado
@@ -107,6 +106,7 @@
         Button1.Enabled = estado
         modificarBT.Enabled = estado
         nuevoBT.Enabled = estado
+        Button3.Enabled = estado
     End Sub
     Private Sub limpiarCampos()
         TextBox1.Text = ""
@@ -117,6 +117,8 @@
         LTotal.Text = "00.00"
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        limpiarCampos()
+        obtenerdatos()
         Dim Buscar As New BuscarVenta
         Buscar.ShowDialog()
 
@@ -124,10 +126,11 @@
             controlesBuscar(True)
             posicion = datatable.Rows.IndexOf(datatable.Rows.Find(Buscar.idc))
         End If
+        controlesOpen(True)
         mostrardatos()
         DatosGrid()
+        mostrardatos()
         totalizar()
-        controlesBuscar(True)
     End Sub
     Private Sub nuevoBT_Click(sender As Object, e As EventArgs) Handles nuevoBT.Click
         If nuevoBT.Text = "Nuevo" Then 'Nuevo
@@ -137,7 +140,7 @@
 
             controlesNuevo(True)
             limpiarCampos()
-        Else 'Guardar
+        Else
             Dim msg = conexion.mantenimientoVenta(New String() {
                 Me.Tag, ComboBox1.SelectedValue, ComboBox2.SelectedValue, ComboBox3.SelectedValue, TextBox1.Text, TextBox2.Text, TextBox3.Text
                }, cambio)
@@ -153,30 +156,51 @@
                 detalle.IdV = Me.Tag
                 detalle.ShowDialog()
 
+                mostrardatos()
                 DatosGrid()
-                controlesBuscar(True)
+                mostrardatos()
+                controlesOpen(True)
                 nuevoBT.Text = "Nuevo"
                 modificarBT.Text = "Modificar"
+                obtenerdatos()
+                mostrardatos()
                 totalizar()
+            End If
+        End If
+        If nuevoBT.Text = "Aceptar" Then
+            Dim msg2 = conexion.mantenimientoVenta(New String() {
+            Me.Tag, ComboBox1.SelectedValue, ComboBox2.SelectedValue, ComboBox3.SelectedValue, TextBox1.Text, TextBox2.Text, TextBox3.Text
+           }, cambio)
+            If msg2 = "error" Then
+                MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                nuevoBT.Text = "Nuevo"
+                modificarBT.Text = "Modificar"
+                obtenerdatos()
+                mostrardatos()
+                totalizar()
+                Button2.Enabled = True
             End If
         End If
     End Sub
     Private Sub modificarBT_Click(sender As Object, e As EventArgs) Handles modificarBT.Click
         If modificarBT.Text = "Modificar" Then 'Modificar
-            nuevoBT.Text = "Guardar"
+            nuevoBT.Text = "Aceptar"
             modificarBT.Text = "Cancelar"
             cambio = "modificar"
             controlesNuevo(True)
+            mostrardatos()
         Else 'Cancelar
-            obtenerdatos()
-            controlesInicio(True)
+            mostrardatos()
+            controlesOpen(True)
             nuevoBT.Text = "Nuevo"
             modificarBT.Text = "Modificar"
         End If
-        totalizar()
     End Sub
     Private Sub eliminarBT_Click(sender As Object, e As EventArgs) Handles eliminarBT.Click
         If eliminarBT.Text = "Eliminar" Then
+            mostrardatos()
             If (MessageBox.Show("Esta seguro de borrar " + "este", " registro",
                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
                 Dim Nfilas As Integer = DataGridView1.Rows.Count
@@ -203,12 +227,21 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        mostrardatos()
         Dim detalle As New DetalleVenta
         detalle.factura = TextBox2.Text
         detalle.IdV = Me.Tag
         detalle.ShowDialog()
 
+        mostrardatos()
         DatosGrid()
         totalizar()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim Imprimir As New FRventa
+        Imprimir._idVta = Me.Tag
+        Imprimir.ShowDialog()
+        mostrardatos()
     End Sub
 End Class

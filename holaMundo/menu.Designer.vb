@@ -39,12 +39,17 @@ Partial Class menu
         Me.EXPEDIENTEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CITACONSULTAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EXAMENESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RECETASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PEROSNALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CARGOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.USUARIOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HORARIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PERSONALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RECETASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ADMINISTRARTARJETASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.REPORTESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LISTADEPERSONALDECLINICAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LISTAMEDICAMENTOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LISTADEUSUARIOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,7 +57,7 @@ Partial Class menu
         '
         Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PACIENTESToolStripMenuItem, Me.PACIENTEToolStripMenuItem, Me.PEROSNALToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PACIENTESToolStripMenuItem, Me.PACIENTEToolStripMenuItem, Me.PEROSNALToolStripMenuItem, Me.REPORTESToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(6, 3, 0, 3)
@@ -132,7 +137,7 @@ Partial Class menu
         '
         Me.DATOSToolStripMenuItem.Name = "DATOSToolStripMenuItem"
         Me.DATOSToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
-        Me.DATOSToolStripMenuItem.Text = "DATOS"
+        Me.DATOSToolStripMenuItem.Text = "DATOS PERSONALES"
         '
         'PruebaToolStripMenuItem
         '
@@ -158,9 +163,15 @@ Partial Class menu
         Me.EXAMENESToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.EXAMENESToolStripMenuItem.Text = "EXAMENES"
         '
+        'RECETASToolStripMenuItem
+        '
+        Me.RECETASToolStripMenuItem.Name = "RECETASToolStripMenuItem"
+        Me.RECETASToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
+        Me.RECETASToolStripMenuItem.Text = "RECETAS"
+        '
         'PEROSNALToolStripMenuItem
         '
-        Me.PEROSNALToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CARGOToolStripMenuItem, Me.USUARIOSToolStripMenuItem, Me.HORARIOToolStripMenuItem, Me.PERSONALToolStripMenuItem})
+        Me.PEROSNALToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CARGOToolStripMenuItem, Me.USUARIOSToolStripMenuItem, Me.HORARIOToolStripMenuItem, Me.PERSONALToolStripMenuItem, Me.ADMINISTRARTARJETASToolStripMenuItem})
         Me.PEROSNALToolStripMenuItem.Name = "PEROSNALToolStripMenuItem"
         Me.PEROSNALToolStripMenuItem.Size = New System.Drawing.Size(115, 29)
         Me.PEROSNALToolStripMenuItem.Text = "PERSONAL"
@@ -168,32 +179,57 @@ Partial Class menu
         'CARGOToolStripMenuItem
         '
         Me.CARGOToolStripMenuItem.Name = "CARGOToolStripMenuItem"
-        Me.CARGOToolStripMenuItem.Size = New System.Drawing.Size(201, 34)
+        Me.CARGOToolStripMenuItem.Size = New System.Drawing.Size(313, 34)
         Me.CARGOToolStripMenuItem.Text = "CARGO"
         '
         'USUARIOSToolStripMenuItem
         '
         Me.USUARIOSToolStripMenuItem.Name = "USUARIOSToolStripMenuItem"
-        Me.USUARIOSToolStripMenuItem.Size = New System.Drawing.Size(201, 34)
+        Me.USUARIOSToolStripMenuItem.Size = New System.Drawing.Size(313, 34)
         Me.USUARIOSToolStripMenuItem.Text = "USUARIOS"
         '
         'HORARIOToolStripMenuItem
         '
         Me.HORARIOToolStripMenuItem.Name = "HORARIOToolStripMenuItem"
-        Me.HORARIOToolStripMenuItem.Size = New System.Drawing.Size(201, 34)
+        Me.HORARIOToolStripMenuItem.Size = New System.Drawing.Size(313, 34)
         Me.HORARIOToolStripMenuItem.Text = "HORARIO"
         '
         'PERSONALToolStripMenuItem
         '
         Me.PERSONALToolStripMenuItem.Name = "PERSONALToolStripMenuItem"
-        Me.PERSONALToolStripMenuItem.Size = New System.Drawing.Size(201, 34)
+        Me.PERSONALToolStripMenuItem.Size = New System.Drawing.Size(313, 34)
         Me.PERSONALToolStripMenuItem.Text = "PERSONAL"
         '
-        'RECETASToolStripMenuItem
+        'ADMINISTRARTARJETASToolStripMenuItem
         '
-        Me.RECETASToolStripMenuItem.Name = "RECETASToolStripMenuItem"
-        Me.RECETASToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
-        Me.RECETASToolStripMenuItem.Text = "RECETAS"
+        Me.ADMINISTRARTARJETASToolStripMenuItem.Name = "ADMINISTRARTARJETASToolStripMenuItem"
+        Me.ADMINISTRARTARJETASToolStripMenuItem.Size = New System.Drawing.Size(313, 34)
+        Me.ADMINISTRARTARJETASToolStripMenuItem.Text = "ADMINISTRAR TARJETAS"
+        '
+        'REPORTESToolStripMenuItem
+        '
+        Me.REPORTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LISTADEPERSONALDECLINICAToolStripMenuItem, Me.LISTAMEDICAMENTOSToolStripMenuItem, Me.LISTADEUSUARIOSToolStripMenuItem})
+        Me.REPORTESToolStripMenuItem.Name = "REPORTESToolStripMenuItem"
+        Me.REPORTESToolStripMenuItem.Size = New System.Drawing.Size(110, 29)
+        Me.REPORTESToolStripMenuItem.Text = "REPORTES"
+        '
+        'LISTADEPERSONALDECLINICAToolStripMenuItem
+        '
+        Me.LISTADEPERSONALDECLINICAToolStripMenuItem.Name = "LISTADEPERSONALDECLINICAToolStripMenuItem"
+        Me.LISTADEPERSONALDECLINICAToolStripMenuItem.Size = New System.Drawing.Size(373, 34)
+        Me.LISTADEPERSONALDECLINICAToolStripMenuItem.Text = "LISTA DE PERSONAL DE CLINICA"
+        '
+        'LISTAMEDICAMENTOSToolStripMenuItem
+        '
+        Me.LISTAMEDICAMENTOSToolStripMenuItem.Name = "LISTAMEDICAMENTOSToolStripMenuItem"
+        Me.LISTAMEDICAMENTOSToolStripMenuItem.Size = New System.Drawing.Size(373, 34)
+        Me.LISTAMEDICAMENTOSToolStripMenuItem.Text = "LISTA MEDICAMENTOS"
+        '
+        'LISTADEUSUARIOSToolStripMenuItem
+        '
+        Me.LISTADEUSUARIOSToolStripMenuItem.Name = "LISTADEUSUARIOSToolStripMenuItem"
+        Me.LISTADEUSUARIOSToolStripMenuItem.Size = New System.Drawing.Size(373, 34)
+        Me.LISTADEUSUARIOSToolStripMenuItem.Text = "LISTA DE USUARIOS"
         '
         'menu
         '
@@ -234,4 +270,9 @@ Partial Class menu
     Friend WithEvents CITACONSULTAToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EXAMENESToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RECETASToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ADMINISTRARTARJETASToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents REPORTESToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LISTADEPERSONALDECLINICAToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LISTAMEDICAMENTOSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LISTADEUSUARIOSToolStripMenuItem As ToolStripMenuItem
 End Class

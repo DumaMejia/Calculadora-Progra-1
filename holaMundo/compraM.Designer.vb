@@ -32,8 +32,17 @@ Partial Class compraM
         Me.PanelBD = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdDcompra = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCompra = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nfactura = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.PanelDatos = New System.Windows.Forms.Panel()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -47,15 +56,7 @@ Partial Class compraM
         Me.Label1 = New System.Windows.Forms.Label()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.IdDcompra = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCompra = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nfactura = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDatos.SuspendLayout()
@@ -126,16 +127,15 @@ Partial Class compraM
         '
         'PanelBD
         '
-        Me.PanelBD.Controls.Add(Me.Button2)
         Me.PanelBD.Controls.Add(Me.DataGridView1)
         Me.PanelBD.Location = New System.Drawing.Point(12, 175)
         Me.PanelBD.Name = "PanelBD"
-        Me.PanelBD.Size = New System.Drawing.Size(1179, 421)
+        Me.PanelBD.Size = New System.Drawing.Size(1179, 372)
         Me.PanelBD.TabIndex = 77
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(16, 369)
+        Me.Button2.Location = New System.Drawing.Point(28, 552)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(298, 44)
         Me.Button2.TabIndex = 66
@@ -155,6 +155,80 @@ Partial Class compraM
         Me.DataGridView1.RowTemplate.Height = 28
         Me.DataGridView1.Size = New System.Drawing.Size(1097, 337)
         Me.DataGridView1.TabIndex = 45
+        '
+        'IdDcompra
+        '
+        Me.IdDcompra.DataPropertyName = "IdDcompra"
+        Me.IdDcompra.HeaderText = "IDDCOMPRA"
+        Me.IdDcompra.MinimumWidth = 8
+        Me.IdDcompra.Name = "IdDcompra"
+        Me.IdDcompra.ReadOnly = True
+        Me.IdDcompra.Visible = False
+        Me.IdDcompra.Width = 150
+        '
+        'IdCompra
+        '
+        Me.IdCompra.DataPropertyName = "IdCompra"
+        Me.IdCompra.HeaderText = "IDCOMPRA"
+        Me.IdCompra.MinimumWidth = 8
+        Me.IdCompra.Name = "IdCompra"
+        Me.IdCompra.ReadOnly = True
+        Me.IdCompra.Visible = False
+        Me.IdCompra.Width = 150
+        '
+        'Nfactura
+        '
+        Me.Nfactura.DataPropertyName = "Nfactura"
+        Me.Nfactura.HeaderText = "NFACTURA"
+        Me.Nfactura.MinimumWidth = 8
+        Me.Nfactura.Name = "Nfactura"
+        Me.Nfactura.ReadOnly = True
+        Me.Nfactura.Width = 150
+        '
+        'Id
+        '
+        Me.Id.DataPropertyName = "Id"
+        Me.Id.HeaderText = "IDMEDICAMENTO"
+        Me.Id.MinimumWidth = 8
+        Me.Id.Name = "Id"
+        Me.Id.ReadOnly = True
+        Me.Id.Visible = False
+        Me.Id.Width = 150
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "MEDICAMENTO"
+        Me.nombre.MinimumWidth = 8
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 150
+        '
+        'cantidad
+        '
+        Me.cantidad.DataPropertyName = "cantidad"
+        Me.cantidad.HeaderText = "CANTIDAD"
+        Me.cantidad.MinimumWidth = 8
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.ReadOnly = True
+        Me.cantidad.Width = 150
+        '
+        'precio
+        '
+        Me.precio.DataPropertyName = "precio"
+        Me.precio.HeaderText = "PRECIO"
+        Me.precio.MinimumWidth = 8
+        Me.precio.Name = "precio"
+        Me.precio.ReadOnly = True
+        Me.precio.Width = 150
+        '
+        'subtotal
+        '
+        Me.subtotal.HeaderText = "SUBTOTAL"
+        Me.subtotal.MinimumWidth = 8
+        Me.subtotal.Name = "subtotal"
+        Me.subtotal.ReadOnly = True
+        Me.subtotal.Width = 150
         '
         'modificarBT
         '
@@ -183,6 +257,14 @@ Partial Class compraM
         Me.PanelDatos.Name = "PanelDatos"
         Me.PanelDatos.Size = New System.Drawing.Size(1179, 133)
         Me.PanelDatos.TabIndex = 76
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(570, 55)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox4.TabIndex = 32
         '
         'TextBox3
         '
@@ -294,93 +376,22 @@ Partial Class compraM
         Me.eliminarBT.Text = "Eliminar"
         Me.eliminarBT.UseVisualStyleBackColor = True
         '
-        'ComboBox4
+        'Button3
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(570, 55)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(187, 28)
-        Me.ComboBox4.TabIndex = 32
-        '
-        'IdDcompra
-        '
-        Me.IdDcompra.DataPropertyName = "IdDcompra"
-        Me.IdDcompra.HeaderText = "IDDCOMPRA"
-        Me.IdDcompra.MinimumWidth = 8
-        Me.IdDcompra.Name = "IdDcompra"
-        Me.IdDcompra.ReadOnly = True
-        Me.IdDcompra.Visible = False
-        Me.IdDcompra.Width = 150
-        '
-        'IdCompra
-        '
-        Me.IdCompra.DataPropertyName = "IdCompra"
-        Me.IdCompra.HeaderText = "IDCOMPRA"
-        Me.IdCompra.MinimumWidth = 8
-        Me.IdCompra.Name = "IdCompra"
-        Me.IdCompra.ReadOnly = True
-        Me.IdCompra.Visible = False
-        Me.IdCompra.Width = 150
-        '
-        'Nfactura
-        '
-        Me.Nfactura.DataPropertyName = "Nfactura"
-        Me.Nfactura.HeaderText = "NFACTURA"
-        Me.Nfactura.MinimumWidth = 8
-        Me.Nfactura.Name = "Nfactura"
-        Me.Nfactura.ReadOnly = True
-        Me.Nfactura.Width = 150
-        '
-        'Id
-        '
-        Me.Id.DataPropertyName = "Id"
-        Me.Id.HeaderText = "IDMEDICAMENTO"
-        Me.Id.MinimumWidth = 8
-        Me.Id.Name = "Id"
-        Me.Id.ReadOnly = True
-        Me.Id.Visible = False
-        Me.Id.Width = 150
-        '
-        'nombre
-        '
-        Me.nombre.DataPropertyName = "nombre"
-        Me.nombre.HeaderText = "MEDICAMENTO"
-        Me.nombre.MinimumWidth = 8
-        Me.nombre.Name = "nombre"
-        Me.nombre.ReadOnly = True
-        Me.nombre.Width = 150
-        '
-        'cantidad
-        '
-        Me.cantidad.DataPropertyName = "cantidad"
-        Me.cantidad.HeaderText = "CANTIDAD"
-        Me.cantidad.MinimumWidth = 8
-        Me.cantidad.Name = "cantidad"
-        Me.cantidad.ReadOnly = True
-        Me.cantidad.Width = 150
-        '
-        'precio
-        '
-        Me.precio.DataPropertyName = "precio"
-        Me.precio.HeaderText = "PRECIO"
-        Me.precio.MinimumWidth = 8
-        Me.precio.Name = "precio"
-        Me.precio.ReadOnly = True
-        Me.precio.Width = 150
-        '
-        'subtotal
-        '
-        Me.subtotal.HeaderText = "SUBTOTAL"
-        Me.subtotal.MinimumWidth = 8
-        Me.subtotal.Name = "subtotal"
-        Me.subtotal.ReadOnly = True
-        Me.subtotal.Width = 150
+        Me.Button3.Location = New System.Drawing.Point(488, 602)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(113, 44)
+        Me.Button3.TabIndex = 83
+        Me.Button3.Text = "Imprimir"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'compraM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1308, 836)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.LTotal)
         Me.Controls.Add(Me.LIva)
         Me.Controls.Add(Me.LSuma)
@@ -438,4 +449,5 @@ Partial Class compraM
     Friend WithEvents Label1 As Label
     Friend WithEvents nuevoBT As Button
     Friend WithEvents eliminarBT As Button
+    Friend WithEvents Button3 As Button
 End Class

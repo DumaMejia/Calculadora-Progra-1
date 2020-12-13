@@ -24,20 +24,6 @@ Partial Class DatosPersonales
     Private Sub InitializeComponent()
         Me.PanelBD = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdDatos = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCivil = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdOficio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Idsangre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Idgenero = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEnfermedad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nacimiento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.oficio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.genero = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PanelDatos = New System.Windows.Forms.Panel()
@@ -64,6 +50,24 @@ Partial Class DatosPersonales
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.IdDatos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdExpediente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCivil = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdOficio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Idsangre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Idgenero = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdEnfermedad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.oficio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nacimiento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.genero = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDatos.SuspendLayout()
@@ -84,7 +88,7 @@ Partial Class DatosPersonales
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDatos, Me.IdCivil, Me.IdOficio, Me.Idsangre, Me.Idgenero, Me.IdEnfermedad, Me.nacimiento, Me.telefono, Me.direccion, Me.correo, Me.estado, Me.oficio, Me.genero, Me.nombre})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDatos, Me.IdExpediente, Me.nombre, Me.IdCivil, Me.IdOficio, Me.Idsangre, Me.Idgenero, Me.IdEnfermedad, Me.estado, Me.oficio, Me.nacimiento, Me.direccion, Me.correo, Me.telefono, Me.genero, Me.tipo})
         Me.DataGridView1.Location = New System.Drawing.Point(46, 116)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -92,6 +96,259 @@ Partial Class DatosPersonales
         Me.DataGridView1.RowTemplate.Height = 28
         Me.DataGridView1.Size = New System.Drawing.Size(529, 375)
         Me.DataGridView1.TabIndex = 45
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(140, 57)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(391, 26)
+        Me.TextBox3.TabIndex = 44
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(53, 63)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(81, 20)
+        Me.Label4.TabIndex = 42
+        Me.Label4.Text = "BUSCAR:"
+        '
+        'PanelDatos
+        '
+        Me.PanelDatos.Controls.Add(Me.ComboBox6)
+        Me.PanelDatos.Controls.Add(Me.Label11)
+        Me.PanelDatos.Controls.Add(Me.Label10)
+        Me.PanelDatos.Controls.Add(Me.Label9)
+        Me.PanelDatos.Controls.Add(Me.TextBox5)
+        Me.PanelDatos.Controls.Add(Me.TextBox4)
+        Me.PanelDatos.Controls.Add(Me.Label8)
+        Me.PanelDatos.Controls.Add(Me.Label7)
+        Me.PanelDatos.Controls.Add(Me.Label6)
+        Me.PanelDatos.Controls.Add(Me.Label5)
+        Me.PanelDatos.Controls.Add(Me.TextBox1)
+        Me.PanelDatos.Controls.Add(Me.ComboBox5)
+        Me.PanelDatos.Controls.Add(Me.ComboBox4)
+        Me.PanelDatos.Controls.Add(Me.ComboBox3)
+        Me.PanelDatos.Controls.Add(Me.ComboBox2)
+        Me.PanelDatos.Controls.Add(Me.PanelBuscarDiag)
+        Me.PanelDatos.Controls.Add(Me.ComboBox1)
+        Me.PanelDatos.Controls.Add(Me.TextBox2)
+        Me.PanelDatos.Controls.Add(Me.Label3)
+        Me.PanelDatos.Controls.Add(Me.Label2)
+        Me.PanelDatos.Controls.Add(Me.Label1)
+        Me.PanelDatos.Location = New System.Drawing.Point(4, 12)
+        Me.PanelDatos.Name = "PanelDatos"
+        Me.PanelDatos.Size = New System.Drawing.Size(592, 416)
+        Me.PanelDatos.TabIndex = 51
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(101, 349)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(79, 20)
+        Me.Label10.TabIndex = 31
+        Me.Label10.Text = "CORREO"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(101, 317)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(99, 20)
+        Me.Label9.TabIndex = 30
+        Me.Label9.Text = "DIRECCION"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(325, 343)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(187, 26)
+        Me.TextBox5.TabIndex = 29
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(325, 311)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(187, 26)
+        Me.TextBox4.TabIndex = 28
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(101, 153)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(145, 20)
+        Me.Label8.TabIndex = 27
+        Me.Label8.Text = "TIPO DE SANGRE"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(101, 221)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(123, 20)
+        Me.Label7.TabIndex = 26
+        Me.Label7.Text = "ENFERMEDAD"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(101, 187)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(79, 20)
+        Me.Label6.TabIndex = 25
+        Me.Label6.Text = "GENERO"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(101, 114)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(64, 20)
+        Me.Label5.TabIndex = 24
+        Me.Label5.Text = "OFICIO"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(325, 247)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(187, 26)
+        Me.TextBox1.TabIndex = 16
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Location = New System.Drawing.Point(325, 213)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox5.TabIndex = 23
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(325, 179)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox4.TabIndex = 22
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(325, 145)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox3.TabIndex = 21
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(325, 111)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox2.TabIndex = 20
+        '
+        'PanelBuscarDiag
+        '
+        Me.PanelBuscarDiag.Location = New System.Drawing.Point(595, -9)
+        Me.PanelBuscarDiag.Name = "PanelBuscarDiag"
+        Me.PanelBuscarDiag.Size = New System.Drawing.Size(581, 620)
+        Me.PanelBuscarDiag.TabIndex = 19
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(325, 75)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox1.TabIndex = 18
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(325, 279)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(187, 26)
+        Me.TextBox2.TabIndex = 17
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(101, 83)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(120, 20)
+        Me.Label3.TabIndex = 15
+        Me.Label3.Text = "ESTADO CIVIL"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(101, 285)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(94, 20)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "TELEFONO"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(101, 253)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(194, 20)
+        Me.Label1.TabIndex = 9
+        Me.Label1.Text = "FECHA DE NACIMIENTO"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(449, 459)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(113, 44)
+        Me.Button1.TabIndex = 50
+        Me.Button1.Text = "Buscar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'modificarBT
+        '
+        Me.modificarBT.Location = New System.Drawing.Point(141, 459)
+        Me.modificarBT.Name = "modificarBT"
+        Me.modificarBT.Size = New System.Drawing.Size(113, 44)
+        Me.modificarBT.TabIndex = 49
+        Me.modificarBT.Text = "Modificar"
+        Me.modificarBT.UseVisualStyleBackColor = True
+        '
+        'nuevoBT
+        '
+        Me.nuevoBT.Location = New System.Drawing.Point(8, 459)
+        Me.nuevoBT.Name = "nuevoBT"
+        Me.nuevoBT.Size = New System.Drawing.Size(113, 44)
+        Me.nuevoBT.TabIndex = 48
+        Me.nuevoBT.Text = "Nuevo"
+        Me.nuevoBT.UseVisualStyleBackColor = True
+        '
+        'eliminarBT
+        '
+        Me.eliminarBT.Location = New System.Drawing.Point(287, 459)
+        Me.eliminarBT.Name = "eliminarBT"
+        Me.eliminarBT.Size = New System.Drawing.Size(113, 44)
+        Me.eliminarBT.TabIndex = 47
+        Me.eliminarBT.Text = "Eliminar"
+        Me.eliminarBT.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(101, 43)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(88, 20)
+        Me.Label11.TabIndex = 32
+        Me.Label11.Text = "PACIENTE"
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Location = New System.Drawing.Point(325, 35)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox6.TabIndex = 33
         '
         'IdDatos
         '
@@ -102,6 +359,25 @@ Partial Class DatosPersonales
         Me.IdDatos.ReadOnly = True
         Me.IdDatos.Visible = False
         Me.IdDatos.Width = 150
+        '
+        'IdExpediente
+        '
+        Me.IdExpediente.DataPropertyName = "IdExpediente"
+        Me.IdExpediente.HeaderText = "IDEXPEDIENTE"
+        Me.IdExpediente.MinimumWidth = 8
+        Me.IdExpediente.Name = "IdExpediente"
+        Me.IdExpediente.ReadOnly = True
+        Me.IdExpediente.Visible = False
+        Me.IdExpediente.Width = 150
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "PACIENTE"
+        Me.nombre.MinimumWidth = 8
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 150
         '
         'IdCivil
         '
@@ -153,6 +429,24 @@ Partial Class DatosPersonales
         Me.IdEnfermedad.Visible = False
         Me.IdEnfermedad.Width = 150
         '
+        'estado
+        '
+        Me.estado.DataPropertyName = "estado"
+        Me.estado.HeaderText = "ESTADO CIVIL"
+        Me.estado.MinimumWidth = 8
+        Me.estado.Name = "estado"
+        Me.estado.ReadOnly = True
+        Me.estado.Width = 150
+        '
+        'oficio
+        '
+        Me.oficio.DataPropertyName = "oficio"
+        Me.oficio.HeaderText = "OFICIO"
+        Me.oficio.MinimumWidth = 8
+        Me.oficio.Name = "oficio"
+        Me.oficio.ReadOnly = True
+        Me.oficio.Width = 150
+        '
         'nacimiento
         '
         Me.nacimiento.DataPropertyName = "nacimiento"
@@ -161,15 +455,6 @@ Partial Class DatosPersonales
         Me.nacimiento.Name = "nacimiento"
         Me.nacimiento.ReadOnly = True
         Me.nacimiento.Width = 150
-        '
-        'telefono
-        '
-        Me.telefono.DataPropertyName = "telefono"
-        Me.telefono.HeaderText = "TELEFONO"
-        Me.telefono.MinimumWidth = 8
-        Me.telefono.Name = "telefono"
-        Me.telefono.ReadOnly = True
-        Me.telefono.Width = 150
         '
         'direccion
         '
@@ -190,23 +475,14 @@ Partial Class DatosPersonales
         Me.correo.ReadOnly = True
         Me.correo.Width = 150
         '
-        'estado
+        'telefono
         '
-        Me.estado.DataPropertyName = "estado"
-        Me.estado.HeaderText = "ESTADO CIVIL"
-        Me.estado.MinimumWidth = 8
-        Me.estado.Name = "estado"
-        Me.estado.ReadOnly = True
-        Me.estado.Width = 150
-        '
-        'oficio
-        '
-        Me.oficio.DataPropertyName = "oficio"
-        Me.oficio.HeaderText = "OFICIO"
-        Me.oficio.MinimumWidth = 8
-        Me.oficio.Name = "oficio"
-        Me.oficio.ReadOnly = True
-        Me.oficio.Width = 150
+        Me.telefono.DataPropertyName = "telefono"
+        Me.telefono.HeaderText = "TELEFONO"
+        Me.telefono.MinimumWidth = 8
+        Me.telefono.Name = "telefono"
+        Me.telefono.ReadOnly = True
+        Me.telefono.Width = 150
         '
         'genero
         '
@@ -217,248 +493,14 @@ Partial Class DatosPersonales
         Me.genero.ReadOnly = True
         Me.genero.Width = 150
         '
-        'nombre
+        'tipo
         '
-        Me.nombre.DataPropertyName = "nombre"
-        Me.nombre.HeaderText = "ENFERMEDADES"
-        Me.nombre.MinimumWidth = 8
-        Me.nombre.Name = "nombre"
-        Me.nombre.ReadOnly = True
-        Me.nombre.Width = 150
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(140, 57)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(391, 26)
-        Me.TextBox3.TabIndex = 44
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(53, 63)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 20)
-        Me.Label4.TabIndex = 42
-        Me.Label4.Text = "BUSCAR:"
-        '
-        'PanelDatos
-        '
-        Me.PanelDatos.Controls.Add(Me.Label10)
-        Me.PanelDatos.Controls.Add(Me.Label9)
-        Me.PanelDatos.Controls.Add(Me.TextBox5)
-        Me.PanelDatos.Controls.Add(Me.TextBox4)
-        Me.PanelDatos.Controls.Add(Me.Label8)
-        Me.PanelDatos.Controls.Add(Me.Label7)
-        Me.PanelDatos.Controls.Add(Me.Label6)
-        Me.PanelDatos.Controls.Add(Me.Label5)
-        Me.PanelDatos.Controls.Add(Me.TextBox1)
-        Me.PanelDatos.Controls.Add(Me.ComboBox5)
-        Me.PanelDatos.Controls.Add(Me.ComboBox4)
-        Me.PanelDatos.Controls.Add(Me.ComboBox3)
-        Me.PanelDatos.Controls.Add(Me.ComboBox2)
-        Me.PanelDatos.Controls.Add(Me.PanelBuscarDiag)
-        Me.PanelDatos.Controls.Add(Me.ComboBox1)
-        Me.PanelDatos.Controls.Add(Me.TextBox2)
-        Me.PanelDatos.Controls.Add(Me.Label3)
-        Me.PanelDatos.Controls.Add(Me.Label2)
-        Me.PanelDatos.Controls.Add(Me.Label1)
-        Me.PanelDatos.Location = New System.Drawing.Point(4, 12)
-        Me.PanelDatos.Name = "PanelDatos"
-        Me.PanelDatos.Size = New System.Drawing.Size(592, 416)
-        Me.PanelDatos.TabIndex = 51
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(113, 292)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(79, 20)
-        Me.Label10.TabIndex = 31
-        Me.Label10.Text = "CORREO"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(113, 260)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(99, 20)
-        Me.Label9.TabIndex = 30
-        Me.Label9.Text = "DIRECCION"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(337, 286)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(187, 26)
-        Me.TextBox5.TabIndex = 29
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(337, 254)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(187, 26)
-        Me.TextBox4.TabIndex = 28
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(113, 96)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(145, 20)
-        Me.Label8.TabIndex = 27
-        Me.Label8.Text = "TIPO DE SANGRE"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(113, 164)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(123, 20)
-        Me.Label7.TabIndex = 26
-        Me.Label7.Text = "ENFERMEDAD"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(113, 130)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(79, 20)
-        Me.Label6.TabIndex = 25
-        Me.Label6.Text = "GENERO"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(113, 57)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(64, 20)
-        Me.Label5.TabIndex = 24
-        Me.Label5.Text = "OFICIO"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(337, 190)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(187, 26)
-        Me.TextBox1.TabIndex = 16
-        '
-        'ComboBox5
-        '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(337, 156)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(187, 28)
-        Me.ComboBox5.TabIndex = 23
-        '
-        'ComboBox4
-        '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(337, 122)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(187, 28)
-        Me.ComboBox4.TabIndex = 22
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(337, 88)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(187, 28)
-        Me.ComboBox3.TabIndex = 21
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(337, 54)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(187, 28)
-        Me.ComboBox2.TabIndex = 20
-        '
-        'PanelBuscarDiag
-        '
-        Me.PanelBuscarDiag.Location = New System.Drawing.Point(595, -9)
-        Me.PanelBuscarDiag.Name = "PanelBuscarDiag"
-        Me.PanelBuscarDiag.Size = New System.Drawing.Size(581, 620)
-        Me.PanelBuscarDiag.TabIndex = 19
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(337, 18)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(187, 28)
-        Me.ComboBox1.TabIndex = 18
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(337, 222)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(187, 26)
-        Me.TextBox2.TabIndex = 17
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(113, 26)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(120, 20)
-        Me.Label3.TabIndex = 15
-        Me.Label3.Text = "ESTADO CIVIL"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(113, 228)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(94, 20)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "TELEFONO"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(113, 196)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(194, 20)
-        Me.Label1.TabIndex = 9
-        Me.Label1.Text = "FECHA DE NACIMIENTO"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(449, 459)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(113, 44)
-        Me.Button1.TabIndex = 50
-        Me.Button1.Text = "Buscar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'modificarBT
-        '
-        Me.modificarBT.Location = New System.Drawing.Point(141, 459)
-        Me.modificarBT.Name = "modificarBT"
-        Me.modificarBT.Size = New System.Drawing.Size(113, 44)
-        Me.modificarBT.TabIndex = 49
-        Me.modificarBT.Text = "Modificar"
-        Me.modificarBT.UseVisualStyleBackColor = True
-        '
-        'nuevoBT
-        '
-        Me.nuevoBT.Location = New System.Drawing.Point(8, 459)
-        Me.nuevoBT.Name = "nuevoBT"
-        Me.nuevoBT.Size = New System.Drawing.Size(113, 44)
-        Me.nuevoBT.TabIndex = 48
-        Me.nuevoBT.Text = "Nuevo"
-        Me.nuevoBT.UseVisualStyleBackColor = True
-        '
-        'eliminarBT
-        '
-        Me.eliminarBT.Location = New System.Drawing.Point(287, 459)
-        Me.eliminarBT.Name = "eliminarBT"
-        Me.eliminarBT.Size = New System.Drawing.Size(113, 44)
-        Me.eliminarBT.TabIndex = 47
-        Me.eliminarBT.Text = "Eliminar"
-        Me.eliminarBT.UseVisualStyleBackColor = True
+        Me.tipo.DataPropertyName = "Tipo"
+        Me.tipo.HeaderText = "TIPO DE SANGRE"
+        Me.tipo.MinimumWidth = 8
+        Me.tipo.Name = "tipo"
+        Me.tipo.ReadOnly = True
+        Me.tipo.Width = 150
         '
         'DatosPersonales
         '
@@ -510,18 +552,22 @@ Partial Class DatosPersonales
     Friend WithEvents ComboBox4 As ComboBox
     Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents Label11 As Label
     Friend WithEvents IdDatos As DataGridViewTextBoxColumn
+    Friend WithEvents IdExpediente As DataGridViewTextBoxColumn
+    Friend WithEvents nombre As DataGridViewTextBoxColumn
     Friend WithEvents IdCivil As DataGridViewTextBoxColumn
     Friend WithEvents IdOficio As DataGridViewTextBoxColumn
     Friend WithEvents Idsangre As DataGridViewTextBoxColumn
     Friend WithEvents Idgenero As DataGridViewTextBoxColumn
     Friend WithEvents IdEnfermedad As DataGridViewTextBoxColumn
-    Friend WithEvents nacimiento As DataGridViewTextBoxColumn
-    Friend WithEvents telefono As DataGridViewTextBoxColumn
-    Friend WithEvents direccion As DataGridViewTextBoxColumn
-    Friend WithEvents correo As DataGridViewTextBoxColumn
     Friend WithEvents estado As DataGridViewTextBoxColumn
     Friend WithEvents oficio As DataGridViewTextBoxColumn
+    Friend WithEvents nacimiento As DataGridViewTextBoxColumn
+    Friend WithEvents direccion As DataGridViewTextBoxColumn
+    Friend WithEvents correo As DataGridViewTextBoxColumn
+    Friend WithEvents telefono As DataGridViewTextBoxColumn
     Friend WithEvents genero As DataGridViewTextBoxColumn
-    Friend WithEvents nombre As DataGridViewTextBoxColumn
+    Friend WithEvents tipo As DataGridViewTextBoxColumn
 End Class

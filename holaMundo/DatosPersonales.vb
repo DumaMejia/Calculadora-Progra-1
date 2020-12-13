@@ -30,9 +30,9 @@
         ComboBox4.DisplayMember = "genero"
         ComboBox4.ValueMember = "genero.Idgenero"
 
-        ComboBox5.DataSource = conexion.obtenerdatos().Tables("enfermedades").DefaultView()
+        ComboBox5.DataSource = conexion.obtenerdatos().Tables("expediente").DefaultView()
         ComboBox5.DisplayMember = "nombre"
-        ComboBox5.ValueMember = "enfermedades.IdEnfermedad"
+        ComboBox5.ValueMember = "expediente.IdExpediente"
     End Sub
     Sub mostrardatos()
         Me.Tag = datatable.Rows(posicion).ItemArray(0).ToString()
@@ -45,6 +45,7 @@
         TextBox2.Text = datatable.Rows(posicion).ItemArray(6).ToString()
         TextBox4.Text = datatable.Rows(posicion).ItemArray(7).ToString()
         TextBox5.Text = datatable.Rows(posicion).ItemArray(8).ToString()
+        ComboBox5.SelectedValue = datatable.Rows(posicion).ItemArray(9).ToString()
     End Sub
     Private Sub SeleccionarDato()
         idc = DataGridView1.CurrentRow.Cells("IdDatos").Value.ToString()
@@ -127,7 +128,7 @@
             limpiarCampos()
         Else 'Guardar
             Dim msg = conexion.mantenimientoDatosPersonales(New String() {
-                Me.Tag, ComboBox1.SelectedValue, ComboBox2.SelectedValue, ComboBox3.SelectedValue, ComboBox4.SelectedValue, TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox5.Text
+                Me.Tag, ComboBox1.SelectedValue, ComboBox2.SelectedValue, ComboBox3.SelectedValue, ComboBox4.SelectedValue, TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox5.Text, ComboBox5.SelectedValue
                }, cambio)
             If msg = "error" Then
                 MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro de Clientes",
@@ -136,13 +137,6 @@
                 controlesInicio(True)
                 nuevoBT.Text = "Nuevo"
                 modificarBT.Text = "Modificar"
-
-                obtenerdatos()
-                posicion = datatable.Rows.Count - 1
-                mostrardatos()
-
-                idc2 = Me.Tag
-                Close()
             End If
         End If
     End Sub
