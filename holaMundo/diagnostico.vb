@@ -20,6 +20,10 @@
         ComboBox2.DataSource = conexion.obtenerdatos().Tables("expediente").DefaultView()
         ComboBox2.DisplayMember = "nombre"
         ComboBox2.ValueMember = "expediente.IdExpediente"
+
+        ComboBox3.DataSource = conexion.obtenerdatos().Tables("personal").DefaultView()
+        ComboBox3.DisplayMember = "nombre"
+        ComboBox3.ValueMember = "personal.IdPersonal"
     End Sub
     Sub mostrardatos()
         Me.Tag = datatable.Rows(posicion).ItemArray(0).ToString()
@@ -28,6 +32,7 @@
         TextBox1.Text = datatable.Rows(posicion).ItemArray(2).ToString()
         TextBox2.Text = datatable.Rows(posicion).ItemArray(3).ToString()
         ComboBox2.SelectedValue = datatable.Rows(posicion).ItemArray(4).ToString()
+        ComboBox3.SelectedValue = datatable.Rows(posicion).ItemArray(5).ToString()
     End Sub
     Private Sub SeleccionarDato()
         idc = DataGridView1.CurrentRow.Cells("IdDiag").Value.ToString()
@@ -41,7 +46,7 @@
     Private Sub filtrar(ByVal valor As String)
         Dim bs As New BindingSource()
         bs.DataSource = DataGridView1.DataSource
-        bs.Filter = "diag like '%" & valor & "%' or nombre like '%" & valor & "%'"
+        bs.Filter = "nombre like '%" & valor & "%' or nombre like '%" & valor & "%'"
         DataGridView1.DataSource = bs
     End Sub
     Private Sub controlesNuevo(ByVal estado As Boolean)
@@ -58,6 +63,7 @@
         eliminarBT.Enabled = Not estado
         Button1.Enabled = estado
         modificarBT.Enabled = Not estado
+        Button2.Enabled = Not estado
     End Sub
     Private Sub controlesBuscar(ByVal estado As Boolean)
         PanelDatos.Enabled = Not estado
@@ -74,6 +80,7 @@
         Button1.Enabled = estado
         modificarBT.Enabled = estado
         nuevoBT.Enabled = estado
+        Button2.Enabled = estado
     End Sub
     Private Sub limpiarCampos()
         TextBox1.Text = ""
@@ -106,7 +113,7 @@
             limpiarCampos()
         Else 'Guardar
             Dim msg = conexion.mantenimientoDiag(New String() {
-                Me.Tag, ComboBox1.SelectedValue, TextBox1.Text, TextBox2.Text, ComboBox2.SelectedValue
+                Me.Tag, ComboBox1.SelectedValue, TextBox1.Text, TextBox2.Text, ComboBox2.SelectedValue, ComboBox3.SelectedValue
                }, cambio)
             If msg = "error" Then
                 MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro de Clientes",
@@ -115,6 +122,7 @@
                 controlesInicio(True)
                 nuevoBT.Text = "Nuevo"
                 modificarBT.Text = "Modificar"
+                Button2.Enabled = True
             End If
         End If
     End Sub
@@ -147,5 +155,12 @@
 
     Private Sub PanelDatos_Paint(sender As Object, e As PaintEventArgs) Handles PanelDatos.Paint
 
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim Reporte As New ReportDiagnostico
+        Reporte._idDiag = Me.Tag
+        Reporte.ShowDialog()
+        mostrardatos()
     End Sub
 End Class

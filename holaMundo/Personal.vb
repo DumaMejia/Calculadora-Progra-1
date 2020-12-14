@@ -17,10 +17,6 @@
         ComboBox1.DisplayMember = "cargoper"
         ComboBox1.ValueMember = "CargoPersonal.IdCargo"
 
-        ComboBox3.DataSource = conexion.obtenerdatos().Tables("especialista").DefaultView()
-        ComboBox3.DisplayMember = "especialidad"
-        ComboBox3.ValueMember = "especialista.IdEspecialista"
-
     End Sub
     Sub mostrardatos()
         Me.Tag = datatable.Rows(posicion).ItemArray(0).ToString()
@@ -31,7 +27,6 @@
         TextBox4.Text = datatable.Rows(posicion).ItemArray(4).ToString()
         TextBox5.Text = datatable.Rows(posicion).ItemArray(5).ToString()
         ComboBox1.SelectedValue = datatable.Rows(posicion).ItemArray(6).ToString()
-        ComboBox3.SelectedValue = datatable.Rows(posicion).ItemArray(7).ToString()
     End Sub
     Private Sub SeleccionarDato()
         idc = DataGridView1.CurrentRow.Cells("IdPersonal").Value.ToString()
@@ -115,7 +110,7 @@
             limpiarCampos()
         Else 'Guardar
             Dim msg = conexion.mantenimientoPersonal(New String() {
-                Me.Tag, TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, ComboBox1.SelectedValue, ComboBox3.SelectedValue
+                Me.Tag, TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, ComboBox1.SelectedValue
                }, cambio)
             If msg = "error" Then
                 MessageBox.Show("Error al intentar guardar el registro, por favor intente nuevamente.", "Registro de Clientes",

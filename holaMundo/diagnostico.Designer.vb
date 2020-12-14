@@ -23,6 +23,8 @@ Partial Class diagnostico
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PanelDatos = New System.Windows.Forms.Panel()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.PanelBuscarDiag = New System.Windows.Forms.Panel()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -36,16 +38,21 @@ Partial Class diagnostico
         Me.eliminarBT = New System.Windows.Forms.Button()
         Me.PanelBD = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdDiag = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.IdEnfermedad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdDiag = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdPersonal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdExpediente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.diag = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.PanelDatos.SuspendLayout()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,6 +60,9 @@ Partial Class diagnostico
         '
         'PanelDatos
         '
+        Me.PanelDatos.Controls.Add(Me.Label7)
+        Me.PanelDatos.Controls.Add(Me.Label6)
+        Me.PanelDatos.Controls.Add(Me.ComboBox3)
         Me.PanelDatos.Controls.Add(Me.ComboBox2)
         Me.PanelDatos.Controls.Add(Me.Label5)
         Me.PanelDatos.Controls.Add(Me.PanelBuscarDiag)
@@ -66,6 +76,23 @@ Partial Class diagnostico
         Me.PanelDatos.Name = "PanelDatos"
         Me.PanelDatos.Size = New System.Drawing.Size(592, 459)
         Me.PanelDatos.TabIndex = 39
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(291, 63)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox2.TabIndex = 21
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(135, 19)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(73, 20)
+        Me.Label5.TabIndex = 20
+        Me.Label5.Text = "MEDICO"
         '
         'PanelBuscarDiag
         '
@@ -92,7 +119,7 @@ Partial Class diagnostico
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(291, 91)
+        Me.TextBox1.Location = New System.Drawing.Point(291, 109)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(187, 122)
@@ -119,7 +146,7 @@ Partial Class diagnostico
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(135, 94)
+        Me.Label1.Location = New System.Drawing.Point(135, 109)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(121, 20)
         Me.Label1.TabIndex = 9
@@ -176,7 +203,7 @@ Partial Class diagnostico
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDiag, Me.IdEnfermedad, Me.nombre, Me.diag, Me.descripcion})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEnfermedad, Me.IdDiag, Me.IdPersonal, Me.IdExpediente, Me.nombre1, Me.nombre2, Me.nombre, Me.diag, Me.descripcion})
         Me.DataGridView1.Location = New System.Drawing.Point(46, 116)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -184,6 +211,66 @@ Partial Class diagnostico
         Me.DataGridView1.RowTemplate.Height = 28
         Me.DataGridView1.Size = New System.Drawing.Size(529, 455)
         Me.DataGridView1.TabIndex = 45
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(140, 57)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(391, 26)
+        Me.TextBox3.TabIndex = 44
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(53, 63)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(81, 20)
+        Me.Label4.TabIndex = 42
+        Me.Label4.Text = "BUSCAR:"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(473, 495)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(113, 44)
+        Me.Button2.TabIndex = 41
+        Me.Button2.Text = "Imprimir"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(291, 19)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox3.TabIndex = 22
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(135, 71)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(0, 20)
+        Me.Label6.TabIndex = 23
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(135, 71)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(88, 20)
+        Me.Label7.TabIndex = 24
+        Me.Label7.Text = "PACIENTE"
+        '
+        'IdEnfermedad
+        '
+        Me.IdEnfermedad.DataPropertyName = "IdEnfermedad"
+        Me.IdEnfermedad.HeaderText = "IDENFER"
+        Me.IdEnfermedad.MinimumWidth = 8
+        Me.IdEnfermedad.Name = "IdEnfermedad"
+        Me.IdEnfermedad.ReadOnly = True
+        Me.IdEnfermedad.Visible = False
+        Me.IdEnfermedad.Width = 150
         '
         'IdDiag
         '
@@ -195,15 +282,42 @@ Partial Class diagnostico
         Me.IdDiag.Visible = False
         Me.IdDiag.Width = 150
         '
-        'IdEnfermedad
+        'IdPersonal
         '
-        Me.IdEnfermedad.DataPropertyName = "IdEnfermedad"
-        Me.IdEnfermedad.HeaderText = "IDENFER"
-        Me.IdEnfermedad.MinimumWidth = 8
-        Me.IdEnfermedad.Name = "IdEnfermedad"
-        Me.IdEnfermedad.ReadOnly = True
-        Me.IdEnfermedad.Visible = False
-        Me.IdEnfermedad.Width = 150
+        Me.IdPersonal.HeaderText = "IDPERSONAL"
+        Me.IdPersonal.MinimumWidth = 8
+        Me.IdPersonal.Name = "IdPersonal"
+        Me.IdPersonal.ReadOnly = True
+        Me.IdPersonal.Visible = False
+        Me.IdPersonal.Width = 150
+        '
+        'IdExpediente
+        '
+        Me.IdExpediente.DataPropertyName = "IdExpediente"
+        Me.IdExpediente.HeaderText = "IDEXPEDIENTE"
+        Me.IdExpediente.MinimumWidth = 8
+        Me.IdExpediente.Name = "IdExpediente"
+        Me.IdExpediente.ReadOnly = True
+        Me.IdExpediente.Visible = False
+        Me.IdExpediente.Width = 150
+        '
+        'nombre1
+        '
+        Me.nombre1.DataPropertyName = "nombre1"
+        Me.nombre1.HeaderText = "PACIENTE"
+        Me.nombre1.MinimumWidth = 8
+        Me.nombre1.Name = "nombre1"
+        Me.nombre1.ReadOnly = True
+        Me.nombre1.Width = 150
+        '
+        'nombre2
+        '
+        Me.nombre2.DataPropertyName = "nombre2"
+        Me.nombre2.HeaderText = "DOCTOR"
+        Me.nombre2.MinimumWidth = 8
+        Me.nombre2.Name = "nombre2"
+        Me.nombre2.ReadOnly = True
+        Me.nombre2.Width = 150
         '
         'nombre
         '
@@ -232,48 +346,6 @@ Partial Class diagnostico
         Me.descripcion.Name = "descripcion"
         Me.descripcion.ReadOnly = True
         Me.descripcion.Width = 150
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(140, 57)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(391, 26)
-        Me.TextBox3.TabIndex = 44
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(53, 63)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 20)
-        Me.Label4.TabIndex = 42
-        Me.Label4.Text = "BUSCAR:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(135, 19)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(88, 20)
-        Me.Label5.TabIndex = 20
-        Me.Label5.Text = "PACIENTE"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(291, 16)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(187, 28)
-        Me.ComboBox2.TabIndex = 21
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(473, 495)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(113, 44)
-        Me.Button2.TabIndex = 41
-        Me.Button2.Text = "Imprimir"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'diagnostico
         '
@@ -313,12 +385,19 @@ Partial Class diagnostico
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents IdDiag As DataGridViewTextBoxColumn
-    Friend WithEvents IdEnfermedad As DataGridViewTextBoxColumn
-    Friend WithEvents nombre As DataGridViewTextBoxColumn
-    Friend WithEvents diag As DataGridViewTextBoxColumn
-    Friend WithEvents descripcion As DataGridViewTextBoxColumn
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents IdEnfermedad As DataGridViewTextBoxColumn
+    Friend WithEvents IdDiag As DataGridViewTextBoxColumn
+    Friend WithEvents IdPersonal As DataGridViewTextBoxColumn
+    Friend WithEvents IdExpediente As DataGridViewTextBoxColumn
+    Friend WithEvents nombre1 As DataGridViewTextBoxColumn
+    Friend WithEvents nombre2 As DataGridViewTextBoxColumn
+    Friend WithEvents nombre As DataGridViewTextBoxColumn
+    Friend WithEvents diag As DataGridViewTextBoxColumn
+    Friend WithEvents descripcion As DataGridViewTextBoxColumn
 End Class

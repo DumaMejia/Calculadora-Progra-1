@@ -294,3 +294,6 @@ C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.Report
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.Listapersonal.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.listamed.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ListaDeUsuarios.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.PacienteExamen.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.PersonalEspecialista.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ReportDiagnostico.resources

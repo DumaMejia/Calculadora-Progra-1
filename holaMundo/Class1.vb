@@ -97,11 +97,18 @@ Public Class db_conexion
         miadapter.Fill(ds, "expediente")
 
         micomand.CommandText = "
-            select personal.IdPersonal, personal.nombre, personal.apellido, personal.direccion, personal.correo, personal.telefono, personal.IdCargo, personal.IdEspecialista, CargoPersonal.cargoper, especialista.especialidad
+            select PacExam.Idexapaciente, PacExam.IdExpediente, PacExam.Idexamen, PacExam.Fecha, PacExam.Hora, expediente.nombre, examenes.Tipo
+            from PacExam
+            inner join expediente on(expediente.IdExpediente=PacExam.IdExpediente)
+            inner join examenes on(examenes.Idexamen=PacExam.Idexamen)
+        "
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "PacExam")
+
+        micomand.CommandText = "
+            select personal.IdPersonal, personal.nombre, personal.apellido, personal.direccion, personal.correo, personal.telefono, personal.IdCargo, CargoPersonal.cargoper
             from personal
             inner join CargoPersonal on(CargoPersonal.IdCargo=personal.IdCargo)
-            inner join especialista on(especialista.IdEspecialista=personal.IdEspecialista)
-
         "
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "personal")
@@ -188,10 +195,11 @@ Public Class db_conexion
         miadapter.Fill(ds, "CargoPersonal")
 
         micomand.CommandText = "
-            select diagnostico.IdDiag, diagnostico.IdEnfermedad, diagnostico.diag, diagnostico.descripcion, diagnostico.IdExpediente, enfermedades.nombre, expediente.nombre
+            select diagnostico.IdDiag, diagnostico.IdEnfermedad, diagnostico.diag, diagnostico.descripcion, diagnostico.IdExpediente, diagnostico.IdPersonal, enfermedades.nombre, expediente.nombre, personal.nombre
             from diagnostico 
             inner join enfermedades on(enfermedades.IdEnfermedad=diagnostico.IdEnfermedad)
             inner join expediente on(expediente.IdExpediente=diagnostico.IdExpediente)
+            inner join personal on(personal.IdPersonal=diagnostico.IdPersonal)
         "
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "diagnostico")
@@ -225,12 +233,22 @@ Public Class db_conexion
         miadapter.Fill(ds, "receta")
 
         micomand.CommandText = "
-            select horario.Idhorario, horario.IdCargo, horario.horario, CargoPersonal.cargoper
+            select horario.Idhorario, horario.IdCargo, horario.horario, horario.IdPersonal, CargoPersonal.cargoper, personal.nombre
             from horario
             inner join CargoPersonal on(CargoPersonal.IdCargo=horario.IdCargo)
+            inner join personal on(personal.IdPersonal=horario.IdPersonal)
         "
         miadapter.SelectCommand = micomand
         miadapter.Fill(ds, "horario")
+
+        micomand.CommandText = "
+            select perespec.IdPerEspec, perespec.IdPersonal, perespec.IdEspecialista, perespec.JVPM, personal.nombre, especialista.especialidad
+            from perespec
+            inner join personal on(personal.IdPersonal=perespec.IdPersonal)
+            inner join especialista on(especialista.IdEspecialista=perespec.IdEspecialista)
+        "
+        miadapter.SelectCommand = micomand
+        miadapter.Fill(ds, "perespec")
 
         micomand.CommandText = "select * from tipoUsuario"
         miadapter.SelectCommand = micomand
@@ -356,6 +374,24 @@ Public Class db_conexion
 
         Return msg
     End Function
+    Public Function mantenimientoPersonalEspecialista(ByVal datos As String(), ByVal cambio As String)
+        Dim sql, msg As String
+        Select Case cambio
+            Case "nuevo"
+                sql = "INSERT INTO perespec (IdPersonal,IdEspecialista,JVPM) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "')"
+            Case "modificar"
+                sql = "UPDATE perespec SET IdPersonal='" + datos(1) + "',IdEspecialista='" + datos(2) + "',JVPM='" + datos(3) + "' WHERE IdPerEspec='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM perespec WHERE IdPerEspec='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
     Public Function mantenimientoDatosCargo(ByVal datos As String(), ByVal accion As String)
         Dim sql, msg As String
         Select Case accion
@@ -378,11 +414,29 @@ Public Class db_conexion
         Dim sql, msg As String
         Select Case cambio
             Case "nuevo"
-                sql = "INSERT INTO diagnostico (IdEnfermedad,diag,descripcion,IdExpediente) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "')"
+                sql = "INSERT INTO diagnostico (IdEnfermedad,diag,descripcion,IdExpediente,IdPersonal) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "')"
             Case "modificar"
-                sql = "UPDATE diagnostico SET Idenfermedad='" + datos(1) + "',diag='" + datos(2) + "',descripcion='" + datos(3) + "',IdExpediente='" + datos(4) + "' WHERE IdDiag='" + datos(0) + "'"
+                sql = "UPDATE diagnostico SET Idenfermedad='" + datos(1) + "',diag='" + datos(2) + "',descripcion='" + datos(3) + "',IdExpediente='" + datos(4) + "',IdPersonal='" + datos(5) + "' WHERE IdDiag='" + datos(0) + "'"
             Case "eliminar"
                 sql = "DELETE FROM diagnostico WHERE IdDiag='" + datos(0) + "'"
+        End Select
+        If (executeSql(sql) > 0) Then
+            msg = "exito"
+        Else
+            msg = "error"
+        End If
+
+        Return msg
+    End Function
+    Public Function mantenimientoPacienteExamen(ByVal datos As String(), ByVal cambio As String)
+        Dim sql, msg As String
+        Select Case cambio
+            Case "nuevo"
+                sql = "INSERT INTO PacExam (IdExpediente,Idexamen,Fecha,Hora) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "')"
+            Case "modificar"
+                sql = "UPDATE PacExam SET IdExpediente='" + datos(1) + "',Idexamen='" + datos(2) + "',Fecha='" + datos(3) + "',Hora='" + datos(4) + "' WHERE Idexapacaiente='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM PacExam WHERE Idexapaciente='" + datos(0) + "'"
         End Select
         If (executeSql(sql) > 0) Then
             msg = "exito"
@@ -468,9 +522,9 @@ Public Class db_conexion
         Dim sql, msg As String
         Select Case cambio
             Case "nuevo"
-                sql = "INSERT INTO horario (IdCargo,horario) VALUES('" + datos(1) + "','" + datos(2) + "')"
+                sql = "INSERT INTO horario (IdCargo,horario,IdPersonal) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "')"
             Case "modificar"
-                sql = "UPDATE horario SET IdCargo='" + datos(1) + "',horario='" + datos(2) + "' WHERE Idhorario='" + datos(0) + "'"
+                sql = "UPDATE horario SET IdCargo='" + datos(1) + "',horario='" + datos(2) + "',IdPersonal='" + datos(3) + "' WHERE Idhorario='" + datos(0) + "'"
             Case "eliminar"
                 sql = "DELETE FROM horario WHERE Idhorario='" + datos(0) + "'"
         End Select
@@ -522,9 +576,9 @@ Public Class db_conexion
         Dim sql, msg As String
         Select Case cambio
             Case "nuevo"
-                sql = "INSERT INTO personal (nombre,apellido,direccion,correo,telefono,IdCargo,IdEspecialista) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "','" + datos(6) + "','" + datos(7) + "')"
+                sql = "INSERT INTO personal (nombre,apellido,direccion,correo,telefono,IdCargo) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "','" + datos(6) + "')"
             Case "modificar"
-                sql = "UPDATE personal SET nombre='" + datos(1) + "',apellido='" + datos(2) + "',direccion='" + datos(3) + "',correo='" + datos(4) + "',telefono='" + datos(5) + "',IdCargo='" + datos(6) + "',IdEspecialista='" + datos(7) + "' WHERE IdDfamiliar='" + datos(0) + "'"
+                sql = "UPDATE personal SET nombre='" + datos(1) + "',apellido='" + datos(2) + "',direccion='" + datos(3) + "',correo='" + datos(4) + "',telefono='" + datos(5) + "',IdCargo='" + datos(6) + "' WHERE IdPersonal='" + datos(0) + "'"
             Case "eliminar"
                 sql = "DELETE FROM personal WHERE IdPersonal='" + datos(0) + "'"
         End Select

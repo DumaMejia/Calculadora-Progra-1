@@ -117,4 +117,14 @@
         Dim Objusuariolist As New ListaDeUsuarios
         Objusuariolist.Show()
     End Sub
+
+    Private Sub CITAEXAMENToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CITAEXAMENToolStripMenuItem.Click
+        Dim objexamencita As New PacienteExamen
+        objexamencita.Show()
+    End Sub
+
+    Private Sub PERSONALESPECIALISTAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PERSONALESPECIALISTAToolStripMenuItem.Click
+        Dim objperespec As New PersonalEspecialista
+        objperespec.Show()
+    End Sub
 End Class

@@ -39,6 +39,7 @@ Partial Class menu
         Me.CITACONSULTAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EXAMENESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RECETASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CITAEXAMENToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PEROSNALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CARGOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.USUARIOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -49,6 +50,7 @@ Partial Class menu
         Me.LISTADEPERSONALDECLINICAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LISTAMEDICAMENTOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LISTADEUSUARIOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PERSONALESPECIALISTAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -97,7 +99,7 @@ Partial Class menu
         '
         'PACIENTEToolStripMenuItem
         '
-        Me.PACIENTEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ENFERMEDADESToolStripMenuItem, Me.DIAGNOSTICOToolStripMenuItem, Me.TRASLADOToolStripMenuItem, Me.ALERGIAToolStripMenuItem, Me.DATOSToolStripMenuItem, Me.PruebaToolStripMenuItem, Me.EXPEDIENTEToolStripMenuItem, Me.CITACONSULTAToolStripMenuItem, Me.EXAMENESToolStripMenuItem, Me.RECETASToolStripMenuItem})
+        Me.PACIENTEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ENFERMEDADESToolStripMenuItem, Me.DIAGNOSTICOToolStripMenuItem, Me.TRASLADOToolStripMenuItem, Me.ALERGIAToolStripMenuItem, Me.DATOSToolStripMenuItem, Me.PruebaToolStripMenuItem, Me.EXPEDIENTEToolStripMenuItem, Me.CITACONSULTAToolStripMenuItem, Me.EXAMENESToolStripMenuItem, Me.RECETASToolStripMenuItem, Me.CITAEXAMENToolStripMenuItem})
         Me.PACIENTEToolStripMenuItem.Name = "PACIENTEToolStripMenuItem"
         Me.PACIENTEToolStripMenuItem.Size = New System.Drawing.Size(105, 29)
         Me.PACIENTEToolStripMenuItem.Text = "PACIENTE"
@@ -162,9 +164,15 @@ Partial Class menu
         Me.RECETASToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.RECETASToolStripMenuItem.Text = "RECETAS"
         '
+        'CITAEXAMENToolStripMenuItem
+        '
+        Me.CITAEXAMENToolStripMenuItem.Name = "CITAEXAMENToolStripMenuItem"
+        Me.CITAEXAMENToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
+        Me.CITAEXAMENToolStripMenuItem.Text = "CITA EXAMEN"
+        '
         'PEROSNALToolStripMenuItem
         '
-        Me.PEROSNALToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CARGOToolStripMenuItem, Me.USUARIOSToolStripMenuItem, Me.HORARIOToolStripMenuItem, Me.PERSONALToolStripMenuItem, Me.ADMINISTRARTARJETASToolStripMenuItem})
+        Me.PEROSNALToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CARGOToolStripMenuItem, Me.USUARIOSToolStripMenuItem, Me.HORARIOToolStripMenuItem, Me.PERSONALToolStripMenuItem, Me.ADMINISTRARTARJETASToolStripMenuItem, Me.PERSONALESPECIALISTAToolStripMenuItem})
         Me.PEROSNALToolStripMenuItem.Name = "PEROSNALToolStripMenuItem"
         Me.PEROSNALToolStripMenuItem.Size = New System.Drawing.Size(115, 29)
         Me.PEROSNALToolStripMenuItem.Text = "PERSONAL"
@@ -172,31 +180,31 @@ Partial Class menu
         'CARGOToolStripMenuItem
         '
         Me.CARGOToolStripMenuItem.Name = "CARGOToolStripMenuItem"
-        Me.CARGOToolStripMenuItem.Size = New System.Drawing.Size(313, 34)
+        Me.CARGOToolStripMenuItem.Size = New System.Drawing.Size(315, 34)
         Me.CARGOToolStripMenuItem.Text = "CARGO"
         '
         'USUARIOSToolStripMenuItem
         '
         Me.USUARIOSToolStripMenuItem.Name = "USUARIOSToolStripMenuItem"
-        Me.USUARIOSToolStripMenuItem.Size = New System.Drawing.Size(313, 34)
+        Me.USUARIOSToolStripMenuItem.Size = New System.Drawing.Size(315, 34)
         Me.USUARIOSToolStripMenuItem.Text = "USUARIOS"
         '
         'HORARIOToolStripMenuItem
         '
         Me.HORARIOToolStripMenuItem.Name = "HORARIOToolStripMenuItem"
-        Me.HORARIOToolStripMenuItem.Size = New System.Drawing.Size(313, 34)
+        Me.HORARIOToolStripMenuItem.Size = New System.Drawing.Size(315, 34)
         Me.HORARIOToolStripMenuItem.Text = "HORARIO"
         '
         'PERSONALToolStripMenuItem
         '
         Me.PERSONALToolStripMenuItem.Name = "PERSONALToolStripMenuItem"
-        Me.PERSONALToolStripMenuItem.Size = New System.Drawing.Size(313, 34)
+        Me.PERSONALToolStripMenuItem.Size = New System.Drawing.Size(315, 34)
         Me.PERSONALToolStripMenuItem.Text = "PERSONAL"
         '
         'ADMINISTRARTARJETASToolStripMenuItem
         '
         Me.ADMINISTRARTARJETASToolStripMenuItem.Name = "ADMINISTRARTARJETASToolStripMenuItem"
-        Me.ADMINISTRARTARJETASToolStripMenuItem.Size = New System.Drawing.Size(313, 34)
+        Me.ADMINISTRARTARJETASToolStripMenuItem.Size = New System.Drawing.Size(315, 34)
         Me.ADMINISTRARTARJETASToolStripMenuItem.Text = "ADMINISTRAR TARJETAS"
         '
         'REPORTESToolStripMenuItem
@@ -223,6 +231,12 @@ Partial Class menu
         Me.LISTADEUSUARIOSToolStripMenuItem.Name = "LISTADEUSUARIOSToolStripMenuItem"
         Me.LISTADEUSUARIOSToolStripMenuItem.Size = New System.Drawing.Size(373, 34)
         Me.LISTADEUSUARIOSToolStripMenuItem.Text = "LISTA DE USUARIOS"
+        '
+        'PERSONALESPECIALISTAToolStripMenuItem
+        '
+        Me.PERSONALESPECIALISTAToolStripMenuItem.Name = "PERSONALESPECIALISTAToolStripMenuItem"
+        Me.PERSONALESPECIALISTAToolStripMenuItem.Size = New System.Drawing.Size(315, 34)
+        Me.PERSONALESPECIALISTAToolStripMenuItem.Text = "PERSONAL ESPECIALISTA"
         '
         'menu
         '
@@ -267,4 +281,6 @@ Partial Class menu
     Friend WithEvents LISTADEPERSONALDECLINICAToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LISTAMEDICAMENTOSToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LISTADEUSUARIOSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CITAEXAMENToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PERSONALESPECIALISTAToolStripMenuItem As ToolStripMenuItem
 End Class

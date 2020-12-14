@@ -166,6 +166,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBClinicaDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DBClinicaDataSetFinal.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBClinicaDataSetFinal.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dcompra.Designer.vb">
       <DependentUpon>Dcompra.vb</DependentUpon>
     </Compile>
@@ -291,10 +296,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PacienteExamen.Designer.vb">
+      <DependentUpon>PacienteExamen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PacienteExamen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Personal.Designer.vb">
       <DependentUpon>Personal.vb</DependentUpon>
     </Compile>
     <Compile Include="Personal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalEspecialista.Designer.vb">
+      <DependentUpon>PersonalEspecialista.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalEspecialista.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Proveedor.Designer.vb">
@@ -307,6 +324,18 @@
       <DependentUpon>receta.vb</DependentUpon>
     </Compile>
     <Compile Include="receta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepoCexamen.Designer.vb">
+      <DependentUpon>RepoCexamen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RepoCexamen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportDiagnostico.Designer.vb">
+      <DependentUpon>ReportDiagnostico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDiagnostico.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReporteCompra.Designer.vb">
@@ -427,8 +456,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="PacienteExamen.resx">
+      <DependentUpon>PacienteExamen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Personal.resx">
       <DependentUpon>Personal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalEspecialista.resx">
+      <DependentUpon>PersonalEspecialista.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personallis.rdlc" />
     <EmbeddedResource Include="Proveedor.resx">
@@ -438,7 +473,15 @@
     <EmbeddedResource Include="receta.resx">
       <DependentUpon>receta.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RepoCexamen.resx">
+      <DependentUpon>RepoCexamen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepoExamenCita.rdlc" />
+    <EmbeddedResource Include="ReporDiag.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReportDiagnostico.resx">
+      <DependentUpon>ReportDiagnostico.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReporteCompra.resx">
       <DependentUpon>ReporteCompra.vb</DependentUpon>
     </EmbeddedResource>
@@ -479,6 +522,17 @@
     </None>
     <None Include="DBClinicaDataSet3.xss">
       <DependentUpon>DBClinicaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DBClinicaDataSetFinal.xsc">
+      <DependentUpon>DBClinicaDataSetFinal.xsd</DependentUpon>
+    </None>
+    <None Include="DBClinicaDataSetFinal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBClinicaDataSetFinal.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBClinicaDataSetFinal.xss">
+      <DependentUpon>DBClinicaDataSetFinal.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

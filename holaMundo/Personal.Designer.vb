@@ -25,10 +25,6 @@ Partial Class Personal
         Me.PanelDatos = New System.Windows.Forms.Panel()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -69,10 +65,6 @@ Partial Class Personal
         '
         Me.PanelDatos.Controls.Add(Me.TextBox3)
         Me.PanelDatos.Controls.Add(Me.ComboBox1)
-        Me.PanelDatos.Controls.Add(Me.Button4)
-        Me.PanelDatos.Controls.Add(Me.ComboBox3)
-        Me.PanelDatos.Controls.Add(Me.Label4)
-        Me.PanelDatos.Controls.Add(Me.Button2)
         Me.PanelDatos.Controls.Add(Me.TextBox5)
         Me.PanelDatos.Controls.Add(Me.TextBox4)
         Me.PanelDatos.Controls.Add(Me.Label8)
@@ -103,43 +95,6 @@ Partial Class Personal
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(187, 28)
         Me.ComboBox1.TabIndex = 64
-        '
-        'Button4
-        '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(465, 215)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(113, 28)
-        Me.Button4.TabIndex = 63
-        Me.Button4.Text = "Agregar"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(241, 215)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(187, 28)
-        Me.ComboBox3.TabIndex = 62
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(13, 225)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(222, 20)
-        Me.Label4.TabIndex = 61
-        Me.Label4.Text = "ESPECIALIZACION/PUESTO"
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(465, 180)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(113, 28)
-        Me.Button2.TabIndex = 59
-        Me.Button2.Text = "Agregar"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'TextBox5
         '
@@ -440,10 +395,6 @@ Partial Class Personal
     Friend WithEvents eliminarBT As Button
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Button4 As Button
     Friend WithEvents PanelBD As Panel
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label9 As Label
