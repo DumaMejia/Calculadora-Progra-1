@@ -132,6 +132,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Class1.vb" />
+    <Compile Include="Class2.vb" />
     <Compile Include="compraM.Designer.vb">
       <DependentUpon>compraM.vb</DependentUpon>
     </Compile>
@@ -256,6 +257,18 @@
     <Compile Include="horario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ListaDeHorario.Designer.vb">
+      <DependentUpon>ListaDeHorario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListaDeHorario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaDeTarjetas.Designer.vb">
+      <DependentUpon>ListaDeTarjetas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListaDeTarjetas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ListaDeUsuarios.Designer.vb">
       <DependentUpon>ListaDeUsuarios.vb</DependentUpon>
     </Compile>
@@ -344,6 +357,18 @@
     <Compile Include="ReporteCompra.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ReporteConsulta.Designer.vb">
+      <DependentUpon>ReporteConsulta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteConsulta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteEspecialistas.Designer.vb">
+      <DependentUpon>ReporteEspecialistas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteEspecialistas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ReporteRecetas.Designer.vb">
       <DependentUpon>ReporteRecetas.vb</DependentUpon>
     </Compile>
@@ -360,6 +385,12 @@
       <DependentUpon>traslado.vb</DependentUpon>
     </Compile>
     <Compile Include="traslado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrasladoReporte1.Designer.vb">
+      <DependentUpon>TrasladoReporte1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TrasladoReporte1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="usuario.Designer.vb">
@@ -385,6 +416,7 @@
     <EmbeddedResource Include="compraM.resx">
       <DependentUpon>compraM.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConRepo.rdlc" />
     <EmbeddedResource Include="consulta.resx">
       <DependentUpon>consulta.vb</DependentUpon>
     </EmbeddedResource>
@@ -436,7 +468,14 @@
     <EmbeddedResource Include="horario.resx">
       <DependentUpon>horario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HorarioRepo.rdlc" />
     <EmbeddedResource Include="InformeVentas.rdlc" />
+    <EmbeddedResource Include="ListaDeHorario.resx">
+      <DependentUpon>ListaDeHorario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaDeTarjetas.resx">
+      <DependentUpon>ListaDeTarjetas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListaDeUsuarios.resx">
       <DependentUpon>ListaDeUsuarios.vb</DependentUpon>
     </EmbeddedResource>
@@ -446,6 +485,7 @@
     <EmbeddedResource Include="Listapersonal.resx">
       <DependentUpon>Listapersonal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListaTarjetas.rdlc" />
     <EmbeddedResource Include="Medicamentos.rdlc" />
     <EmbeddedResource Include="menu.resx">
       <DependentUpon>menu.vb</DependentUpon>
@@ -476,14 +516,23 @@
     <EmbeddedResource Include="RepoCexamen.resx">
       <DependentUpon>RepoCexamen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RepoEspec.rdlc" />
     <EmbeddedResource Include="RepoExamenCita.rdlc" />
     <EmbeddedResource Include="ReporDiag.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="ReportDiagnostico.resx">
       <DependentUpon>ReportDiagnostico.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteCompra.resx">
       <DependentUpon>ReporteCompra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteConsulta.resx">
+      <DependentUpon>ReporteConsulta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteEspecialistas.resx">
+      <DependentUpon>ReporteEspecialistas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteReceta1.rdlc" />
     <EmbeddedResource Include="ReporteRecetas.resx">
@@ -494,6 +543,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="traslado.resx">
       <DependentUpon>traslado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrasladoRep.rdlc" />
+    <EmbeddedResource Include="TrasladoReporte1.resx">
+      <DependentUpon>TrasladoReporte1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usuario.resx">
       <DependentUpon>usuario.vb</DependentUpon>

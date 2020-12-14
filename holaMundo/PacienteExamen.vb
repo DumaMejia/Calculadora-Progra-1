@@ -151,7 +151,7 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim Reporte As New RepoCexamen
-        Reporte._idDiag = Me.Tag
+        Reporte._idExa = Me.Tag
         Reporte.ShowDialog()
         mostrardatos()
     End Sub

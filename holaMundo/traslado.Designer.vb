@@ -24,9 +24,17 @@ Partial Class traslado
     Private Sub InitializeComponent()
         Me.PanelBD = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Idtraslado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdExpediente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lugar = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.motivo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PanelDatos = New System.Windows.Forms.Panel()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.PanelBuscarDiag = New System.Windows.Forms.Panel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -38,14 +46,7 @@ Partial Class traslado
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Idtraslado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdExpediente = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lugar = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.motivo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDatos.SuspendLayout()
@@ -76,6 +77,63 @@ Partial Class traslado
         Me.DataGridView1.RowTemplate.Height = 28
         Me.DataGridView1.Size = New System.Drawing.Size(621, 265)
         Me.DataGridView1.TabIndex = 45
+        '
+        'Idtraslado
+        '
+        Me.Idtraslado.DataPropertyName = "Idtraslado"
+        Me.Idtraslado.HeaderText = "IDTRAS"
+        Me.Idtraslado.MinimumWidth = 8
+        Me.Idtraslado.Name = "Idtraslado"
+        Me.Idtraslado.ReadOnly = True
+        Me.Idtraslado.Visible = False
+        Me.Idtraslado.Width = 150
+        '
+        'IdExpediente
+        '
+        Me.IdExpediente.DataPropertyName = "IdExpediente"
+        Me.IdExpediente.HeaderText = "IDEXPEDIENTE"
+        Me.IdExpediente.MinimumWidth = 8
+        Me.IdExpediente.Name = "IdExpediente"
+        Me.IdExpediente.ReadOnly = True
+        Me.IdExpediente.Visible = False
+        Me.IdExpediente.Width = 150
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "PACIENTE"
+        Me.nombre.MinimumWidth = 8
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 150
+        '
+        'lugar
+        '
+        Me.lugar.DataPropertyName = "lugar"
+        Me.lugar.HeaderText = "LUGAR"
+        Me.lugar.MinimumWidth = 8
+        Me.lugar.Name = "lugar"
+        Me.lugar.ReadOnly = True
+        Me.lugar.Width = 150
+        '
+        'motivo
+        '
+        Me.motivo.DataPropertyName = "motivo"
+        Me.motivo.HeaderText = "MOTIVO"
+        Me.motivo.MinimumWidth = 8
+        Me.motivo.Name = "motivo"
+        Me.motivo.ReadOnly = True
+        Me.motivo.Width = 150
+        '
+        'fecha
+        '
+        Me.fecha.DataPropertyName = "fecha"
+        Me.fecha.FillWeight = 200.0!
+        Me.fecha.HeaderText = "FECHA"
+        Me.fecha.MinimumWidth = 8
+        Me.fecha.Name = "fecha"
+        Me.fecha.ReadOnly = True
+        Me.fecha.Width = 150
         '
         'TextBox3
         '
@@ -110,6 +168,23 @@ Partial Class traslado
         Me.PanelDatos.Name = "PanelDatos"
         Me.PanelDatos.Size = New System.Drawing.Size(592, 332)
         Me.PanelDatos.TabIndex = 51
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(256, 33)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox1.TabIndex = 22
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(138, 41)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(88, 20)
+        Me.Label5.TabIndex = 21
+        Me.Label5.Text = "PACIENTE"
         '
         'TextBox4
         '
@@ -173,7 +248,7 @@ Partial Class traslado
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(542, 401)
+        Me.Button1.Location = New System.Drawing.Point(445, 400)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 44)
@@ -183,7 +258,7 @@ Partial Class traslado
         '
         'modificarBT
         '
-        Me.modificarBT.Location = New System.Drawing.Point(227, 401)
+        Me.modificarBT.Location = New System.Drawing.Point(209, 401)
         Me.modificarBT.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.modificarBT.Name = "modificarBT"
         Me.modificarBT.Size = New System.Drawing.Size(112, 44)
@@ -203,7 +278,7 @@ Partial Class traslado
         '
         'eliminarBT
         '
-        Me.eliminarBT.Location = New System.Drawing.Point(385, 401)
+        Me.eliminarBT.Location = New System.Drawing.Point(327, 401)
         Me.eliminarBT.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.eliminarBT.Name = "eliminarBT"
         Me.eliminarBT.Size = New System.Drawing.Size(112, 44)
@@ -211,85 +286,22 @@ Partial Class traslado
         Me.eliminarBT.Text = "Eliminar"
         Me.eliminarBT.UseVisualStyleBackColor = True
         '
-        'Label5
+        'Button2
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(138, 41)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(88, 20)
-        Me.Label5.TabIndex = 21
-        Me.Label5.Text = "PACIENTE"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(256, 33)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(187, 28)
-        Me.ComboBox1.TabIndex = 22
-        '
-        'Idtraslado
-        '
-        Me.Idtraslado.DataPropertyName = "Idtraslado"
-        Me.Idtraslado.HeaderText = "IDTRAS"
-        Me.Idtraslado.MinimumWidth = 8
-        Me.Idtraslado.Name = "Idtraslado"
-        Me.Idtraslado.ReadOnly = True
-        Me.Idtraslado.Visible = False
-        Me.Idtraslado.Width = 150
-        '
-        'IdExpediente
-        '
-        Me.IdExpediente.DataPropertyName = "IdExpediente"
-        Me.IdExpediente.HeaderText = "IDEXPEDIENTE"
-        Me.IdExpediente.MinimumWidth = 8
-        Me.IdExpediente.Name = "IdExpediente"
-        Me.IdExpediente.ReadOnly = True
-        Me.IdExpediente.Visible = False
-        Me.IdExpediente.Width = 150
-        '
-        'nombre
-        '
-        Me.nombre.DataPropertyName = "nombre"
-        Me.nombre.HeaderText = "PACIENTE"
-        Me.nombre.MinimumWidth = 8
-        Me.nombre.Name = "nombre"
-        Me.nombre.ReadOnly = True
-        Me.nombre.Width = 150
-        '
-        'lugar
-        '
-        Me.lugar.DataPropertyName = "lugar"
-        Me.lugar.HeaderText = "LUGAR"
-        Me.lugar.MinimumWidth = 8
-        Me.lugar.Name = "lugar"
-        Me.lugar.ReadOnly = True
-        Me.lugar.Width = 150
-        '
-        'motivo
-        '
-        Me.motivo.DataPropertyName = "motivo"
-        Me.motivo.HeaderText = "MOTIVO"
-        Me.motivo.MinimumWidth = 8
-        Me.motivo.Name = "motivo"
-        Me.motivo.ReadOnly = True
-        Me.motivo.Width = 150
-        '
-        'fecha
-        '
-        Me.fecha.DataPropertyName = "fecha"
-        Me.fecha.FillWeight = 200.0!
-        Me.fecha.HeaderText = "FECHA"
-        Me.fecha.MinimumWidth = 8
-        Me.fecha.Name = "fecha"
-        Me.fecha.ReadOnly = True
-        Me.fecha.Width = 150
+        Me.Button2.Location = New System.Drawing.Point(563, 400)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(112, 44)
+        Me.Button2.TabIndex = 53
+        Me.Button2.Text = "Imprimir"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'traslado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1389, 486)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PanelBD)
         Me.Controls.Add(Me.PanelDatos)
         Me.Controls.Add(Me.Button1)
@@ -332,4 +344,5 @@ Partial Class traslado
     Friend WithEvents lugar As DataGridViewTextBoxColumn
     Friend WithEvents motivo As DataGridViewTextBoxColumn
     Friend WithEvents fecha As DataGridViewTextBoxColumn
+    Friend WithEvents Button2 As Button
 End Class

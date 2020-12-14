@@ -46,11 +46,14 @@ Partial Class menu
         Me.HORARIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PERSONALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ADMINISTRARTARJETASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PERSONALESPECIALISTAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REPORTESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LISTADEPERSONALDECLINICAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LISTAMEDICAMENTOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LISTADEUSUARIOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PERSONALESPECIALISTAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LISTADETARJETASDELPERSONALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LISTADELOSHORARIOSDELPERSONALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LISTADEMEDICOSESPECIALISTASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -207,9 +210,15 @@ Partial Class menu
         Me.ADMINISTRARTARJETASToolStripMenuItem.Size = New System.Drawing.Size(315, 34)
         Me.ADMINISTRARTARJETASToolStripMenuItem.Text = "ADMINISTRAR TARJETAS"
         '
+        'PERSONALESPECIALISTAToolStripMenuItem
+        '
+        Me.PERSONALESPECIALISTAToolStripMenuItem.Name = "PERSONALESPECIALISTAToolStripMenuItem"
+        Me.PERSONALESPECIALISTAToolStripMenuItem.Size = New System.Drawing.Size(315, 34)
+        Me.PERSONALESPECIALISTAToolStripMenuItem.Text = "PERSONAL ESPECIALISTA"
+        '
         'REPORTESToolStripMenuItem
         '
-        Me.REPORTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LISTADEPERSONALDECLINICAToolStripMenuItem, Me.LISTAMEDICAMENTOSToolStripMenuItem, Me.LISTADEUSUARIOSToolStripMenuItem})
+        Me.REPORTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LISTADEPERSONALDECLINICAToolStripMenuItem, Me.LISTAMEDICAMENTOSToolStripMenuItem, Me.LISTADEUSUARIOSToolStripMenuItem, Me.LISTADETARJETASDELPERSONALToolStripMenuItem, Me.LISTADELOSHORARIOSDELPERSONALToolStripMenuItem, Me.LISTADEMEDICOSESPECIALISTASToolStripMenuItem})
         Me.REPORTESToolStripMenuItem.Name = "REPORTESToolStripMenuItem"
         Me.REPORTESToolStripMenuItem.Size = New System.Drawing.Size(110, 29)
         Me.REPORTESToolStripMenuItem.Text = "REPORTES"
@@ -217,26 +226,38 @@ Partial Class menu
         'LISTADEPERSONALDECLINICAToolStripMenuItem
         '
         Me.LISTADEPERSONALDECLINICAToolStripMenuItem.Name = "LISTADEPERSONALDECLINICAToolStripMenuItem"
-        Me.LISTADEPERSONALDECLINICAToolStripMenuItem.Size = New System.Drawing.Size(373, 34)
+        Me.LISTADEPERSONALDECLINICAToolStripMenuItem.Size = New System.Drawing.Size(393, 34)
         Me.LISTADEPERSONALDECLINICAToolStripMenuItem.Text = "LISTA DE PERSONAL DE CLINICA"
         '
         'LISTAMEDICAMENTOSToolStripMenuItem
         '
         Me.LISTAMEDICAMENTOSToolStripMenuItem.Name = "LISTAMEDICAMENTOSToolStripMenuItem"
-        Me.LISTAMEDICAMENTOSToolStripMenuItem.Size = New System.Drawing.Size(373, 34)
+        Me.LISTAMEDICAMENTOSToolStripMenuItem.Size = New System.Drawing.Size(393, 34)
         Me.LISTAMEDICAMENTOSToolStripMenuItem.Text = "LISTA MEDICAMENTOS"
         '
         'LISTADEUSUARIOSToolStripMenuItem
         '
         Me.LISTADEUSUARIOSToolStripMenuItem.Name = "LISTADEUSUARIOSToolStripMenuItem"
-        Me.LISTADEUSUARIOSToolStripMenuItem.Size = New System.Drawing.Size(373, 34)
+        Me.LISTADEUSUARIOSToolStripMenuItem.Size = New System.Drawing.Size(393, 34)
         Me.LISTADEUSUARIOSToolStripMenuItem.Text = "LISTA DE USUARIOS"
         '
-        'PERSONALESPECIALISTAToolStripMenuItem
+        'LISTADETARJETASDELPERSONALToolStripMenuItem
         '
-        Me.PERSONALESPECIALISTAToolStripMenuItem.Name = "PERSONALESPECIALISTAToolStripMenuItem"
-        Me.PERSONALESPECIALISTAToolStripMenuItem.Size = New System.Drawing.Size(315, 34)
-        Me.PERSONALESPECIALISTAToolStripMenuItem.Text = "PERSONAL ESPECIALISTA"
+        Me.LISTADETARJETASDELPERSONALToolStripMenuItem.Name = "LISTADETARJETASDELPERSONALToolStripMenuItem"
+        Me.LISTADETARJETASDELPERSONALToolStripMenuItem.Size = New System.Drawing.Size(393, 34)
+        Me.LISTADETARJETASDELPERSONALToolStripMenuItem.Text = "LISTA DE TARJETAS DEL PERSONAL"
+        '
+        'LISTADELOSHORARIOSDELPERSONALToolStripMenuItem
+        '
+        Me.LISTADELOSHORARIOSDELPERSONALToolStripMenuItem.Name = "LISTADELOSHORARIOSDELPERSONALToolStripMenuItem"
+        Me.LISTADELOSHORARIOSDELPERSONALToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
+        Me.LISTADELOSHORARIOSDELPERSONALToolStripMenuItem.Text = "LISTA DE LOS HORARIOS DEL PERSONAL"
+        '
+        'LISTADEMEDICOSESPECIALISTASToolStripMenuItem
+        '
+        Me.LISTADEMEDICOSESPECIALISTASToolStripMenuItem.Name = "LISTADEMEDICOSESPECIALISTASToolStripMenuItem"
+        Me.LISTADEMEDICOSESPECIALISTASToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
+        Me.LISTADEMEDICOSESPECIALISTASToolStripMenuItem.Text = "LISTA DE MEDICOS ESPECIALISTAS"
         '
         'menu
         '
@@ -283,4 +304,7 @@ Partial Class menu
     Friend WithEvents LISTADEUSUARIOSToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CITAEXAMENToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PERSONALESPECIALISTAToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LISTADETARJETASDELPERSONALToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LISTADELOSHORARIOSDELPERSONALToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LISTADEMEDICOSESPECIALISTASToolStripMenuItem As ToolStripMenuItem
 End Class

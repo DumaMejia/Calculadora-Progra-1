@@ -127,4 +127,19 @@
         Dim objperespec As New PersonalEspecialista
         objperespec.Show()
     End Sub
+
+    Private Sub LISTADETARJETASDELPERSONALToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LISTADETARJETASDELPERSONALToolStripMenuItem.Click
+        Dim objreportetarjeta As New ListaDeTarjetas
+        objreportetarjeta.Show()
+    End Sub
+
+    Private Sub LISTADELOSHORARIOSDELPERSONALToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LISTADELOSHORARIOSDELPERSONALToolStripMenuItem.Click
+        Dim objHorarioList As New ListaDeHorario
+        objHorarioList.Show()
+    End Sub
+
+    Private Sub LISTADEMEDICOSESPECIALISTASToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LISTADEMEDICOSESPECIALISTASToolStripMenuItem.Click
+        Dim objespecialistaslist As New ReporteEspecialistas
+        objespecialistaslist.Show()
+    End Sub
 End Class

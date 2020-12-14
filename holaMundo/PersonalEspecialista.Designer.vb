@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class PersonalEspecialista
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,16 @@ Partial Class PersonalEspecialista
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PanelBD = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdPerEspec = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Idpersonal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.JVPM = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.especialidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdEspecialista = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PanelDatos = New System.Windows.Forms.Panel()
@@ -38,13 +44,6 @@ Partial Class PersonalEspecialista
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
-        Me.IdPerEspec = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Idpersonal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.JVPM = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.especialidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEspecialista = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDatos.SuspendLayout()
@@ -73,6 +72,64 @@ Partial Class PersonalEspecialista
         Me.DataGridView1.RowTemplate.Height = 28
         Me.DataGridView1.Size = New System.Drawing.Size(529, 216)
         Me.DataGridView1.TabIndex = 45
+        '
+        'IdPerEspec
+        '
+        Me.IdPerEspec.DataPropertyName = "IdPerEspec"
+        Me.IdPerEspec.HeaderText = "ID"
+        Me.IdPerEspec.MinimumWidth = 8
+        Me.IdPerEspec.Name = "IdPerEspec"
+        Me.IdPerEspec.ReadOnly = True
+        Me.IdPerEspec.Visible = False
+        Me.IdPerEspec.Width = 150
+        '
+        'Idpersonal
+        '
+        Me.Idpersonal.DataPropertyName = "Idpersonal"
+        Me.Idpersonal.HeaderText = "IDPERSONAL"
+        Me.Idpersonal.MinimumWidth = 8
+        Me.Idpersonal.Name = "Idpersonal"
+        Me.Idpersonal.ReadOnly = True
+        Me.Idpersonal.Visible = False
+        Me.Idpersonal.Width = 150
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "NOMBRE"
+        Me.nombre.MinimumWidth = 8
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 150
+        '
+        'JVPM
+        '
+        Me.JVPM.DataPropertyName = "JVPM"
+        Me.JVPM.HeaderText = "JVPM"
+        Me.JVPM.MinimumWidth = 8
+        Me.JVPM.Name = "JVPM"
+        Me.JVPM.ReadOnly = True
+        Me.JVPM.Width = 150
+        '
+        'especialidad
+        '
+        Me.especialidad.DataPropertyName = "especialidad"
+        Me.especialidad.HeaderText = "ESPECIALIDAD"
+        Me.especialidad.MinimumWidth = 8
+        Me.especialidad.Name = "especialidad"
+        Me.especialidad.ReadOnly = True
+        Me.especialidad.Width = 150
+        '
+        'IdEspecialista
+        '
+        Me.IdEspecialista.DataPropertyName = "IdEspecialista"
+        Me.IdEspecialista.FillWeight = 200.0!
+        Me.IdEspecialista.HeaderText = "IDESPECIALISTA"
+        Me.IdEspecialista.MinimumWidth = 8
+        Me.IdEspecialista.Name = "IdEspecialista"
+        Me.IdEspecialista.ReadOnly = True
+        Me.IdEspecialista.Visible = False
+        Me.IdEspecialista.Width = 150
         '
         'TextBox3
         '
@@ -197,79 +254,11 @@ Partial Class PersonalEspecialista
         Me.eliminarBT.Text = "Eliminar"
         Me.eliminarBT.UseVisualStyleBackColor = True
         '
-        'IdPerEspec
-        '
-        Me.IdPerEspec.DataPropertyName = "IdPerEspec"
-        Me.IdPerEspec.HeaderText = "ID"
-        Me.IdPerEspec.MinimumWidth = 8
-        Me.IdPerEspec.Name = "IdPerEspec"
-        Me.IdPerEspec.ReadOnly = True
-        Me.IdPerEspec.Visible = False
-        Me.IdPerEspec.Width = 150
-        '
-        'Idpersonal
-        '
-        Me.Idpersonal.DataPropertyName = "Idpersonal"
-        Me.Idpersonal.HeaderText = "IDPERSONAL"
-        Me.Idpersonal.MinimumWidth = 8
-        Me.Idpersonal.Name = "Idpersonal"
-        Me.Idpersonal.ReadOnly = True
-        Me.Idpersonal.Visible = False
-        Me.Idpersonal.Width = 150
-        '
-        'nombre
-        '
-        Me.nombre.DataPropertyName = "nombre"
-        Me.nombre.HeaderText = "NOMBRE"
-        Me.nombre.MinimumWidth = 8
-        Me.nombre.Name = "nombre"
-        Me.nombre.ReadOnly = True
-        Me.nombre.Width = 150
-        '
-        'JVPM
-        '
-        Me.JVPM.DataPropertyName = "JVPM"
-        Me.JVPM.HeaderText = "JVPM"
-        Me.JVPM.MinimumWidth = 8
-        Me.JVPM.Name = "JVPM"
-        Me.JVPM.ReadOnly = True
-        Me.JVPM.Width = 150
-        '
-        'especialidad
-        '
-        Me.especialidad.DataPropertyName = "especialidad"
-        Me.especialidad.HeaderText = "ESPECIALIDAD"
-        Me.especialidad.MinimumWidth = 8
-        Me.especialidad.Name = "especialidad"
-        Me.especialidad.ReadOnly = True
-        Me.especialidad.Width = 150
-        '
-        'IdEspecialista
-        '
-        Me.IdEspecialista.DataPropertyName = "IdEspecialista"
-        Me.IdEspecialista.FillWeight = 200.0!
-        Me.IdEspecialista.HeaderText = "IDESPECIALISTA"
-        Me.IdEspecialista.MinimumWidth = 8
-        Me.IdEspecialista.Name = "IdEspecialista"
-        Me.IdEspecialista.ReadOnly = True
-        Me.IdEspecialista.Visible = False
-        Me.IdEspecialista.Width = 150
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(523, 351)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(113, 44)
-        Me.Button2.TabIndex = 59
-        Me.Button2.Text = "Imprimir"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'PersonalEspecialista
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1283, 414)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PanelBD)
         Me.Controls.Add(Me.PanelDatos)
         Me.Controls.Add(Me.Button1)
@@ -309,5 +298,4 @@ Partial Class PersonalEspecialista
     Friend WithEvents JVPM As DataGridViewTextBoxColumn
     Friend WithEvents especialidad As DataGridViewTextBoxColumn
     Friend WithEvents IdEspecialista As DataGridViewTextBoxColumn
-    Friend WithEvents Button2 As Button
 End Class

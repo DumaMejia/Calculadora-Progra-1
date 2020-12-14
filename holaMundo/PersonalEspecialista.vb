@@ -49,7 +49,6 @@
         eliminarBT.Enabled = Not estado
         Button1.Enabled = Not estado
         modificarBT.Enabled = estado
-
     End Sub
     Private Sub controlesInicio(ByVal estado As Boolean)
         nuevoBT.Enabled = estado
@@ -58,7 +57,6 @@
         eliminarBT.Enabled = Not estado
         Button1.Enabled = estado
         modificarBT.Enabled = Not estado
-        Button2.Enabled = Not estado
     End Sub
     Private Sub controlesBuscar(ByVal estado As Boolean)
         PanelDatos.Enabled = Not estado
@@ -75,7 +73,6 @@
         Button1.Enabled = estado
         modificarBT.Enabled = estado
         nuevoBT.Enabled = estado
-        Button2.Enabled = True
     End Sub
     Private Sub limpiarCampos()
         TextBox2.Text = ""
@@ -116,7 +113,6 @@
                 controlesInicio(True)
                 nuevoBT.Text = "Nuevo"
                 modificarBT.Text = "Modificar"
-                Button2.Enabled = True
             End If
         End If
     End Sub
@@ -145,9 +141,5 @@
             Button1.Text = "Buscar"
             eliminarBT.Text = "Eliminar"
         End If
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
     End Sub
 End Class

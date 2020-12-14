@@ -297,3 +297,9 @@ C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ListaD
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.PacienteExamen.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.PersonalEspecialista.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ReportDiagnostico.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.RepoCexamen.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.TrasladoReporte1.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ReporteConsulta.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ListaDeTarjetas.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ListaDeHorario.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ReporteEspecialistas.resources
