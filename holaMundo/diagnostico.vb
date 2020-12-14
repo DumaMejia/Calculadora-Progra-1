@@ -122,7 +122,6 @@
                 controlesInicio(True)
                 nuevoBT.Text = "Nuevo"
                 modificarBT.Text = "Modificar"
-                Button2.Enabled = True
             End If
         End If
     End Sub
