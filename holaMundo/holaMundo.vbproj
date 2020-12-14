@@ -81,7 +81,9 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -275,16 +277,16 @@
     <Compile Include="ListaDeUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ListaEmpleados.Designer.vb">
+      <DependentUpon>ListaEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListaEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="listamed.Designer.vb">
       <DependentUpon>listamed.vb</DependentUpon>
     </Compile>
     <Compile Include="listamed.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Listapersonal.Designer.vb">
-      <DependentUpon>Listapersonal.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Listapersonal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="menu.Designer.vb">
@@ -479,11 +481,11 @@
     <EmbeddedResource Include="ListaDeUsuarios.resx">
       <DependentUpon>ListaDeUsuarios.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListaEmpleados.resx">
+      <DependentUpon>ListaEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="listamed.resx">
       <DependentUpon>listamed.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Listapersonal.resx">
-      <DependentUpon>Listapersonal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaTarjetas.rdlc" />
     <EmbeddedResource Include="Medicamentos.rdlc" />
@@ -505,7 +507,6 @@
     <EmbeddedResource Include="PersonalEspecialista.resx">
       <DependentUpon>PersonalEspecialista.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personallis.rdlc" />
     <EmbeddedResource Include="Proveedor.resx">
       <DependentUpon>Proveedor.vb</DependentUpon>
     </EmbeddedResource>
@@ -522,6 +523,7 @@
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
     <EmbeddedResource Include="ReportDiagnostico.resx">
       <DependentUpon>ReportDiagnostico.vb</DependentUpon>
     </EmbeddedResource>

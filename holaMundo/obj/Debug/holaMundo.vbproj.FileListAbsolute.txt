@@ -291,7 +291,6 @@ C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.vbproj
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.FRventa.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ReporteCompra.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ReporteRecetas.resources
-C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.Listapersonal.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.listamed.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ListaDeUsuarios.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.PacienteExamen.resources
@@ -303,3 +302,4 @@ C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.Report
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ListaDeTarjetas.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ListaDeHorario.resources
 C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ReporteEspecialistas.resources
+C:\Users\Usuario\source\repos\ProyectoFinal\holaMundo\obj\Debug\holaMundo.ListaEmpleados.resources

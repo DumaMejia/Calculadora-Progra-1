@@ -104,7 +104,7 @@
     End Sub
 
     Private Sub LISTADEPERSONALDECLINICAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LISTADEPERSONALDECLINICAToolStripMenuItem.Click
-        Dim objreppersnal As New Listapersonal
+        Dim objreppersnal As New ListaEmpleados
         objreppersnal.Show()
     End Sub
 
