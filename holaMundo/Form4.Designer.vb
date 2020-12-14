@@ -33,12 +33,12 @@ Partial Class Form4
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
         Me.PanelBD = New System.Windows.Forms.Panel()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.idEnfermedad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.PanelDatos.SuspendLayout()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -141,22 +141,6 @@ Partial Class Form4
         Me.PanelBD.Size = New System.Drawing.Size(598, 409)
         Me.PanelBD.TabIndex = 65
         '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(136, 58)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(441, 26)
-        Me.TextBox3.TabIndex = 44
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(52, 63)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 20)
-        Me.Label4.TabIndex = 42
-        Me.Label4.Text = "BUSCAR:"
-        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
@@ -200,6 +184,22 @@ Partial Class Form4
         Me.descripcion.ReadOnly = True
         Me.descripcion.Width = 150
         '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(136, 58)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(441, 26)
+        Me.TextBox3.TabIndex = 44
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(52, 63)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(81, 20)
+        Me.Label4.TabIndex = 42
+        Me.Label4.Text = "BUSCAR:"
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -213,7 +213,7 @@ Partial Class Form4
         Me.Controls.Add(Me.nuevoBT)
         Me.Controls.Add(Me.eliminarBT)
         Me.Name = "Form4"
-        Me.Text = "Form4"
+        Me.Text = "ENFERMEDADES"
         Me.PanelDatos.ResumeLayout(False)
         Me.PanelDatos.PerformLayout()
         Me.PanelBD.ResumeLayout(False)

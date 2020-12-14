@@ -27,16 +27,16 @@ Partial Class DatosPersonales
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PanelDatos = New System.Windows.Forms.Panel()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -50,8 +50,6 @@ Partial Class DatosPersonales
         Me.modificarBT = New System.Windows.Forms.Button()
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.IdDatos = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdExpediente = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -59,7 +57,6 @@ Partial Class DatosPersonales
         Me.IdOficio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Idsangre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Idgenero = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEnfermedad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.oficio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nacimiento = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -88,7 +85,7 @@ Partial Class DatosPersonales
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDatos, Me.IdExpediente, Me.nombre, Me.IdCivil, Me.IdOficio, Me.Idsangre, Me.Idgenero, Me.IdEnfermedad, Me.estado, Me.oficio, Me.nacimiento, Me.direccion, Me.correo, Me.telefono, Me.genero, Me.tipo})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDatos, Me.IdExpediente, Me.nombre, Me.IdCivil, Me.IdOficio, Me.Idsangre, Me.Idgenero, Me.estado, Me.oficio, Me.nacimiento, Me.direccion, Me.correo, Me.telefono, Me.genero, Me.tipo})
         Me.DataGridView1.Location = New System.Drawing.Point(46, 116)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -122,11 +119,9 @@ Partial Class DatosPersonales
         Me.PanelDatos.Controls.Add(Me.TextBox5)
         Me.PanelDatos.Controls.Add(Me.TextBox4)
         Me.PanelDatos.Controls.Add(Me.Label8)
-        Me.PanelDatos.Controls.Add(Me.Label7)
         Me.PanelDatos.Controls.Add(Me.Label6)
         Me.PanelDatos.Controls.Add(Me.Label5)
         Me.PanelDatos.Controls.Add(Me.TextBox1)
-        Me.PanelDatos.Controls.Add(Me.ComboBox5)
         Me.PanelDatos.Controls.Add(Me.ComboBox4)
         Me.PanelDatos.Controls.Add(Me.ComboBox3)
         Me.PanelDatos.Controls.Add(Me.ComboBox2)
@@ -140,6 +135,23 @@ Partial Class DatosPersonales
         Me.PanelDatos.Name = "PanelDatos"
         Me.PanelDatos.Size = New System.Drawing.Size(592, 416)
         Me.PanelDatos.TabIndex = 51
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Location = New System.Drawing.Point(325, 55)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox6.TabIndex = 33
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(101, 63)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(88, 20)
+        Me.Label11.TabIndex = 32
+        Me.Label11.Text = "PACIENTE"
         '
         'Label10
         '
@@ -176,25 +188,16 @@ Partial Class DatosPersonales
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(101, 153)
+        Me.Label8.Location = New System.Drawing.Point(101, 177)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(145, 20)
         Me.Label8.TabIndex = 27
         Me.Label8.Text = "TIPO DE SANGRE"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(101, 221)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(123, 20)
-        Me.Label7.TabIndex = 26
-        Me.Label7.Text = "ENFERMEDAD"
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(101, 187)
+        Me.Label6.Location = New System.Drawing.Point(101, 218)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(79, 20)
         Me.Label6.TabIndex = 25
@@ -203,7 +206,7 @@ Partial Class DatosPersonales
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(101, 114)
+        Me.Label5.Location = New System.Drawing.Point(101, 138)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(64, 20)
         Me.Label5.TabIndex = 24
@@ -216,18 +219,10 @@ Partial Class DatosPersonales
         Me.TextBox1.Size = New System.Drawing.Size(187, 26)
         Me.TextBox1.TabIndex = 16
         '
-        'ComboBox5
-        '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(325, 213)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(187, 28)
-        Me.ComboBox5.TabIndex = 23
-        '
         'ComboBox4
         '
         Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(325, 179)
+        Me.ComboBox4.Location = New System.Drawing.Point(325, 210)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(187, 28)
         Me.ComboBox4.TabIndex = 22
@@ -235,7 +230,7 @@ Partial Class DatosPersonales
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(325, 145)
+        Me.ComboBox3.Location = New System.Drawing.Point(325, 169)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(187, 28)
         Me.ComboBox3.TabIndex = 21
@@ -243,7 +238,7 @@ Partial Class DatosPersonales
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(325, 111)
+        Me.ComboBox2.Location = New System.Drawing.Point(325, 130)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(187, 28)
         Me.ComboBox2.TabIndex = 20
@@ -258,7 +253,7 @@ Partial Class DatosPersonales
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(325, 75)
+        Me.ComboBox1.Location = New System.Drawing.Point(325, 96)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(187, 28)
         Me.ComboBox1.TabIndex = 18
@@ -273,7 +268,7 @@ Partial Class DatosPersonales
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(101, 83)
+        Me.Label3.Location = New System.Drawing.Point(101, 106)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(120, 20)
         Me.Label3.TabIndex = 15
@@ -332,23 +327,6 @@ Partial Class DatosPersonales
         Me.eliminarBT.TabIndex = 47
         Me.eliminarBT.Text = "Eliminar"
         Me.eliminarBT.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(101, 43)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(88, 20)
-        Me.Label11.TabIndex = 32
-        Me.Label11.Text = "PACIENTE"
-        '
-        'ComboBox6
-        '
-        Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Location = New System.Drawing.Point(325, 35)
-        Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(187, 28)
-        Me.ComboBox6.TabIndex = 33
         '
         'IdDatos
         '
@@ -418,16 +396,6 @@ Partial Class DatosPersonales
         Me.Idgenero.ReadOnly = True
         Me.Idgenero.Visible = False
         Me.Idgenero.Width = 150
-        '
-        'IdEnfermedad
-        '
-        Me.IdEnfermedad.DataPropertyName = "IdEnfermedad"
-        Me.IdEnfermedad.HeaderText = "IDENFERMEDAD"
-        Me.IdEnfermedad.MinimumWidth = 8
-        Me.IdEnfermedad.Name = "IdEnfermedad"
-        Me.IdEnfermedad.ReadOnly = True
-        Me.IdEnfermedad.Visible = False
-        Me.IdEnfermedad.Width = 150
         '
         'estado
         '
@@ -545,10 +513,8 @@ Partial Class DatosPersonales
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents ComboBox5 As ComboBox
     Friend WithEvents ComboBox4 As ComboBox
     Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents ComboBox2 As ComboBox
@@ -561,7 +527,6 @@ Partial Class DatosPersonales
     Friend WithEvents IdOficio As DataGridViewTextBoxColumn
     Friend WithEvents Idsangre As DataGridViewTextBoxColumn
     Friend WithEvents Idgenero As DataGridViewTextBoxColumn
-    Friend WithEvents IdEnfermedad As DataGridViewTextBoxColumn
     Friend WithEvents estado As DataGridViewTextBoxColumn
     Friend WithEvents oficio As DataGridViewTextBoxColumn
     Friend WithEvents nacimiento As DataGridViewTextBoxColumn

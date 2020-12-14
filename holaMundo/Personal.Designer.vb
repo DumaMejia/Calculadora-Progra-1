@@ -42,6 +42,8 @@ Partial Class Personal
         Me.eliminarBT = New System.Windows.Forms.Button()
         Me.PanelBD = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.IdPersonal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -49,13 +51,7 @@ Partial Class Personal
         Me.correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdCargo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Idusuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEspecialista = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cargoper = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.username = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.especialidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.PanelDatos.SuspendLayout()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -234,13 +230,29 @@ Partial Class Personal
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPersonal, Me.nombre, Me.apellido, Me.direccion, Me.correo, Me.telefono, Me.IdCargo, Me.Idusuario, Me.IdEspecialista, Me.cargoper, Me.username, Me.especialidad})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPersonal, Me.nombre, Me.apellido, Me.direccion, Me.correo, Me.telefono, Me.IdCargo, Me.cargoper})
         Me.DataGridView1.Location = New System.Drawing.Point(27, 105)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 62
         Me.DataGridView1.RowTemplate.Height = 28
         Me.DataGridView1.Size = New System.Drawing.Size(533, 341)
         Me.DataGridView1.TabIndex = 45
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(90, 61)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(470, 26)
+        Me.TextBox6.TabIndex = 44
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(3, 67)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(81, 20)
+        Me.Label9.TabIndex = 42
+        Me.Label9.Text = "BUSCAR:"
         '
         'IdPersonal
         '
@@ -300,24 +312,6 @@ Partial Class Personal
         Me.IdCargo.Visible = False
         Me.IdCargo.Width = 150
         '
-        'Idusuario
-        '
-        Me.Idusuario.DataPropertyName = "Idusuario"
-        Me.Idusuario.HeaderText = "IDUSUARIO"
-        Me.Idusuario.MinimumWidth = 8
-        Me.Idusuario.Name = "Idusuario"
-        Me.Idusuario.Visible = False
-        Me.Idusuario.Width = 150
-        '
-        'IdEspecialista
-        '
-        Me.IdEspecialista.DataPropertyName = "IdEspecialista"
-        Me.IdEspecialista.HeaderText = "IDESPECIALISTA"
-        Me.IdEspecialista.MinimumWidth = 8
-        Me.IdEspecialista.Name = "IdEspecialista"
-        Me.IdEspecialista.Visible = False
-        Me.IdEspecialista.Width = 150
-        '
         'cargoper
         '
         Me.cargoper.DataPropertyName = "cargoper"
@@ -325,38 +319,6 @@ Partial Class Personal
         Me.cargoper.MinimumWidth = 8
         Me.cargoper.Name = "cargoper"
         Me.cargoper.Width = 150
-        '
-        'username
-        '
-        Me.username.DataPropertyName = "username"
-        Me.username.HeaderText = "USER"
-        Me.username.MinimumWidth = 8
-        Me.username.Name = "username"
-        Me.username.Width = 150
-        '
-        'especialidad
-        '
-        Me.especialidad.DataPropertyName = "especialidad"
-        Me.especialidad.HeaderText = "ESPEC"
-        Me.especialidad.MinimumWidth = 8
-        Me.especialidad.Name = "especialidad"
-        Me.especialidad.Width = 150
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(90, 61)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(470, 26)
-        Me.TextBox6.TabIndex = 44
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(3, 67)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(81, 20)
-        Me.Label9.TabIndex = 42
-        Me.Label9.Text = "BUSCAR:"
         '
         'Personal
         '
@@ -399,6 +361,8 @@ Partial Class Personal
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents IdPersonal As DataGridViewTextBoxColumn
     Friend WithEvents nombre As DataGridViewTextBoxColumn
     Friend WithEvents apellido As DataGridViewTextBoxColumn
@@ -406,11 +370,5 @@ Partial Class Personal
     Friend WithEvents correo As DataGridViewTextBoxColumn
     Friend WithEvents telefono As DataGridViewTextBoxColumn
     Friend WithEvents IdCargo As DataGridViewTextBoxColumn
-    Friend WithEvents Idusuario As DataGridViewTextBoxColumn
-    Friend WithEvents IdEspecialista As DataGridViewTextBoxColumn
     Friend WithEvents cargoper As DataGridViewTextBoxColumn
-    Friend WithEvents username As DataGridViewTextBoxColumn
-    Friend WithEvents especialidad As DataGridViewTextBoxColumn
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
 End Class

@@ -24,13 +24,6 @@ Partial Class PacienteExamen
     Private Sub InitializeComponent()
         Me.PanelBD = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Idexapaciente = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdExpediente = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Idexamen = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Hora = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PanelDatos = New System.Windows.Forms.Panel()
@@ -48,6 +41,13 @@ Partial Class PacienteExamen
         Me.nuevoBT = New System.Windows.Forms.Button()
         Me.eliminarBT = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Idexapaciente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdExpediente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Idexamen = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Hora = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PanelBD.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDatos.SuspendLayout()
@@ -76,71 +76,6 @@ Partial Class PacienteExamen
         Me.DataGridView1.RowTemplate.Height = 28
         Me.DataGridView1.Size = New System.Drawing.Size(529, 216)
         Me.DataGridView1.TabIndex = 45
-        '
-        'Idexapaciente
-        '
-        Me.Idexapaciente.DataPropertyName = "Idexapaciente"
-        Me.Idexapaciente.HeaderText = "IDEAXPACIENTE"
-        Me.Idexapaciente.MinimumWidth = 8
-        Me.Idexapaciente.Name = "Idexapaciente"
-        Me.Idexapaciente.ReadOnly = True
-        Me.Idexapaciente.Visible = False
-        Me.Idexapaciente.Width = 150
-        '
-        'IdExpediente
-        '
-        Me.IdExpediente.DataPropertyName = "IdExpediente"
-        Me.IdExpediente.HeaderText = "IDEXPEDIENTE"
-        Me.IdExpediente.MinimumWidth = 8
-        Me.IdExpediente.Name = "IdExpediente"
-        Me.IdExpediente.ReadOnly = True
-        Me.IdExpediente.Visible = False
-        Me.IdExpediente.Width = 150
-        '
-        'Idexamen
-        '
-        Me.Idexamen.HeaderText = "IDEXAMEN"
-        Me.Idexamen.MinimumWidth = 8
-        Me.Idexamen.Name = "Idexamen"
-        Me.Idexamen.ReadOnly = True
-        Me.Idexamen.Visible = False
-        Me.Idexamen.Width = 150
-        '
-        'nombre
-        '
-        Me.nombre.DataPropertyName = "nombre"
-        Me.nombre.HeaderText = "PACIENTE"
-        Me.nombre.MinimumWidth = 8
-        Me.nombre.Name = "nombre"
-        Me.nombre.ReadOnly = True
-        Me.nombre.Width = 150
-        '
-        'Tipo
-        '
-        Me.Tipo.DataPropertyName = "Tipo"
-        Me.Tipo.HeaderText = "EXAMEN"
-        Me.Tipo.MinimumWidth = 8
-        Me.Tipo.Name = "Tipo"
-        Me.Tipo.ReadOnly = True
-        Me.Tipo.Width = 150
-        '
-        'Fecha
-        '
-        Me.Fecha.DataPropertyName = "Fecha"
-        Me.Fecha.HeaderText = "FECHA"
-        Me.Fecha.MinimumWidth = 8
-        Me.Fecha.Name = "Fecha"
-        Me.Fecha.ReadOnly = True
-        Me.Fecha.Width = 150
-        '
-        'Hora
-        '
-        Me.Hora.DataPropertyName = "Hora"
-        Me.Hora.HeaderText = "HORA"
-        Me.Hora.MinimumWidth = 8
-        Me.Hora.Name = "Hora"
-        Me.Hora.ReadOnly = True
-        Me.Hora.Width = 150
         '
         'TextBox3
         '
@@ -292,6 +227,72 @@ Partial Class PacienteExamen
         Me.Button2.Text = "Imprimir"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Idexapaciente
+        '
+        Me.Idexapaciente.DataPropertyName = "Idexapaciente"
+        Me.Idexapaciente.HeaderText = "IDEAXPACIENTE"
+        Me.Idexapaciente.MinimumWidth = 8
+        Me.Idexapaciente.Name = "Idexapaciente"
+        Me.Idexapaciente.ReadOnly = True
+        Me.Idexapaciente.Visible = False
+        Me.Idexapaciente.Width = 150
+        '
+        'IdExpediente
+        '
+        Me.IdExpediente.DataPropertyName = "IdExpediente"
+        Me.IdExpediente.HeaderText = "IDEXPEDIENTE"
+        Me.IdExpediente.MinimumWidth = 8
+        Me.IdExpediente.Name = "IdExpediente"
+        Me.IdExpediente.ReadOnly = True
+        Me.IdExpediente.Visible = False
+        Me.IdExpediente.Width = 150
+        '
+        'Idexamen
+        '
+        Me.Idexamen.DataPropertyName = "Idexamen"
+        Me.Idexamen.HeaderText = "IDEXAMEN"
+        Me.Idexamen.MinimumWidth = 8
+        Me.Idexamen.Name = "Idexamen"
+        Me.Idexamen.ReadOnly = True
+        Me.Idexamen.Visible = False
+        Me.Idexamen.Width = 150
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "PACIENTE"
+        Me.nombre.MinimumWidth = 8
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 150
+        '
+        'Tipo
+        '
+        Me.Tipo.DataPropertyName = "Tipo"
+        Me.Tipo.HeaderText = "EXAMEN"
+        Me.Tipo.MinimumWidth = 8
+        Me.Tipo.Name = "Tipo"
+        Me.Tipo.ReadOnly = True
+        Me.Tipo.Width = 150
+        '
+        'Fecha
+        '
+        Me.Fecha.DataPropertyName = "Fecha"
+        Me.Fecha.HeaderText = "FECHA"
+        Me.Fecha.MinimumWidth = 8
+        Me.Fecha.Name = "Fecha"
+        Me.Fecha.ReadOnly = True
+        Me.Fecha.Width = 150
+        '
+        'Hora
+        '
+        Me.Hora.DataPropertyName = "Hora"
+        Me.Hora.HeaderText = "HORA"
+        Me.Hora.MinimumWidth = 8
+        Me.Hora.Name = "Hora"
+        Me.Hora.ReadOnly = True
+        Me.Hora.Width = 150
+        '
         'PacienteExamen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -333,6 +334,7 @@ Partial Class PacienteExamen
     Friend WithEvents modificarBT As Button
     Friend WithEvents nuevoBT As Button
     Friend WithEvents eliminarBT As Button
+    Friend WithEvents Button2 As Button
     Friend WithEvents Idexapaciente As DataGridViewTextBoxColumn
     Friend WithEvents IdExpediente As DataGridViewTextBoxColumn
     Friend WithEvents Idexamen As DataGridViewTextBoxColumn
@@ -340,5 +342,4 @@ Partial Class PacienteExamen
     Friend WithEvents Tipo As DataGridViewTextBoxColumn
     Friend WithEvents Fecha As DataGridViewTextBoxColumn
     Friend WithEvents Hora As DataGridViewTextBoxColumn
-    Friend WithEvents Button2 As Button
 End Class

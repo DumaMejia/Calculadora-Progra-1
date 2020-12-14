@@ -174,6 +174,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBClinicaDataSetFinal.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DBClinicaDataSetFINAL1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBClinicaDataSetFINAL1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dcompra.Designer.vb">
       <DependentUpon>Dcompra.vb</DependentUpon>
     </Compile>
@@ -257,12 +262,6 @@
       <DependentUpon>horario.vb</DependentUpon>
     </Compile>
     <Compile Include="horario.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListaDeHorario.Designer.vb">
-      <DependentUpon>ListaDeHorario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ListaDeHorario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListaDeTarjetas.Designer.vb">
@@ -371,6 +370,12 @@
     <Compile Include="ReporteEspecialistas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ReporteHorario.Designer.vb">
+      <DependentUpon>ReporteHorario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteHorario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ReporteRecetas.Designer.vb">
       <DependentUpon>ReporteRecetas.vb</DependentUpon>
     </Compile>
@@ -470,11 +475,7 @@
     <EmbeddedResource Include="horario.resx">
       <DependentUpon>horario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HorarioRepo.rdlc" />
     <EmbeddedResource Include="InformeVentas.rdlc" />
-    <EmbeddedResource Include="ListaDeHorario.resx">
-      <DependentUpon>ListaDeHorario.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ListaDeTarjetas.resx">
       <DependentUpon>ListaDeTarjetas.vb</DependentUpon>
     </EmbeddedResource>
@@ -536,6 +537,10 @@
     <EmbeddedResource Include="ReporteEspecialistas.resx">
       <DependentUpon>ReporteEspecialistas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteHorario.rdlc" />
+    <EmbeddedResource Include="ReporteHorario.resx">
+      <DependentUpon>ReporteHorario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReporteReceta1.rdlc" />
     <EmbeddedResource Include="ReporteRecetas.resx">
       <DependentUpon>ReporteRecetas.vb</DependentUpon>
@@ -588,6 +593,17 @@
     </None>
     <None Include="DBClinicaDataSetFinal.xss">
       <DependentUpon>DBClinicaDataSetFinal.xsd</DependentUpon>
+    </None>
+    <None Include="DBClinicaDataSetFINAL1.xsc">
+      <DependentUpon>DBClinicaDataSetFINAL1.xsd</DependentUpon>
+    </None>
+    <None Include="DBClinicaDataSetFINAL1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBClinicaDataSetFINAL1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBClinicaDataSetFINAL1.xss">
+      <DependentUpon>DBClinicaDataSetFINAL1.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

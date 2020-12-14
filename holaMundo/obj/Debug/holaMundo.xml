@@ -1807,12 +1807,12 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:holaMundo.DBClinicaDataSetFinal.ListHorarioDataTable">
+<member name="T:holaMundo.DBClinicaDataSetFinal.ListaEspecialistaDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:holaMundo.DBClinicaDataSetFinal.ListaEspecialistaDataTable">
+<member name="T:holaMundo.DBClinicaDataSetFinal.HorarioRepoDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -2027,12 +2027,12 @@ Represents strongly named DataRow class.
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:holaMundo.DBClinicaDataSetFinal.ListHorarioRow">
+<member name="T:holaMundo.DBClinicaDataSetFinal.ListaEspecialistaRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:holaMundo.DBClinicaDataSetFinal.ListaEspecialistaRow">
+<member name="T:holaMundo.DBClinicaDataSetFinal.HorarioRepoRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -2247,12 +2247,12 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:holaMundo.DBClinicaDataSetFinal.ListHorarioRowChangeEvent">
+<member name="T:holaMundo.DBClinicaDataSetFinal.ListaEspecialistaRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:holaMundo.DBClinicaDataSetFinal.ListaEspecialistaRowChangeEvent">
+<member name="T:holaMundo.DBClinicaDataSetFinal.HorarioRepoRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
@@ -2467,12 +2467,12 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:holaMundo.DBClinicaDataSetFinalTableAdapters.ListHorarioTableAdapter">
+<member name="T:holaMundo.DBClinicaDataSetFinalTableAdapters.ListaEspecialistaTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:holaMundo.DBClinicaDataSetFinalTableAdapters.ListaEspecialistaTableAdapter">
+<member name="T:holaMundo.DBClinicaDataSetFinalTableAdapters.HorarioRepoTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -2513,6 +2513,811 @@ Update Order Option
 </summary>
 </member>
 <member name="T:holaMundo.DBClinicaDataSetFinalTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.alergiaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.CargoPersonalDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.CitaConsultaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.CompraMDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DatosPersonalesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DcompraDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DExpedienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DfamiliaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.diagnosticoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DrecetaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DventaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.EcivilDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.edadesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.enfermedadesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.especialistaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.examenesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.expedienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.generoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.habitacionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.horarioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.medicinaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.oficioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.PacExamDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.PagoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.perespecDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.personalDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.proveedorDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.recetaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.TableDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.tarjetasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.TfacturaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.tipoAccesoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.TipoSangreDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.tipoUsuarioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.trasladoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.usuarioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.VentasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.ReporteHorarioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.alergiaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.CargoPersonalRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.CitaConsultaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.CompraMRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DatosPersonalesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DcompraRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DExpedienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DfamiliaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.diagnosticoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DrecetaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DventaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.EcivilRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.edadesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.enfermedadesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.especialistaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.examenesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.expedienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.generoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.habitacionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.horarioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.medicinaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.oficioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.PacExamRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.PagoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.perespecRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.personalRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.proveedorRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.recetaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.TableRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.tarjetasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.TfacturaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.tipoAccesoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.TipoSangreRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.tipoUsuarioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.trasladoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.usuarioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.VentasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.ReporteHorarioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.alergiaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.CargoPersonalRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.CitaConsultaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.CompraMRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DatosPersonalesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DcompraRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DExpedienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DfamiliaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.diagnosticoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DrecetaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.DventaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.EcivilRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.edadesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.enfermedadesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.especialistaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.examenesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.expedienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.generoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.habitacionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.horarioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.medicinaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.oficioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.PacExamRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.PagoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.perespecRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.personalRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.proveedorRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.recetaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.TableRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.tarjetasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.TfacturaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.tipoAccesoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.TipoSangreRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.tipoUsuarioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.trasladoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.usuarioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.VentasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1.ReporteHorarioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.alergiaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.CargoPersonalTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.CitaConsultaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.CompraMTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.DatosPersonalesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.DcompraTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.DExpedienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.DfamiliaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.diagnosticoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.DrecetaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.DventaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.EcivilTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.edadesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.enfermedadesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.especialistaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.examenesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.expedienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.generoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.habitacionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.horarioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.medicinaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.oficioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.PacExamTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.PagoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.perespecTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.personalTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.proveedorTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.recetaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.TableTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.tarjetasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.TfacturaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.tipoAccesoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.TipoSangreTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.tipoUsuarioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.trasladoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.usuarioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.VentasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.ReporteHorarioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:holaMundo.DBClinicaDataSetFINAL1TableAdapters.TableAdapterManager.UpdateUpdatedRows(holaMundo.DBClinicaDataSetFINAL1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:holaMundo.DBClinicaDataSetFINAL1TableAdapters.TableAdapterManager.UpdateInsertedRows(holaMundo.DBClinicaDataSetFINAL1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:holaMundo.DBClinicaDataSetFINAL1TableAdapters.TableAdapterManager.UpdateDeletedRows(holaMundo.DBClinicaDataSetFINAL1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:holaMundo.DBClinicaDataSetFINAL1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:holaMundo.DBClinicaDataSetFINAL1TableAdapters.TableAdapterManager.UpdateAll(holaMundo.DBClinicaDataSetFINAL1)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:holaMundo.DBClinicaDataSetFINAL1TableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>

@@ -272,7 +272,7 @@ Public Class db_conexion
             Case "nuevo"
                 sql = "INSERT INTO medicina (nombre,cant,caducidad,descripcion) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "')"
             Case "modificar"
-                sql = "UPDATE medicina SET nombre='" + datos(1) + "',cantidad='" + datos(2) + "',caducidad='" + datos(3) + "',descripcion='" + datos(4) + "' WHERE id='" + datos(0) + "'"
+                sql = "UPDATE medicina SET nombre='" + datos(1) + "',cant='" + datos(2) + "',caducidad='" + datos(3) + "',descripcion='" + datos(4) + "' WHERE id='" + datos(0) + "'"
             Case "eliminar"
                 sql = "DELETE FROM medicina WHERE id='" + datos(0) + "'"
         End Select
@@ -434,7 +434,7 @@ Public Class db_conexion
             Case "nuevo"
                 sql = "INSERT INTO PacExam (IdExpediente,Idexamen,Fecha,Hora) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "')"
             Case "modificar"
-                sql = "UPDATE PacExam SET IdExpediente='" + datos(1) + "',Idexamen='" + datos(2) + "',Fecha='" + datos(3) + "',Hora='" + datos(4) + "' WHERE Idexapacaiente='" + datos(0) + "'"
+                sql = "UPDATE PacExam SET IdExpediente='" + datos(1) + "',Idexamen='" + datos(2) + "',Fecha='" + datos(3) + "',Hora='" + datos(4) + "' WHERE Idexapaciente='" + datos(0) + "'"
             Case "eliminar"
                 sql = "DELETE FROM PacExam WHERE Idexapaciente='" + datos(0) + "'"
         End Select

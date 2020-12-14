@@ -134,7 +134,7 @@
     End Sub
 
     Private Sub LISTADELOSHORARIOSDELPERSONALToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LISTADELOSHORARIOSDELPERSONALToolStripMenuItem.Click
-        Dim objHorarioList As New ListaDeHorario
+        Dim objHorarioList As New ReporteHorario
         objHorarioList.Show()
     End Sub
 

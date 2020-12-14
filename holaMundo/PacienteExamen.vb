@@ -18,14 +18,14 @@
         ComboBox1.ValueMember = "expediente.IdExpediente"
 
         ComboBox2.DataSource = conexion.obtenerdatos().Tables("examenes").DefaultView()
-        ComboBox2.DisplayMember = "tipo"
+        ComboBox2.DisplayMember = "Tipo"
         ComboBox2.ValueMember = "examenes.Idexamen"
     End Sub
     Sub mostrardatos()
         Me.Tag = datatable.Rows(posicion).ItemArray(0).ToString()
 
         ComboBox1.SelectedValue = datatable.Rows(posicion).ItemArray(1).ToString()
-        ComboBox2.Text = datatable.Rows(posicion).ItemArray(2).ToString
+        ComboBox2.SelectedValue = datatable.Rows(posicion).ItemArray(2).ToString
         TextBox1.Text = datatable.Rows(posicion).ItemArray(3).ToString()
         TextBox2.Text = datatable.Rows(posicion).ItemArray(4).ToString()
 

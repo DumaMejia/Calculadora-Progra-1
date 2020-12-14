@@ -27,7 +27,7 @@
         ComboBox1.SelectedValue = datatable.Rows(posicion).ItemArray(1).ToString()
         TextBox1.Text = datatable.Rows(posicion).ItemArray(2).ToString()
         TextBox2.Text = datatable.Rows(posicion).ItemArray(3).ToString()
-        ComboBox2.Text = datatable.Rows(posicion).ItemArray(4).ToString
+        ComboBox2.SelectedValue = datatable.Rows(posicion).ItemArray(4).ToString
     End Sub
     Private Sub SeleccionarDato()
         idc = DataGridView1.CurrentRow.Cells("Idusuario").Value.ToString()

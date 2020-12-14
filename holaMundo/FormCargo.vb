@@ -31,7 +31,7 @@
     Private Sub filtrar(ByVal valor As String)
         Dim bs As New BindingSource()
         bs.DataSource = DataGridView1.DataSource
-        bs.Filter = "cargo like '%" & valor & "%' or cargo like '%" & valor & "%'"
+        bs.Filter = "cargoper like '%" & valor & "%' or cargoper like '%" & valor & "%'"
         DataGridView1.DataSource = bs
     End Sub
     Private Sub controlesNuevo(ByVal estado As Boolean)
